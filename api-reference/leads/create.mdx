@@ -1,143 +1,143 @@
 ---
-title: "Create lead"
+title: "Lead erstellen"
 api: "POST /user/lead"
-description: "Create a new lead in the Autocalls system"
+description: "Einen neuen Lead im Autocalls-System erstellen"
 ---
 
-This endpoint allows you to create a new lead in the Autocalls system.
+Dieser Endpunkt ermöglicht es Ihnen, einen neuen Lead im Autocalls-System zu erstellen.
 
-### Request body
+### Anfragekörper
 
 <ParamField body="phone_number" type="string" required>
-  The phone number of the lead in E.164 format (e.g. +1234567890)
+  Die Telefonnummer des Leads im E.164-Format (z. B. +1234567890)
 </ParamField>
 
 <ParamField body="campaign_id" type="integer" required>
-  The ID of the campaign to create the lead for
+  Die ID der Kampagne, für die der Lead erstellt werden soll
 </ParamField>
 
 <ParamField body="variables" type="object">
-  The variables to pass to the lead
+  Die Variablen, die an den Lead übergeben werden sollen
   
-  <Expandable title="variables properties">
+  <Expandable title="Variablen-Eigenschaften">
     <ParamField body="customer_name" type="string" default="<string>">
-      The name of the customer
+      Der Name des Kunden
     </ParamField>
     
     <ParamField body="email" type="string" default="<string>">
-      The email of the customer
+      Die E-Mail-Adresse des Kunden
     </ParamField>
   </Expandable>
 </ParamField>
 
 <ParamField body="allow_dupplicate" type="boolean">
-  Whether to allow duplicate leads in a campaign.
+  Ob doppelte Leads in einer Kampagne erlaubt werden sollen.
 </ParamField>
 
 <ParamField body="secondary_contacts" type="array">
-  Array of secondary contact leads to create along with the main lead
+  Array von sekundären Kontakt-Leads, die zusammen mit dem Haupt-Lead erstellt werden sollen
   
-  <Expandable title="secondary_contacts properties">
+  <Expandable title="Eigenschaften sekundärer Kontakte">
     <ParamField body="phone_number" type="string" required>
-      The phone number of the secondary contact in E.164 format
+      Die Telefonnummer des sekundären Kontakts im E.164-Format
     </ParamField>
     
     <ParamField body="variables" type="object">
-      The variables to pass to the secondary contact
+      Die Variablen, die an den sekundären Kontakt übergeben werden sollen
       
-      <Expandable title="variables properties">
+      <Expandable title="Variablen-Eigenschaften">
         <ParamField body="customer_name" type="string" default="<string>">
-          The name of the secondary contact
+          Der Name des sekundären Kontakts
         </ParamField>
         
         <ParamField body="email" type="string" default="<string>">
-          The email of the secondary contact
+          Die E-Mail-Adresse des sekundären Kontakts
         </ParamField>
       </Expandable>
     </ParamField>
   </Expandable>
 </ParamField>
 
-### Response
+### Antwort
 
 <ResponseField name="message" type="string" default="Lead created successfully">
-  The message of the response
+  Die Nachricht der Antwort
 </ResponseField>
 
 <ResponseField name="data" type="object">
-  The lead data object
+  Das Lead-Datenobjekt
   
-  <Expandable title="data properties">
+  <Expandable title="Daten-Eigenschaften">
     <ResponseField name="id" type="integer">
-      The unique ID of the created lead
+      Die eindeutige ID des erstellten Leads
     </ResponseField>
     
     <ResponseField name="campaign_id" type="integer">
-      The ID of the campaign this lead belongs to
+      Die ID der Kampagne, zu der dieser Lead gehört
     </ResponseField>
 
     <ResponseField name="phone_number" type="string">
-      The phone number of the lead in E.164 format
+      Die Telefonnummer des Leads im E.164-Format
     </ResponseField>
     
     <ResponseField name="variables" type="object">
-      The variables associated with the lead
+      Die dem Lead zugeordneten Variablen
       
-      <Expandable title="variables properties">
+      <Expandable title="Variablen-Eigenschaften">
         <ResponseField name="customer_name" type="string" default="<string>">
-          The name of the customer
+          Der Name des Kunden
         </ResponseField>
         
         <ResponseField name="email" type="string" default="<string>">
-          The email of the customer
+          Die E-Mail-Adresse des Kunden
         </ResponseField>
       </Expandable>
     </ResponseField>
     
     <ResponseField name="status" type="string" default="created">
-      The status of the lead
+      Der Status des Leads
     </ResponseField>
     
     <ResponseField name="created_at" type="string">
-      The timestamp when the lead was created
+      Der Zeitstempel, wann der Lead erstellt wurde
     </ResponseField>
     
     <ResponseField name="updated_at" type="string">
-      The timestamp when the lead was last updated
+      Der Zeitstempel, wann der Lead zuletzt aktualisiert wurde
     </ResponseField>
 
     <ResponseField name="campaign" type="object">
-      The campaign information
-      <Expandable title="campaign properties">
+      Die Kampagneninformationen
+      <Expandable title="Kampagnen-Eigenschaften">
         <ResponseField name="id" type="integer">
-          The id of the campaign
+          Die ID der Kampagne
         </ResponseField>
         <ResponseField name="name" type="string">
-          The name of the campaign
+          Der Name der Kampagne
         </ResponseField>
       </Expandable>
     </ResponseField>
 
     <ResponseField name="secondary_contacts" type="array">
-      Array of secondary contact leads associated with this lead
-      <Expandable title="secondary_contacts properties">
+      Array von sekundären Kontakt-Leads, die mit diesem Lead verknüpft sind
+      <Expandable title="Eigenschaften sekundärer Kontakte">
         <ResponseField name="id" type="integer">
-          The id of the secondary contact lead
+          Die ID des sekundären Kontakt-Leads
         </ResponseField>
         <ResponseField name="phone_number" type="string">
-          The phone number of the secondary contact in E.164 format
+          Die Telefonnummer des sekundären Kontakts im E.164-Format
         </ResponseField>
         <ResponseField name="variables" type="object">
-          The variables associated with the secondary contact
+          Die dem sekundären Kontakt zugeordneten Variablen
         </ResponseField>
         <ResponseField name="status" type="string">
-          The status of the secondary contact
+          Der Status des sekundären Kontakts
         </ResponseField>
         <ResponseField name="created_at" type="string">
-          The created at date of the secondary contact
+          Das Erstellungsdatum des sekundären Kontakts
         </ResponseField>
         <ResponseField name="updated_at" type="string">
-          The updated at date of the secondary contact
+          Das Aktualisierungsdatum des sekundären Kontakts
         </ResponseField>
       </Expandable>
     </ResponseField>
@@ -146,7 +146,7 @@ This endpoint allows you to create a new lead in the Autocalls system.
 
 <ResponseExample>
 
-```json 200 Response
+```json 200 Antwort
 {
   "message": "Lead created successfully",
   "data": {

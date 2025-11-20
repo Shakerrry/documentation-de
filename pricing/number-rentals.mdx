@@ -1,69 +1,69 @@
 ---
-title: "Number Rentals & International Rates"
+title: "Nummernmiete & Internationale Tarife"
 icon: "globe"
-description: "Understand phone number rental costs, plus how SIP and Caller ID usage is billed by the minute."
+description: "Verstehen Sie Kosten für Telefonnummernmiete und wie SIP- und Anrufer-ID-Nutzung minutengenau abgerechnet wird."
 ---
 
-Autocalls.ai offers multiple ways to handle phone numbers for inbound or outbound calls. You can **rent** a dedicated number from us, use a **SIP** trunk (no monthly fee but carrier costs are on your own PBX), or verify an **existing Caller ID** (also no monthly fee, but region-based per-minute charges).
-
----
-
-## 1. Renting a Dedicated Number
-
-If you want a fully managed inbound/outbound line, you can rent it directly in the platform:
-
-- **Monthly Fee**: Typically \$3.99/month for standard local numbers (US/CA/UK). Regions vary:
-  - **EU Countries**: €3–€5/month
-  - **Latin America, Asia, Africa**: \$10+ in some cases, depending on availability or local taxes
-- **Custom Provisioning**: If you don't see your desired country or region listed, our team can custom-provision a number after verifying local documents.
-
-**Per-Minute Rates**
-
-- Outbound calls on a rented number: depends on the country you're calling—could range from \$0.05/min to \$0.50/min if it's an expensive destination.
-- Inbound calls: usually no extra charge unless it's a special/toll scenario in that region.
+Autocalls.ai bietet mehrere Möglichkeiten, Telefonnummern für eingehende oder ausgehende Anrufe zu verwalten. Sie können eine dedizierte Nummer von uns **mieten**, einen **SIP**-Trunk verwenden (keine monatliche Gebühr, aber Carrier-Kosten liegen bei Ihrer eigenen PBX), oder eine **bestehende Anrufer-ID** verifizieren (auch keine monatliche Gebühr, aber regionsbasierte Minutengebühren).
 
 ---
 
-## 2. SIP Integration (No Monthly Fee)
+## 1. Mieten einer dedizierten Nummer
 
-If you already have a VOIP/PBX solution, you can integrate via a **SIP trunk** with **no monthly rental** from Autocalls.ai. Instead, you pay:
+Wenn Sie eine vollständig verwaltete eingehende/ausgehende Leitung wünschen, können Sie diese direkt in der Plattform mieten:
 
-- **SIP Per-Minute**: \$0.00045/min on our side for carrier bridging. Your VOIP provider may also have separate usage fees.
-- **Your Existing Number**: You'll continue to use your own phone lines for inbound and outbound, but the carrier layer costs \$0.00045/min with us whenever the AI is on the call.
+- **Monatliche Gebühr**: Normalerweise 3,99 $/Monat für Standard-Ortsnummern (US/CA/UK). Regionen variieren:
+  - **EU-Länder**: 3–5 €/Monat
+  - **Lateinamerika, Asien, Afrika**: 10 $+ in einigen Fällen, abhängig von Verfügbarkeit oder lokalen Steuern
+- **Benutzerdefinierte Bereitstellung**: Wenn Sie Ihr gewünschtes Land oder Ihre Region nicht aufgeführt sehen, kann unser Team nach Überprüfung lokaler Dokumente eine Nummer bereitstellen.
 
-This is ideal if you're comfortable managing your own phone system or want to keep your existing numbers without renting from us. See our [SIP Integration Guide](/provisioning/sip-trunking/sip-integration) for setup instructions.
+**Minutentarife**
 
----
-
-## 3. Caller ID (No Monthly Fee)
-
-You can verify an existing number for **outbound calls** only—no inbound routing.
-
-- **Verification**: We confirm ownership via a short OTP or call.
-- **Per-Minute**: For the telephony used behind the scenes, we charge region-based rates.
-  - **Example**: In the US, Caller ID usage might be \$0.01/min.
-  - Other countries vary; contact support for specifics.
-
-> **Note**: Caller ID alone does **not** enable inbound AI; it only masks your outbound calls with your verified number.
+- Ausgehende Anrufe mit einer gemieteten Nummer: hängt vom Land ab, das Sie anrufen – kann von 0,05 $/Min bis 0,50 $/Min reichen, wenn es ein teures Ziel ist.
+- Eingehende Anrufe: normalerweise keine zusätzliche Gebühr, es sei denn, es ist ein spezielles/gebührenpflichtiges Szenario in dieser Region.
 
 ---
 
-## 4. International Rates & Regions
+## 2. SIP-Integration (Keine monatliche Gebühr)
 
-When making outbound calls:
+Wenn Sie bereits eine VOIP/PBX-Lösung haben, können Sie über einen **SIP-Trunk** mit **keiner monatlichen Miete** von Autocalls.ai integrieren. Stattdessen zahlen Sie:
 
-- **Carrier Rates**: Some countries cost \$0.01/min, others \$0.50/min due to local carriers.
-- **Inbound**: If you rent a number in a high-cost region or special type, inbound calls could have surcharges.
+- **SIP pro Minute**: 0,00045 $/Min auf unserer Seite für Carrier-Bridging. Ihr VOIP-Anbieter kann auch separate Nutzungsgebühren haben.
+- **Ihre bestehende Nummer**: Sie werden weiterhin Ihre eigenen Telefonleitungen für eingehend und ausgehend verwenden, aber die Carrier-Schicht kostet 0,00045 $/Min bei uns, wann immer die KI im Anruf ist.
 
-Regardless of whether you rent a number or use Caller ID/SIP, the **carrier portion** of the call cost depends on the destination/origin country and is typically added to your overall usage.
+Dies ist ideal, wenn Sie sich wohl fühlen, Ihr eigenes Telefonsystem zu verwalten, oder wenn Sie Ihre bestehenden Nummern behalten möchten, ohne von uns zu mieten. Siehe unseren [SIP-Integrationsleitfaden](/provisioning/sip-trunking/sip-integration) für Einrichtungsanweisungen.
 
 ---
 
-## 5. Putting It All Together
+## 3. Anrufer-ID (Keine monatliche Gebühr)
 
-1. **Rent a Number**
-   - Pay a monthly fee (from \$3.99), plus standard inbound/outbound carrier costs for calls on that line.
-2. **Use SIP**
-   - No monthly from us, but a \$0.00045/min AI bridging cost, plus your own PBX fees.
-3. **Caller ID**
-   - No monthly from us, but region-based per-minute telephony charges (e.g., \$0.01/min in the US). Outbound only.
+Sie können eine bestehende Nummer nur für **ausgehende Anrufe** verifizieren – kein eingehendes Routing.
+
+- **Verifizierung**: Wir bestätigen das Eigentum über einen kurzen OTP oder Anruf.
+- **Pro Minute**: Für die dahinter verwendete Telefonie berechnen wir regionsbasierte Tarife.
+  - **Beispiel**: In den USA könnte die Anrufer-ID-Nutzung 0,01 $/Min betragen.
+  - Andere Länder variieren; kontaktieren Sie den Support für Details.
+
+> **Hinweis**: Anrufer-ID allein ermöglicht **keine** eingehende KI; sie maskiert nur Ihre ausgehenden Anrufe mit Ihrer verifizierten Nummer.
+
+---
+
+## 4. Internationale Tarife & Regionen
+
+Bei ausgehenden Anrufen:
+
+- **Carrier-Tarife**: Einige Länder kosten 0,01 $/Min, andere 0,50 $/Min aufgrund lokaler Carrier.
+- **Eingehend**: Wenn Sie eine Nummer in einer hochpreisigen Region oder eines speziellen Typs mieten, könnten eingehende Anrufe Aufschläge haben.
+
+Unabhängig davon, ob Sie eine Nummer mieten oder Anrufer-ID/SIP verwenden, hängt der **Carrier-Anteil** der Anrufkosten vom Ziel/Ursprungsland ab und wird normalerweise zu Ihrer Gesamtnutzung hinzugefügt.
+
+---
+
+## 5. Alles zusammenfügen
+
+1. **Nummer mieten**
+   - Zahlen Sie eine monatliche Gebühr (ab 3,99 $), plus Standard-eingehende/ausgehende Carrier-Kosten für Anrufe auf dieser Leitung.
+2. **SIP verwenden**
+   - Keine monatliche Gebühr von uns, aber 0,00045 $/Min KI-Bridging-Kosten, plus Ihre eigenen PBX-Gebühren.
+3. **Anrufer-ID**
+   - Keine monatliche Gebühr von uns, aber regionsbasierte Minutengebühren für Telefonie (z.B. 0,01 $/Min in den USA). Nur ausgehend.

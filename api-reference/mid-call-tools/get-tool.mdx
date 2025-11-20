@@ -1,99 +1,99 @@
 ---
-title: "Get mid call tool"
+title: "Mid-Call-Tool abrufen"
 api: "GET /user/tools/{id}"
-description: "Retrieve a specific mid call tool by ID"
+description: "Bestimmtes Mid-Call-Tool nach ID abrufen"
 ---
 
-This endpoint allows you to retrieve detailed information about a specific mid call tool.
+Dieser Endpunkt ermöglicht es Ihnen, detaillierte Informationen über ein bestimmtes Mid-Call-Tool abzurufen.
 
-### Headers
+### Header
 
 <ParamField header="Authorization" type="string" required>
-  Bearer token for authentication
+  Bearer-Token für die Authentifizierung
 </ParamField>
 
 <ParamField header="Content-Type" type="string" required>
-  Must be `application/json`
+  Muss `application/json` sein
 </ParamField>
 
 <ParamField header="Accept" type="string" required>
-  Must be `application/json`
+  Muss `application/json` sein
 </ParamField>
 
-### Path Parameters
+### Pfad-Parameter
 
 <ParamField path="id" type="integer" required>
-  The unique identifier of the tool
+  Eindeutiger Bezeichner des Tools
 </ParamField>
 
-### Response fields
+### Antwortfelder
 
 <ResponseField name="id" type="integer">
-  The unique identifier of the tool
+  Eindeutiger Bezeichner des Tools
 </ResponseField>
 
 <ResponseField name="name" type="string">
-  The name of the tool (lowercase with underscores)
+  Name des Tools (Kleinbuchstaben mit Unterstrichen)
 </ResponseField>
 
 <ResponseField name="description" type="string">
-  Detailed explanation of when and how the AI should use this tool
+  Detaillierte Erklärung, wann und wie die KI dieses Tool verwenden soll
 </ResponseField>
 
 <ResponseField name="endpoint" type="string">
-  The API endpoint URL that will be called
+  Die API-Endpunkt-URL, die aufgerufen wird
 </ResponseField>
 
 <ResponseField name="method" type="string">
-  HTTP method (GET, POST, PUT, PATCH, DELETE)
+  HTTP-Methode (GET, POST, PUT, PATCH, DELETE)
 </ResponseField>
 
 <ResponseField name="timeout" type="integer">
-  Request timeout in seconds (1-30)
+  Anfrage-Timeout in Sekunden (1-30)
 </ResponseField>
 
 <ResponseField name="headers" type="array">
-  HTTP headers to send with the request
-  <Expandable title="header properties">
+  Mit der Anfrage zu sendende HTTP-Header
+  <Expandable title="header-Eigenschaften">
     <ResponseField name="name" type="string">
-      Header name
+      Header-Name
     </ResponseField>
     <ResponseField name="value" type="string">
-      Header value
+      Header-Wert
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="schema" type="array">
-  Parameters that the AI will extract and send to the endpoint
-  <Expandable title="schema properties">
+  Parameter, die die KI extrahiert und an den Endpunkt sendet
+  <Expandable title="schema-Eigenschaften">
     <ResponseField name="name" type="string">
-      Parameter name
+      Parameter-Name
     </ResponseField>
     <ResponseField name="type" type="string">
-      Parameter type (string, number, boolean)
+      Parameter-Typ (string, number, boolean)
     </ResponseField>
     <ResponseField name="description" type="string">
-      Description to help AI understand how to extract this parameter
+      Beschreibung, die der KI hilft zu verstehen, wie dieser Parameter extrahiert werden soll
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="created_at" type="string">
-  ISO 8601 timestamp when the tool was created
+  ISO 8601-Zeitstempel, wann das Tool erstellt wurde
 </ResponseField>
 
 <ResponseField name="updated_at" type="string">
-  ISO 8601 timestamp when the tool was last updated
+  ISO 8601-Zeitstempel, wann das Tool zuletzt aktualisiert wurde
 </ResponseField>
 
 <ResponseExample>
 
-```json 200 Response
+```json 200 Antwort
 {
   "id": 1,
   "name": "get_weather",
-  "description": "Use this tool to get the current weather in a specific city. Call this when the customer asks about weather conditions.",
+  "description": "Verwenden Sie dieses Tool, um das aktuelle Wetter in einer bestimmten Stadt abzurufen. Rufen Sie dies auf, wenn der Kunde nach Wetterbedingungen fragt.",
   "endpoint": "https://api.openweathermap.org/data/2.5/weather",
   "method": "GET",
   "timeout": 10,
@@ -111,17 +111,17 @@ This endpoint allows you to retrieve detailed information about a specific mid c
     {
       "name": "city",
       "type": "string",
-      "description": "The city name to get weather for"
+      "description": "Der Stadtname, für den das Wetter abgerufen werden soll"
     },
     {
       "name": "temperature",
       "type": "number",
-      "description": "Current temperature value"
+      "description": "Aktueller Temperaturwert"
     },
     {
       "name": "is_raining",
       "type": "boolean",
-      "description": "Whether it is currently raining"
+      "description": "Ob es derzeit regnet"
     }
   ],
   "created_at": "2025-10-10T12:00:00.000000Z",
@@ -129,17 +129,17 @@ This endpoint allows you to retrieve detailed information about a specific mid c
 }
 ```
 
-```json 404 Not Found
+```json 404 Nicht gefunden
 {
-  "message": "Tool not found"
+  "message": "Tool nicht gefunden"
 }
 ```
 
 </ResponseExample>
 
-### Assigning Tools to Assistants
+### Tools Assistenten zuweisen
 
-To use this tool with an assistant, see:
+Um dieses Tool mit einem Assistenten zu verwenden, siehe:
 
-- **[Create Assistant](/api-reference/assistants/create-assistant)** - Attach tools using the `tool_ids` parameter
-- **[Update Assistant](/api-reference/assistants/update-assistant)** - Manage tool assignments using the `tool_ids` parameter
+- **[Assistenten erstellen](/api-reference/assistants/create-assistant)** - Tools mit dem Parameter `tool_ids` anhängen
+- **[Assistenten aktualisieren](/api-reference/assistants/update-assistant)** - Tool-Zuweisungen mit dem Parameter `tool_ids` verwalten

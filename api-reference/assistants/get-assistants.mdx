@@ -1,303 +1,303 @@
 ---
-title: "List assistants"
+title: "Assistenten auflisten"
 api: "GET /user/assistants/get"
-description: "List all assistants for the authenticated user with pagination"
+description: "Alle Assistenten für den authentifizierten Benutzer mit Paginierung auflisten"
 ---
 
-This endpoint allows you to retrieve all AI assistants belonging to the authenticated user.
+Dieser Endpunkt ermöglicht es Ihnen, alle KI-Assistenten abzurufen, die dem authentifizierten Benutzer gehören.
 
-### Query Parameters
+### Abfrageparameter
 
 <ParamField query="per_page" type="integer" optional>
-  Number of assistants per page (1-100, default: 10)
+  Anzahl der Assistenten pro Seite (1-100, Standard: 10)
 </ParamField>
 
 <ParamField query="page" type="integer" optional>
-  Page number (default: 1)
+  Seitennummer (Standard: 1)
 </ParamField>
 
-### Response fields
+### Antwortfelder
 
 <ResponseField name="data" type="array">
-  <Expandable title="properties">
+  <Expandable title="Eigenschaften">
     <ResponseField name="id" type="integer">
-      The unique identifier of the assistant
+      Die eindeutige Kennung des Assistenten
     </ResponseField>
 
     <ResponseField name="user_id" type="integer">
-      The ID of the user who owns this assistant
+      Die ID des Benutzers, dem dieser Assistent gehört
     </ResponseField>
 
     <ResponseField name="phone_number_id" type="integer">
-      The ID of the phone number assigned to the assistant
+      Die ID der dem Assistenten zugewiesenen Telefonnummer
     </ResponseField>
 
     <ResponseField name="engine_id" type="integer">
-      Engine ID
+      Engine-ID
     </ResponseField>
 
     <ResponseField name="synthesizer_id" type="integer">
-      Synthesizer ID
+      Synthesizer-ID
     </ResponseField>
 
     <ResponseField name="transcriber_id" type="integer">
-      Transcriber ID
+      Transcriber-ID
     </ResponseField>
 
     <ResponseField name="voice_id" type="integer">
-      The ID of the voice used by the assistant
+      Die ID der vom Assistenten verwendeten Stimme
     </ResponseField>
 
     <ResponseField name="instance_id" type="integer">
-      The instance ID for the assistant
+      Die Instanz-ID für den Assistenten
     </ResponseField>
 
     <ResponseField name="name" type="string">
-      The name of the assistant
+      Der Name des Assistenten
     </ResponseField>
 
     <ResponseField name="variables" type="object">
-      Custom variables defined for the assistant
+      Benutzerdefinierte Variablen, die für den Assistenten definiert wurden
     </ResponseField>
 
     <ResponseField name="post_call_evaluation" type="boolean">
-      Whether post-call evaluation is enabled
+      Ob die Post-Call-Bewertung aktiviert ist
     </ResponseField>
 
     <ResponseField name="fillers" type="integer">
-      Whether filler audio is enabled (1 = enabled, 0 = disabled)
+      Ob Fülllaute aktiviert sind (1 = aktiviert, 0 = deaktiviert)
     </ResponseField>
 
     <ResponseField name="post_call_schema" type="array">
-      Schema definition for post-call data extraction
-      <Expandable title="post_call_schema properties">
+      Schemadefinition für die Post-Call-Datenextraktion
+      <Expandable title="post_call_schema-Eigenschaften">
         <ResponseField name="name" type="string">
-          The name of the schema field
+          Der Name des Schemafelds
         </ResponseField>
         <ResponseField name="type" type="string">
-          The data type (string, number, bool)
+          Der Datentyp (string, number, bool)
         </ResponseField>
         <ResponseField name="description" type="string">
-          Description of what this field represents
+          Beschreibung dessen, was dieses Feld darstellt
         </ResponseField>
       </Expandable>
     </ResponseField>
 
     <ResponseField name="tools" type="array">
-      Array of tools available to the assistant
+      Array von Tools, die dem Assistenten zur Verfügung stehen
     </ResponseField>
 
     <ResponseField name="is_webhook_active" type="boolean">
-      Whether webhook notifications are enabled
+      Ob Webhook-Benachrichtigungen aktiviert sind
     </ResponseField>
 
     <ResponseField name="webhook_url" type="string">
-      The webhook URL for post-call notifications
+      Die Webhook-URL für Post-Call-Benachrichtigungen
     </ResponseField>
 
     <ResponseField name="inbound_webhook_url" type="string">
-      The webhook URL for inbound call notifications
+      Die Webhook-URL für eingehende Anrufbenachrichtigungen
     </ResponseField>
 
     <ResponseField name="language" type="string">
-      Language
+      Sprache
     </ResponseField>
 
     <ResponseField name="type" type="string">
-      The type of assistant (inbound or outbound)
+      Der Typ des Assistenten (inbound oder outbound)
     </ResponseField>
 
     <ResponseField name="status" type="string">
-      The current status of the assistant (active or inactive)
+      Der aktuelle Status des Assistenten (active oder inactive)
     </ResponseField>
 
     <ResponseField name="max_duration" type="integer">
-      Maximum call duration in seconds
+      Maximale Anrufdauer in Sekunden
     </ResponseField>
 
     <ResponseField name="record" type="boolean">
-      Whether to record calls
+      Ob Anrufe aufgezeichnet werden sollen
     </ResponseField>
 
     <ResponseField name="initial_message" type="string">
-      The initial message the assistant will speak
+      Die erste Nachricht, die der Assistent sprechen wird
     </ResponseField>
 
     <ResponseField name="system_prompt" type="string">
-      The system prompt that defines the assistant's behavior
+      Der System-Prompt, der das Verhalten des Assistenten definiert
     </ResponseField>
 
     <ResponseField name="flows_platform_id" type="integer">
-      ID for flows platform integration
+      ID für die Integration der Flows-Plattform
     </ResponseField>
 
     <ResponseField name="timezone" type="string">
-      The timezone setting for the assistant
+      Die Zeitzoneneinstellung für den Assistenten
     </ResponseField>
 
     <ResponseField name="created_at" type="string">
-      The date and time when the assistant was created
+      Datum und Uhrzeit der Erstellung des Assistenten
     </ResponseField>
 
     <ResponseField name="updated_at" type="string">
-      The date and time when the assistant was last updated
+      Datum und Uhrzeit der letzten Aktualisierung des Assistenten
     </ResponseField>
 
     <ResponseField name="max_silence_duration" type="integer">
-      Maximum silence duration in seconds before re-engagement
+      Maximale Stille-Dauer in Sekunden vor erneutem Eingriff
     </ResponseField>
 
     <ResponseField name="reengagement_interval" type="integer">
-      Re-engagement interval in seconds
+      Intervall für erneuten Eingriff in Sekunden
     </ResponseField>
 
     <ResponseField name="deleted_at" type="string">
-      Soft deletion timestamp (null if not deleted)
+      Soft-Deletion-Zeitstempel (null, wenn nicht gelöscht)
     </ResponseField>
 
     <ResponseField name="end_call_on_voicemail" type="integer">
-      Whether to end call when voicemail is detected (1 = yes, 0 = no)
+      Ob der Anruf bei Voicemail-Erkennung beendet werden soll (1 = ja, 0 = nein)
     </ResponseField>
 
     <ResponseField name="llm_temperature" type="string">
-      LLM temperature setting as string
+      LLM-Temperatureinstellung als String
     </ResponseField>
 
     <ResponseField name="voice_stability" type="string">
-      Voice stability setting as string
+      Stimmstabilitätseinstellung als String
     </ResponseField>
 
     <ResponseField name="voice_similarity" type="string">
-      Voice similarity setting as string
+      Stimmähnlichkeitseinstellung als String
     </ResponseField>
 
     <ResponseField name="allow_interruptions" type="boolean">
-      Whether to allow caller interruptions
+      Ob Anruferunterbrechungen erlaubt sind
     </ResponseField>
 
     <ResponseField name="enable_noise_cancellation" type="boolean">
-      Whether noise cancellation is enabled
+      Ob Geräuschunterdrückung aktiviert ist
     </ResponseField>
 
     <ResponseField name="endpoint_sensitivity" type="number">
-      Endpoint sensitivity level
+      Endpunkt-Empfindlichkeitsstufe
     </ResponseField>
 
     <ResponseField name="speech_speed" type="string">
-      Speech speed multiplier as string
+      Sprechgeschwindigkeitsmultiplikator als String
     </ResponseField>
 
     <ResponseField name="endpoint_type" type="string">
-      Voice activity detection type (vad or ai)
+      Sprachaktivitätserkennungstyp (vad oder ai)
     </ResponseField>
 
     <ResponseField name="wait_for_customer" type="boolean">
-      Whether to wait for customer to speak first
+      Ob darauf gewartet werden soll, dass der Kunde zuerst spricht
     </ResponseField>
 
     <ResponseField name="mode" type="string">
-      The engine mode (pipeline or multimodal)
+      Der Engine-Modus (pipeline oder multimodal)
     </ResponseField>
 
     <ResponseField name="language_id" type="integer">
-      The ID of the language used by the assistant
+      Die ID der vom Assistenten verwendeten Sprache
     </ResponseField>
 
     <ResponseField name="transcriber_provider_id" type="integer">
-      ID of the transcriber provider
+      ID des Transcriber-Anbieters
     </ResponseField>
 
     <ResponseField name="synthesizer_provider_id" type="integer">
-      ID of the synthesizer provider
+      ID des Synthesizer-Anbieters
     </ResponseField>
 
     <ResponseField name="llm_model_id" type="integer">
-      ID of the LLM model used
+      ID des verwendeten LLM-Modells
     </ResponseField>
 
     <ResponseField name="multimodal_model_id" type="integer">
-      ID of the multimodal model used
+      ID des verwendeten Multimodal-Modells
     </ResponseField>
 
     <ResponseField name="ambient_sound" type="string">
-      Ambient sound setting
+      Umgebungsgeräusch-Einstellung
     </ResponseField>
 
     <ResponseField name="uuid" type="string">
-      Unique UUID for the assistant
+      Eindeutige UUID für den Assistenten
     </ResponseField>
 
     <ResponseField name="send_webhook_only_on_completed" type="boolean">
-      Whether to send webhooks only on completed calls
+      Ob Webhooks nur bei abgeschlossenen Anrufen gesendet werden sollen
     </ResponseField>
 
     <ResponseField name="include_recording_in_webhook" type="boolean">
-      Whether to include recording URL in webhook payload
+      Ob die Aufzeichnungs-URL in die Webhook-Payload aufgenommen werden soll
     </ResponseField>
 
     <ResponseField name="interrupt_sensitivity" type="number">
-      Interrupt sensitivity level
+      Unterbrechungs-Empfindlichkeitsstufe
     </ResponseField>
 
     <ResponseField name="filler_config" type="object">
-      Configuration for filler audio responses
-      <Expandable title="filler_config properties">
+      Konfiguration für Fülllaut-Antworten
+      <Expandable title="filler_config-Eigenschaften">
         <ResponseField name="neutral" type="array">
-          Array of neutral filler responses
+          Array von neutralen Fülllaut-Antworten
         </ResponseField>
         <ResponseField name="negative" type="array">
-          Array of negative filler responses
+          Array von negativen Fülllaut-Antworten
         </ResponseField>
         <ResponseField name="positive" type="array">
-          Array of positive filler responses
+          Array von positiven Fülllaut-Antworten
         </ResponseField>
         <ResponseField name="question" type="array">
-          Array of question filler responses
+          Array von Fragen-Fülllaut-Antworten
         </ResponseField>
       </Expandable>
     </ResponseField>
 
     <ResponseField name="knowledgebase_id" type="integer">
-      ID of the associated knowledge base
+      ID der zugehörigen Wissensdatenbank
     </ResponseField>
 
     <ResponseField name="knowledgebase_mode" type="string">
-      Knowledge base mode setting
+      Wissensdatenbank-Modus-Einstellung
     </ResponseField>
 
     <ResponseField name="min_interrupt_words" type="integer">
-      Minimum number of words before interruption is allowed
+      Mindestanzahl von Wörtern, bevor eine Unterbrechung erlaubt ist
     </ResponseField>
 
     <ResponseField name="ambient_sound_volume" type="string">
-      Ambient sound volume level as string
+      Umgebungsgeräusch-Lautstärkepegel als String
     </ResponseField>
 
     <ResponseField name="widget_settings" type="object">
-      Settings for web widget integration
+      Einstellungen für die Web-Widget-Integration
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="current_page" type="integer">
-  The current page number
+  Die aktuelle Seitennummer
 </ResponseField>
 
 <ResponseField name="per_page" type="integer">
-  Number of items per page
+  Anzahl der Elemente pro Seite
 </ResponseField>
 
 <ResponseField name="total" type="integer">
-  Total number of assistants
+  Gesamtanzahl der Assistenten
 </ResponseField>
 
 <ResponseField name="last_page" type="integer">
-  The last page number
+  Die letzte Seitennummer
 </ResponseField>
 
 <ResponseExample>
 
-```json 200 Response
+```json 200 Antwort
 {
   "current_page": 1,
   "data": [

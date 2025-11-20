@@ -1,145 +1,145 @@
 ---
-title: "Zadarma Integration"
-description: "A step by step guide to connect to your Zadarma account via SIP trunking"
+title: "Zadarma-Integration"
+description: "Eine Schritt-für-Schritt-Anleitung zur Verbindung mit Ihrem Zadarma-Konto über SIP Trunking"
 ---
 
-## Step 1: Gather Your Information
+## Schritt 1: Sammeln Sie Ihre Informationen
 
--  PBX Extension:
+-  PBX-Nebenstelle:
 
-Go to My Switchboard, Extensions on the main page.
+Gehen Sie zu Meine Telefonanlage, Nebenstellen auf der Hauptseite.
    <Frame>
      <img
        src="/resources/zadarma-mypbx-extensions.png"
-       alt="Zadarma My Switchboard Extensions"
+       alt="Zadarma Meine Telefonanlage Nebenstellen"
      />
    </Frame> 
-Find the following information: 
+Finden Sie die folgenden Informationen: 
 
 ```
-Extension number: e.g., 1000
-Server address: e.g., pbx.zadarma.com
-Username: Your extension username
-Password: Your extension password
+Nebenstellen-Nummer: z.B. 1000
+Serveradresse: z.B. pbx.zadarma.com
+Benutzername: Ihr Nebenstellen-Benutzername
+Passwort: Ihr Nebenstellen-Passwort
 ```
 
     <Frame>
      <img
        src="/resources/zadarma-switch-extension-settings.PNG"
-       alt="Zadarma My Switchboard Extensions Settings"
+       alt="Zadarma Meine Telefonanlage Nebenstellen-Einstellungen"
      />
    </Frame> 
 
--  SIP Connection:
+-  SIP-Verbindung:
 
 ```
-Phone number: e.g., +1 555 0123
-SIP server: e.g., sip.zadarma.com
-Username: Provided by your phone company
-Password: Provided by your phone company
+Telefonnummer: z.B. +1 555 0123
+SIP-Server: z.B. sip.zadarma.com
+Benutzername: Von Ihrer Telefongesellschaft bereitgestellt
+Passwort: Von Ihrer Telefongesellschaft bereitgestellt
 ```
 
-Go to Configuration, SIP Settings on the main page.
+Gehen Sie zu Konfiguration, SIP-Einstellungen auf der Hauptseite.
    <Frame>
      <img
        src="/resources/zadarma-sip-settings.png"
-       alt="Zadarma SIP Settings"
+       alt="Zadarma SIP-Einstellungen"
      />
    </Frame> 
 
-Find the following information: 
+Finden Sie die folgenden Informationen: 
 
    <Frame>
      <img
        src="/resources/zadarma-sip-connection-settings.png"
-       alt="Zadarma SIP Connection Settings"
+       alt="Zadarma SIP-Verbindungseinstellungen"
      />
    </Frame> 
 
-- For **IP Authorization type**:
+- Für **IP-Autorisierungstyp**:
 
-1. Go to Services, Connect number on the main page.
+1. Gehen Sie zu Dienste, Nummer verbinden auf der Hauptseite.
    <Frame>
      <img
        src="/resources/zadarma-services.png"
-       alt="Zadarma Services"
+       alt="Zadarma Dienste"
      />
    </Frame> 
 
-2. Go to Active numbers.
+2. Gehen Sie zu Aktive Nummern.
    <Frame>
      <img
        src="/resources/zadarma-active-numbers.png"
-       alt="Zadarma Active Numbers"
+       alt="Zadarma Aktive Nummern"
      />
    </Frame> 
 
-3. Click on the number you want to connect and press settings button.
+3. Klicken Sie auf die Nummer, die Sie verbinden möchten, und drücken Sie die Einstellungs-Schaltfläche.
    <Frame>
      <img
        src="/resources/zadarma-settings-button.png"
-       alt="Zadarma Settings Button"
+       alt="Zadarma Einstellungs-Schaltfläche"
      />
    </Frame> 
-4. Click on external services and then check the option for SIP URI.
+4. Klicken Sie auf externe Dienste und aktivieren Sie dann die Option für SIP URI.
 
-  Add ```sip:extension@5wed79aeavr.sip.livekit.cloud ``` (this is Autocalls SIP server address) .
+  Fügen Sie ```sip:extension@5wed79aeavr.sip.livekit.cloud ``` hinzu (dies ist die Autocalls SIP-Serveradresse).
 
    <Frame>
      <img
        src="/resources/zadarma-external-services.png"
-       alt="Zadarma External Services"
+       alt="Zadarma Externe Dienste"
      />
    </Frame> 
 
 <Note>
-You will need these IPs which you will put in step 2 for inbound authorization type.
+Sie benötigen diese IPs, die Sie in Schritt 2 für den eingehenden Autorisierungstyp eingeben werden.
 </Note>
 
-## Step 2: Import numbers to Autocalls
+## Schritt 2: Nummern zu Autocalls importieren
 
-You need to import to Autocalls.
+Sie müssen zu Autocalls importieren.
 
-1. Go to your Autocalls.ai dashboard
-2. Navigate to **Your Phone Numbers**
-3. Click “Integrate SIP trunk”
+1. Gehen Sie zu Ihrem Autocalls.ai-Dashboard
+2. Navigieren Sie zu **Ihre Telefonnummern**
+3. Klicken Sie auf "SIP-Trunk integrieren"
 
    <Frame>
      <img
        src="/resources/twillio-import-autocalls-sip1.png"
-       alt="Import numbers to Autocalls"
+       alt="Nummern zu Autocalls importieren"
      />
    </Frame>
-4. Fill in your details based on your integration type 
+4. Füllen Sie Ihre Details basierend auf Ihrem Integrationstyp aus 
 
-For PBX Extension:
+Für PBX-Nebenstelle:
 
    <Frame>
      <img
        src="/resources/zadarma-autocalls-type.png"
-       alt="Fill in your details based on your integration type"
+       alt="Füllen Sie Ihre Details basierend auf Ihrem Integrationstyp aus"
      />
    </Frame>
-For SIP Connection:
+Für SIP-Verbindung:
    <Frame>
      <img
        src="/resources/twillio-autocalls-auth-integration.png"
-       alt="Fill in your details based on your integration type"
+       alt="Füllen Sie Ihre Details basierend auf Ihrem Integrationstyp aus"
      />
    </Frame>
-5. Here you will supply the termination SIP URI you set up in Step 1.
+5. Hier geben Sie die Termination SIP URI an, die Sie in Schritt 1 eingerichtet haben.
 ```
-Server address: e.g., pbx.zadarma.com / sip.zadarma.com based on your integration type
+Serveradresse: z.B. pbx.zadarma.com / sip.zadarma.com basierend auf Ihrem Integrationstyp
 ```
 
    <Frame>
      <img
        src="/resources/zadarma-outbound-settings.png"
-       alt="Zadarma Outbound Settings"
+       alt="Zadarma Ausgehende Einstellungen"
      />
    </Frame>
 
-6. Here select Authorization type. 
+6. Wählen Sie hier den Autorisierungstyp aus. 
 
 {/* - If you opted for auth route select Username and password.
 
@@ -150,72 +150,72 @@ Server address: e.g., pbx.zadarma.com / sip.zadarma.com based on your integratio
      />
    </Frame> */}
 
-- Add the **IPs** from **Zadarma** (Step 1).
+- Fügen Sie die **IPs** von **Zadarma** hinzu (Schritt 1).
 
    <Frame>
      <img
        src="/resources/zadarma-ip-inbound.png"
-       alt="Twillio Autocalls Credentials IP Type"
+       alt="Zadarma IP Eingehend"
      />
    </Frame> 
    
-7. Select the country of where your SIP trunk is located. 
+7. Wählen Sie das Land aus, in dem sich Ihr SIP-Trunk befindet. 
 
     <Frame>
       <img
         src="/resources/twillio-autocalls-sip-country.png"
-        alt="Twillio Autocalls SIP Country"
+        alt="Autocalls SIP Land"
       />
     </Frame>
 
-### Step 3: Verify Setup
+### Schritt 3: Einrichtung überprüfen
 
-After configuration:
+Nach der Konfiguration:
 
-1. Make a test call to your number/extension
-2. Check that the AI assistant answers
-3. Use the test call feature to verify outbound calling
+1. Führen Sie einen Testanruf zu Ihrer Nummer/Nebenstelle durch
+2. Überprüfen Sie, dass der KI-Assistent antwortet
+3. Verwenden Sie die Testanruffunktion, um ausgehende Anrufe zu überprüfen
 
-## Security Requirements
+## Sicherheitsanforderungen
 
-Your SIP credentials need to be secure:
+Ihre SIP-Zugangsdaten müssen sicher sein:
 
-- **Username**: Your extension number or provider-supplied username
-- **Password must have**:
-  - 12 or more characters
-  - Numbers
-  - Upper and lowercase letters
-  - Special characters recommended
-## Common Issues
+- **Benutzername**: Ihre Nebenstellen-Nummer oder vom Anbieter bereitgestellter Benutzername
+- **Passwort muss haben**:
+  - 12 oder mehr Zeichen
+  - Zahlen
+  - Groß- und Kleinbuchstaben
+  - Sonderzeichen empfohlen
+## Häufige Probleme
 
 <AccordionGroup>
-  <Accordion title="After connecting, inbound works but outbound does not work?">
-    - Check your Termination SIP URI If there’s a space in it, please remove. Also you should use a localized termination uri that’s near your region. Check out this [doc](https://www.twilio.com/docs/global-infrastructure/localized-uris/termination) to select one.
-    - Check your user name and credentials Please make sure you entered the right user name and credentials which shows in this dialog. Please note the user name is not the friendly name that shows in the credential list. The friendly is different to user name, you need to double check if you happen to give a different name.
+  <Accordion title="Nach der Verbindung funktionieren eingehende Anrufe, aber ausgehende nicht?">
+    - Überprüfen Sie Ihre Termination SIP URI Wenn ein Leerzeichen vorhanden ist, entfernen Sie es bitte. Außerdem sollten Sie eine lokalisierte Termination URI verwenden, die sich in Ihrer Region befindet. Schauen Sie sich diese [Dokumentation](https://www.twilio.com/docs/global-infrastructure/localized-uris/termination) an, um eine auszuwählen.
+    - Überprüfen Sie Ihren Benutzernamen und Ihre Zugangsdaten Bitte stellen Sie sicher, dass Sie den richtigen Benutzernamen und die richtigen Zugangsdaten eingegeben haben, die in diesem Dialog angezeigt werden. Beachten Sie, dass der Benutzername nicht der Anzeigename ist, der in der Zugangsdatenliste angezeigt wird. Der Anzeigename unterscheidet sich vom Benutzernamen, Sie müssen dies überprüfen, wenn Sie zufällig einen anderen Namen vergeben haben.
     
     <Frame>
      <img
        src="/resources/twillio-outbound-not-work.png"
-       alt="Twillio outbound not work"
+       alt="Ausgehende Anrufe funktionieren nicht"
      />
    </Frame>
   </Accordion>
 
 {" "}
 
-<Accordion title="How do I set up dialing to international countries?">
-- Search “geo” to find the “Voice Geographic Permissions” setting.  
+<Accordion title="Wie richte ich das Wählen in internationale Länder ein?">
+- Suchen Sie nach "geo", um die Einstellung "Voice Geographic Permissions" zu finden.  
     <Frame>
      <img
        src="/resources/twillio-setup-dialing-international.png"
-       alt="Twillio setup dialing international"
+       alt="Einrichtung internationales Wählen"
      />
    </Frame>
-- Choose “Elastic Sip Trunking” in selector, and select the countries you would like to dial. 
+- Wählen Sie "Elastic Sip Trunking" im Selektor und wählen Sie die Länder aus, in die Sie wählen möchten. 
     <Frame>
      <img
        src="/resources/twillio-choose-elastic-sip-trunking.png"
-       alt="Twillio setup dialing international"
+       alt="Elastic SIP Trunking auswählen"
      />
    </Frame>
 
@@ -226,7 +226,5 @@ Your SIP credentials need to be secure:
 ---
 
 <Note>
-  Need help setting up? Our support team specializes in helping customers
-  integrate their phone systems. We'll guide you through the entire process,
-  ensuring a smooth setup with your specific phone system configuration.
+  Benötigen Sie Hilfe bei der Einrichtung? Unser Support-Team ist darauf spezialisiert, Kunden bei der Integration ihrer Telefonsysteme zu helfen. Wir führen Sie durch den gesamten Prozess und sorgen für eine reibungslose Einrichtung mit Ihrer spezifischen Telefonsystem-Konfiguration.
 </Note>

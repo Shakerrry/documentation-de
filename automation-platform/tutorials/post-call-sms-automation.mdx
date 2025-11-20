@@ -1,37 +1,37 @@
 ---
-title: "Post-Call SMS Automation"
+title: "Post-Call-SMS-Automatisierung"
 icon: "message"
-description: "Learn how to automatically send SMS messages to customers after AI phone calls end"
+description: "Erfahren Sie, wie Sie automatisch SMS-Nachrichten an Kunden nach KI-Telefonanrufen senden"
 ---
-This tutorial shows how to set up an automation that automatically sends SMS messages to customers after AI phone calls end, with conditional logic based on call outcomes.
+Dieses Tutorial zeigt, wie Sie eine Automatisierung einrichten, die automatisch SMS-Nachrichten an Kunden nach KI-Telefonanrufen sendet, mit bedingter Logik basierend auf Anrufergebnissen.
 
 <iframe
   width="100%"
   height="400"
   src="https://www.youtube.com/embed/iWvHffgwEkk?si=9Ic3VHwV-QeL5YER"
-  title="Tutorial: How to send an SMS after AI phone call ends"
+  title="Tutorial: Wie man eine SMS nach KI-Telefonanruf sendet"
   frameBorder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen></iframe>
 
-## What You'll Learn
+## Was Sie lernen werden
 
-- Setting up post-call webhook automation triggers
-- Configuring conditional logic based on call success
-- Mapping call data to SMS content
-- Testing post-call automations with live calls
-- Best practices for SMS follow-up messaging
+- Post-Call-Webhook-Automatisierungs-Trigger einrichten
+- Bedingte Logik basierend auf Anruferfolg konfigurieren
+- Anrufdaten zu SMS-Inhalt mappen
+- Post-Call-Automatisierungen mit Live-Anrufen testen
+- Best Practices für SMS-Follow-up-Messaging
 
-## Prerequisites
+## Voraussetzungen
 
-- Configured AI assistant with post-call variables
-- SMS-enabled phone number in your platform
-- Basic understanding of automation flows
-- Access to call testing functionality
+- Konfigurierter KI-Assistent mit Post-Call-Variablen
+- SMS-fähige Telefonnummer in Ihrer Plattform
+- Grundlegendes Verständnis von Automatisierungs-Flows
+- Zugriff auf Anruftest-Funktionalität
 
-## Step 1: Create Post-Call Automation Flow
+## Schritt 1: Post-Call-Automatisierungs-Flow erstellen
 
-We'll start by creating an automation that triggers when a phone call ends.
+Wir beginnen mit der Erstellung einer Automatisierung, die ausgelöst wird, wenn ein Telefonanruf endet.
 
 <video
   autoPlay
@@ -40,13 +40,13 @@ We'll start by creating an automation that triggers when a phone call ends.
   playsinline
   src="/resources/tutorials/post-call-sms/01-create-new-flow.mp4"></video>
 
-1. **Navigate to Automation Platform**
-2. **Create a new flow** from scratch
-3. **Search for your calling platform** in the trigger section
-4. **Select "Phone Call Ended"** trigger
-   - This trigger activates when any call to your selected assistant completes
+1. **Navigieren Sie zur Automatisierungsplattform**
+2. **Erstellen Sie einen neuen Flow** von Grund auf
+3. **Suchen Sie nach Ihrer Anrufplattform** im Trigger-Bereich
+4. **Wählen Sie "Phone Call Ended"**-Trigger
+   - Dieser Trigger wird aktiviert, wenn ein Anruf zu Ihrem ausgewählten Assistenten abgeschlossen ist
 
-## Step 2: Configure Assistant and Webhook
+## Schritt 2: Assistent und Webhook konfigurieren
 
 <video
   autoPlay
@@ -55,14 +55,14 @@ We'll start by creating an automation that triggers when a phone call ends.
   playsinline
   src="/resources/tutorials/post-call-sms/03-select-assistant.mp4"></video>
 
-1. **Select the assistant** you want to automate
-   - Each assistant can only have one "phone call ended" automation
-   - All calls to this assistant will go through this automation
-2. **Click "Test Trigger"** to generate the webhook
-   - This creates a webhook URL in the background
-   - The webhook is automatically saved to your assistant settings
+1. **Wählen Sie den Assistenten**, den Sie automatisieren möchten
+   - Jeder Assistent kann nur eine "Telefonanruf beendet"-Automatisierung haben
+   - Alle Anrufe zu diesem Assistenten durchlaufen diese Automatisierung
+2. **Klicken Sie auf "Test Trigger"**, um den Webhook zu generieren
+   - Dadurch wird im Hintergrund eine Webhook-URL erstellt
+   - Der Webhook wird automatisch in Ihren Assistenteneinstellungen gespeichert
 
-## Step 3: Verify Webhook Configuration
+## Schritt 3: Webhook-Konfiguration überprüfen
 
 <video
   autoPlay
@@ -71,39 +71,39 @@ We'll start by creating an automation that triggers when a phone call ends.
   playsinline
   src="/resources/tutorials/post-call-sms/05-check-assistant-webhook.mp4"></video>
 
-1. **Open a new tab** and navigate to your assistant
-2. **Go to the third tab** "Post-call Actions"
-3. **Verify the webhook URL** was automatically added
+1. **Öffnen Sie einen neuen Tab** und navigieren Sie zu Ihrem Assistenten
+2. **Gehen Sie zum dritten Tab** "Post-call Actions"
+3. **Überprüfen Sie**, ob die Webhook-URL automatisch hinzugefügt wurde
 
 <Frame>
-  <img src="/resources/tutorials/post-call-sms/06-webhook-settings.png" alt="Webhook configuration settings" />
+  <img src="/resources/tutorials/post-call-sms/06-webhook-settings.png" alt="Webhook-Konfigurationseinstellungen" />
 </Frame>
 
-4. **Review webhook settings:**
-   - **Enabled**: Webhook will trigger after calls
-   - **Completed calls only**: Only successful calls trigger automation
-   - **All calls**: Change to "No" if you want all calls (including failed) to trigger
+4. **Webhook-Einstellungen überprüfen:**
+   - **Enabled**: Webhook wird nach Anrufen ausgelöst
+   - **Completed calls only**: Nur erfolgreiche Anrufe lösen Automatisierung aus
+   - **All calls**: Ändern Sie auf "No", wenn Sie alle Anrufe (einschließlich fehlgeschlagener) auslösen möchten
 
 <Frame>
-  <img src="/resources/tutorials/post-call-sms/07-post-call-variables.png" alt="Post-call variables configuration" />
+  <img src="/resources/tutorials/post-call-sms/07-post-call-variables.png" alt="Post-Call-Variablen-Konfiguration" />
 </Frame>
 
-5. **Review post-call variables:**
-   - **status**: Boolean (true/false) indicating if call objective was achieved
-   - **summary**: Text summary of the call conversation
-   - These variables are extracted by AI after each call
+5. **Post-Call-Variablen überprüfen:**
+   - **status**: Boolean (true/false), der anzeigt, ob das Anrufziel erreicht wurde
+   - **summary**: Textzusammenfassung des Anrufgesprächs
+   - Diese Variablen werden von der KI nach jedem Anruf extrahiert
 
-## Step 4: Generate Test Call Data
+## Schritt 4: Testanrufdaten generieren
 
-To configure our automation properly, we need actual call data to work with. We'll make a test call to generate the post-call variables.
+Um unsere Automatisierung richtig zu konfigurieren, benötigen wir tatsächliche Anrufdaten zum Arbeiten. Wir führen einen Testanruf durch, um die Post-Call-Variablen zu generieren.
 
 <Frame>
-  <img src="/resources/tutorials/post-call-sms/08-set-test-values.png" alt="Setting test values for call variables" />
+  <img src="/resources/tutorials/post-call-sms/08-set-test-values.png" alt="Testwerte für Anrufvariablen setzen" />
 </Frame>
 
-1. **Set real values** in your assistant's call variables:
-   - **Set your name and email** for realistic test data
-   - These will be the default values when testing from the assistant
+1. **Setzen Sie echte Werte** in den Anrufvariablen Ihres Assistenten:
+   - **Setzen Sie Ihren Namen und E-Mail** für realistische Testdaten
+   - Dies werden die Standardwerte beim Testen vom Assistenten sein
 
 <video
   autoPlay
@@ -112,15 +112,15 @@ To configure our automation properly, we need actual call data to work with. We'
   playsinline
   src="/resources/tutorials/post-call-sms/09-make-test-call.mp4"></video>
 
-2. **Make a test call to generate webhook data:**
-   - Click **"Speak to Assistant"** → **"Phone Call"**
-   - **Answer when your assistant calls you**
-   - **Respond positively** to ensure the `status` variable becomes `true`
-   - **Complete the call objective** during the conversation
-   - **End the call naturally**
+2. **Führen Sie einen Testanruf durch, um Webhook-Daten zu generieren:**
+   - Klicken Sie auf **"Speak to Assistant"** → **"Phone Call"**
+   - **Antworten Sie, wenn Ihr Assistent Sie anruft**
+   - **Antworten Sie positiv**, um sicherzustellen, dass die `status`-Variable `true` wird
+   - **Erfüllen Sie das Anrufziel** während des Gesprächs
+   - **Beenden Sie den Anruf natürlich**
 
 <Note>
-In a real situation, the assistant will take data assigned to the lead. For testing, it uses the default values you just set.
+In einer realen Situation nimmt der Assistent Daten, die dem Lead zugewiesen sind. Zum Testen verwendet er die Standardwerte, die Sie gerade gesetzt haben.
 </Note>
 
 <video
@@ -130,22 +130,22 @@ In a real situation, the assistant will take data assigned to the lead. For test
   playsinline
   src="/resources/tutorials/post-call-sms/10-check-call-results.mp4"></video>
 
-3. **Verify call results and variable extraction:**
-   - **Navigate to your calls list** and find the recent call
-   - **Click on the call** to view details
-   - **Confirm the `status` variable is `true`** (call objective achieved)
-   - **Review the extracted `summary`** - this contains AI-generated call summary
-   - These variables are extracted after each call based on:
-     - Call transcript
-     - Variable descriptions
-     - Variable types (Boolean for status)
-     - System prompt context
+3. **Anrufergebnisse und Variablenextraktion überprüfen:**
+   - **Navigieren Sie zu Ihrer Anrufliste** und finden Sie den letzten Anruf
+   - **Klicken Sie auf den Anruf**, um Details anzuzeigen
+   - **Bestätigen Sie, dass die `status`-Variable `true` ist** (Anrufziel erreicht)
+   - **Überprüfen Sie die extrahierte `summary`** - diese enthält die KI-generierte Anrufzusammenfassung
+   - Diese Variablen werden nach jedem Anruf basierend auf Folgendem extrahiert:
+     - Anruftranskript
+     - Variablenbeschreibungen
+     - Variablentypen (Boolean für Status)
+     - System-Prompt-Kontext
 
 <Note>
-The variables after a call are being extracted. You can refresh the page after about a minute and then you will see the extracted variables.
+Die Variablen nach einem Anruf werden extrahiert. Sie können die Seite nach etwa einer Minute aktualisieren und dann die extrahierten Variablen sehen.
 </Note>
 
-## Step 5: Configure Automation with Call Data
+## Schritt 5: Automatisierung mit Anrufdaten konfigurieren
 
 <video
   autoPlay
@@ -154,12 +154,12 @@ The variables after a call are being extracted. You can refresh the page after a
   playsinline
   src="/resources/tutorials/post-call-sms/11-received-call-data.mp4"></video>
 
-1. **Return to your automation tab**
-2. **Verify you received call data** from the test trigger
-   - You should see the webhook data because you clicked "Test Trigger" and then made a call
-   - The automation received the request after the call ended and variables were extracted
+1. **Kehren Sie zu Ihrem Automatisierungs-Tab zurück**
+2. **Überprüfen Sie, ob Sie Anrufdaten erhalten haben** vom Test-Trigger
+   - Sie sollten die Webhook-Daten sehen, weil Sie auf "Test Trigger" geklickt und dann einen Anruf getätigt haben
+   - Die Automatisierung erhielt die Anfrage nach Anrufende und Variablenextraktion
 
-3. **Alternative method - resend webhook data from existing calls:**
+3. **Alternative Methode - Webhook-Daten von bestehenden Anrufen erneut senden:**
 
 <video
   autoPlay
@@ -168,16 +168,16 @@ The variables after a call are being extracted. You can refresh the page after a
   playsinline
   src="/resources/tutorials/post-call-sms/12-resend-webhook.mp4"></video>
 
-   - If you need to test with different call data, you can reuse any existing call
-   - **Click "Test Trigger"** again in your automation
-   - **Go to any completed call** in your platform  
-   - **Click "Resend Webhook"** to push that call's data to your automation
-   - **Return to automation tab** to see the updated data
+   - Wenn Sie mit verschiedenen Anrufdaten testen müssen, können Sie jeden bestehenden Anruf wiederverwenden
+   - **Klicken Sie erneut auf "Test Trigger"** in Ihrer Automatisierung
+   - **Gehen Sie zu einem beliebigen abgeschlossenen Anruf** in Ihrer Plattform
+   - **Klicken Sie auf "Resend Webhook"**, um die Daten dieses Anrufs an Ihre Automatisierung zu senden
+   - **Kehren Sie zum Automatisierungs-Tab zurück**, um die aktualisierten Daten zu sehen
 
-### Adding New Post-Call Variables
+### Neue Post-Call-Variablen hinzufügen
 
 <Note>
-If you need to add a new post-call variable after creating the automation, follow this process to update your automation with the new variable data.
+Wenn Sie nach der Erstellung der Automatisierung eine neue Post-Call-Variable hinzufügen müssen, befolgen Sie diesen Prozess, um Ihre Automatisierung mit den neuen Variablendaten zu aktualisieren.
 </Note>
 
 <video
@@ -187,17 +187,17 @@ If you need to add a new post-call variable after creating the automation, follo
   playsinline
   src="/resources/tutorials/post-call-sms/add-variable.mp4"></video>
 
-1. **Define the new variable in your assistant:**
-   - Go to assistant settings → "Post-call Actions" tab
-   - Add your new post-call variable (name, type, description)
-   - **Save the assistant**
+1. **Definieren Sie die neue Variable in Ihrem Assistenten:**
+   - Gehen Sie zu Assistenteneinstellungen → Tab "Post-call Actions"
+   - Fügen Sie Ihre neue Post-Call-Variable hinzu (Name, Typ, Beschreibung)
+   - **Speichern Sie den Assistenten**
 
-2. **Update automation with new variable data:**
-   - **Return to your automation**
-   - **Click "Test Trigger"** to prepare for new webhook data
+2. **Automatisierung mit neuen Variablendaten aktualisieren:**
+   - **Kehren Sie zu Ihrer Automatisierung zurück**
+   - **Klicken Sie auf "Test Trigger"**, um sich auf neue Webhook-Daten vorzubereiten
 
 
-3. **Re-evaluate an existing call:**
+3. **Einen bestehenden Anruf neu bewerten:**
 
 <video
   autoPlay
@@ -206,22 +206,22 @@ If you need to add a new post-call variable after creating the automation, follo
   playsinline
   src="/resources/tutorials/post-call-sms/re-evaluate.mp4"></video>
 
-   - **Go to any completed call** for this assistant
-   - **Click "Re-evaluate"** to extract the new variable from that call
-   - **Wait for processing** to complete
+   - **Gehen Sie zu einem beliebigen abgeschlossenen Anruf** für diesen Assistenten
+   - **Klicken Sie auf "Re-evaluate"**, um die neue Variable aus diesem Anruf zu extrahieren
+   - **Warten Sie auf Abschluss der Verarbeitung**
 
-4. **Send updated data to automation:**
-   - **Click "Resend Webhook"** on the same call
-   - **Return to automation tab** 
-   - **Verify the new variable** is now available in your automation data
+4. **Aktualisierte Daten an Automatisierung senden:**
+   - **Klicken Sie auf "Resend Webhook"** beim selben Anruf
+   - **Kehren Sie zum Automatisierungs-Tab zurück**
+   - **Überprüfen Sie**, dass die neue Variable jetzt in Ihren Automatisierungsdaten verfügbar ist
 
 <Tip>
-This resend feature is useful for testing different scenarios without making new calls every time.
+Diese Resend-Funktion ist nützlich zum Testen verschiedener Szenarien, ohne jedes Mal neue Anrufe zu tätigen.
 </Tip>
 
-## Step 6: Add Conditional Logic for Goal-Based SMS
+## Schritt 6: Bedingte Logik für zielbasierte SMS hinzufügen
 
-We want to send SMS only when the call objective is achieved, so we need a decision branch in our automation.
+Wir möchten SMS nur senden, wenn das Anrufziel erreicht wurde, also benötigen wir einen Entscheidungs-Branch in unserer Automatisierung.
 
 <video
   autoPlay
@@ -230,9 +230,9 @@ We want to send SMS only when the call objective is achieved, so we need a decis
   playsinline
   src="/resources/tutorials/post-call-sms/13-add-branch.mp4"></video>
 
-1. **Click the "+" sign** to add a new step
-2. **Search for "Branch"** in the control flow options
-3. **Select the Branch** component
+1. **Klicken Sie auf das "+"-Zeichen**, um einen neuen Schritt hinzuzufügen
+2. **Suchen Sie nach "Branch"** in den Kontrollfluss-Optionen
+3. **Wählen Sie die Branch**-Komponente
 
 <video
   autoPlay
@@ -241,24 +241,24 @@ We want to send SMS only when the call objective is achieved, so we need a decis
   playsinline
   src="/resources/tutorials/post-call-sms/14-configure-branch-condition.mp4"></video>
 
-4. **Configure the branch condition:**
-   - **A sidebar will appear** for setting up the condition
-   - **Search for the `status` variable** from your call data
-   - **Select the `status` variable**
-   - **Choose "Boolean is true"** as the condition type
-   - This creates **two paths**: **True (left)** and **False (right)**
+4. **Konfigurieren Sie die Branch-Bedingung:**
+   - **Eine Sidebar wird erscheinen** zum Einrichten der Bedingung
+   - **Suchen Sie nach der `status`-Variable** aus Ihren Anrufdaten
+   - **Wählen Sie die `status`-Variable**
+   - **Wählen Sie "Boolean is true"** als Bedingungstyp
+   - Dies erstellt **zwei Pfade**: **True (links)** und **False (rechts)**
 
 <Note>
-The `status` variable is Boolean (true/false). After each call, this variable will be extracted and will be `true` if the call objective was achieved, otherwise `false`. The branch will execute the "True" path when the goal was achieved and the "False" path when it wasn't.
+Die `status`-Variable ist Boolean (true/false). Nach jedem Anruf wird diese Variable extrahiert und ist `true`, wenn das Anrufziel erreicht wurde, andernfalls `false`. Der Branch führt den "True"-Pfad aus, wenn das Ziel erreicht wurde, und den "False"-Pfad, wenn nicht.
 </Note>
 
-**Understanding the Logic:**
-- **True path (left)**: Actions for successful calls (objective achieved)
-- **False path (right)**: Actions for unsuccessful calls (objective not achieved)
+**Die Logik verstehen:**
+- **True-Pfad (links)**: Aktionen für erfolgreiche Anrufe (Ziel erreicht)
+- **False-Pfad (rechts)**: Aktionen für nicht erfolgreiche Anrufe (Ziel nicht erreicht)
 
-## Step 7: Configure SMS Action for Successful Calls
+## Schritt 7: SMS-Aktion für erfolgreiche Anrufe konfigurieren
 
-Now we'll add the SMS action that triggers when the call objective is achieved.
+Jetzt fügen wir die SMS-Aktion hinzu, die ausgelöst wird, wenn das Anrufziel erreicht wurde.
 
 <video
   autoPlay
@@ -267,9 +267,9 @@ Now we'll add the SMS action that triggers when the call objective is achieved.
   playsinline
   src="/resources/tutorials/post-call-sms/15-add-sms-action.mp4"></video>
 
-1. **On the "True" branch** (successful calls), **click the "+" sign**
-2. **Search for your calling platform**
-3. **Select "Send SMS to Customer"**
+1. **Auf dem "True"-Branch** (erfolgreiche Anrufe), **klicken Sie auf das "+"-Zeichen**
+2. **Suchen Sie nach Ihrer Anrufplattform**
+3. **Wählen Sie "Send SMS to Customer"**
 
 <video
   autoPlay
@@ -278,14 +278,14 @@ Now we'll add the SMS action that triggers when the call objective is achieved.
   playsinline
   src="/resources/tutorials/post-call-sms/16-select-phone-number.mp4"></video>
 
-4. **Select an SMS-enabled phone number** from your platform:
-   - **Choose an existing number** that you have in your platform
-   - This number will be the **sender of your SMS messages**
-   - Make sure the number has SMS capabilities enabled
+4. **Wählen Sie eine SMS-fähige Telefonnummer** aus Ihrer Plattform:
+   - **Wählen Sie eine bestehende Nummer**, die Sie in Ihrer Plattform haben
+   - Diese Nummer wird der **Absender Ihrer SMS-Nachrichten** sein
+   - Stellen Sie sicher, dass die Nummer SMS-Fähigkeiten aktiviert hat
 
-## Step 8: Map SMS Content and Recipient
+## Schritt 8: SMS-Inhalt und Empfänger mappen
 
-Now we'll configure who receives the SMS and what message they get.
+Jetzt konfigurieren wir, wer die SMS erhält und welche Nachricht sie bekommen.
 
 <video
   autoPlay
@@ -294,12 +294,12 @@ Now we'll configure who receives the SMS and what message they get.
   playsinline
   src="/resources/tutorials/post-call-sms/17-map-customer-phone.mp4"></video>
 
-1. **Configure the SMS recipient:**
-   - **Click on "Customer Phone" input field**
-   - **A sidebar will open** showing available data from the call
-   - **Search for the variable that holds the phone number**
-   - **Select the phone number** from your call data
-   - **Click "Insert"** to map the field
+1. **SMS-Empfänger konfigurieren:**
+   - **Klicken Sie auf das "Customer Phone"-Eingabefeld**
+   - **Eine Sidebar wird geöffnet**, die verfügbare Daten aus dem Anruf zeigt
+   - **Suchen Sie nach der Variable, die die Telefonnummer enthält**
+   - **Wählen Sie die Telefonnummer** aus Ihren Anrufdaten
+   - **Klicken Sie auf "Insert"**, um das Feld zu mappen
 
 <video
   autoPlay
@@ -308,15 +308,15 @@ Now we'll configure who receives the SMS and what message they get.
   playsinline
   src="/resources/tutorials/post-call-sms/18-configure-sms-content.mp4"></video>
 
-2. **Configure the SMS message content:**
-   - **Move to the text message field**
-   - **Use the `summary` variable** for personalized content
-   - The `summary` is the post-call variable that contains AI-generated call summary
-   - **You can write custom text** + dynamic summary
-   - **Example**: "Thank you for your time! Here's a summary of our call: {summary}"
+2. **SMS-Nachrichteninhalt konfigurieren:**
+   - **Wechseln Sie zum Textnachrichtenfeld**
+   - **Verwenden Sie die `summary`-Variable** für personalisierten Inhalt
+   - Die `summary` ist die Post-Call-Variable, die die KI-generierte Anrufzusammenfassung enthält
+   - **Sie können benutzerdefinierten Text schreiben** + dynamische Zusammenfassung
+   - **Beispiel**: "Vielen Dank für Ihre Zeit! Hier ist eine Zusammenfassung unseres Anrufs: {summary}"
 
 <Note>
-The `summary` variable is filled automatically after each call based on the conversation discussion and will be unique for each customer interaction.
+Die `summary`-Variable wird automatisch nach jedem Anruf basierend auf der Gesprächsdiskussion ausgefüllt und ist für jede Kundeninteraktion einzigartig.
 </Note>
 
 <video
@@ -326,25 +326,25 @@ The `summary` variable is filled automatically after each call based on the conv
   playsinline
   src="/resources/tutorials/post-call-sms/19-test-sms-action.mp4"></video>
 
-3. **Test the SMS action:**
-   - **Click "Test Step"** to send a test SMS using your call data
-   - **Verify successful delivery** in the test results
-   - **Check your phone** for the actual SMS message
-   - **Confirm the message content** includes the call summary
+3. **SMS-Aktion testen:**
+   - **Klicken Sie auf "Test Step"**, um eine Test-SMS mit Ihren Anrufdaten zu senden
+   - **Überprüfen Sie erfolgreiche Zustellung** in den Testergebnissen
+   - **Prüfen Sie Ihr Telefon** auf die tatsächliche SMS-Nachricht
+   - **Bestätigen Sie den Nachrichteninhalt** einschließlich der Anrufzusammenfassung
 
-## Step 9: US Phone Numbers - Twilio Integration
+## Schritt 9: US-Telefonnummern - Twilio-Integration
 
 <Note>
-**Important for US phone numbers**: If your SMS messages need to be sent to US phone numbers, you will need to use Twilio instead of our AI calling platform's SMS feature. This requires A2P verification for compliance with US regulations.
+**Wichtig für US-Telefonnummern**: Wenn Ihre SMS-Nachrichten an US-Telefonnummern gesendet werden müssen, müssen Sie stattdessen Twilio anstelle der SMS-Funktion unserer KI-Anrufplattform verwenden. Dies erfordert A2P-Verifizierung für die Einhaltung der US-Vorschriften.
 </Note>
 
-### Setting Up Twilio for US SMS
+### Twilio für US-SMS einrichten
 
-If you need to send SMS to US numbers, follow these steps:
+Wenn Sie SMS an US-Nummern senden müssen, befolgen Sie diese Schritte:
 
-1. **Purchase a phone number from Twilio** with SMS capabilities
-2. **Complete A2P verification** process in your Twilio account
-3. **Replace the SMS action** in your automation:
+1. **Kaufen Sie eine Telefonnummer von Twilio** mit SMS-Fähigkeiten
+2. **Schließen Sie den A2P-Verifizierungsprozess ab** in Ihrem Twilio-Konto
+3. **Ersetzen Sie die SMS-Aktion** in Ihrer Automatisierung:
 
 <video
   autoPlay
@@ -353,8 +353,8 @@ If you need to send SMS to US numbers, follow these steps:
   playsinline
   src="/resources/tutorials/post-call-sms/search-twilio.mp4"></video>
 
-   - **Search for "Twilio"** in the action search
-   - **Select "Send SMS"** from Twilio options
+   - **Suchen Sie nach "Twilio"** in der Aktionssuche
+   - **Wählen Sie "Send SMS"** aus Twilio-Optionen
 
 <video
   autoPlay
@@ -363,89 +363,89 @@ If you need to send SMS to US numbers, follow these steps:
   playsinline
   src="/resources/tutorials/post-call-sms/twilio-new-connection.mp4"></video>
 
-   - **Create new connection** when prompted
-   - **Complete Account SID and Auth Token** from your Twilio dashboard
-   - **Save the connection**
+   - **Erstellen Sie eine neue Verbindung**, wenn aufgefordert
+   - **Vervollständigen Sie Account SID und Auth Token** aus Ihrem Twilio-Dashboard
+   - **Speichern Sie die Verbindung**
 
-4. **Configure Twilio SMS:**
-   - **Select your Twilio phone number** 
-   - **Map customer phone number** (same process as above)
-   - **Configure message body** (same process as with our platform)
-   - **Test the step** to verify delivery
+4. **Twilio-SMS konfigurieren:**
+   - **Wählen Sie Ihre Twilio-Telefonnummer**
+   - **Mappen Sie Kunden-Telefonnummer** (gleicher Prozess wie oben)
+   - **Konfigurieren Sie Nachrichtentext** (gleicher Prozess wie mit unserer Plattform)
+   - **Testen Sie den Schritt**, um Zustellung zu überprüfen
 
 <Warning>
-US SMS regulations require A2P verification for business messaging. Using unverified numbers may result in message blocking or account suspension.
+US-SMS-Vorschriften erfordern A2P-Verifizierung für Geschäftsnachrichten. Die Verwendung nicht verifizierter Nummern kann zur Sperrung von Nachrichten oder Kontosperrung führen.
 </Warning>
 
-## Step 10: Publish and Activate Automation
+## Schritt 10: Automatisierung veröffentlichen und aktivieren
 
 <Frame>
-  <img src="/resources/tutorials/post-call-sms/20-publish-automation.png" alt="Publishing the automation" />
+  <img src="/resources/tutorials/post-call-sms/20-publish-automation.png" alt="Automatisierung veröffentlichen" />
 </Frame>
 
-1. **Click "Publish"** to activate your automation
-2. **Your post-call SMS automation is now live and ready**
+1. **Klicken Sie auf "Publish"**, um Ihre Automatisierung zu aktivieren
+2. **Ihre Post-Call-SMS-Automatisierung ist jetzt live und bereit**
 
-**What happens now:**
-- **After each call** with the selected assistant
-- **If the objective was achieved** (`status` = true)
-- **The customer will automatically receive an SMS** with the call summary
+**Was jetzt passiert:**
+- **Nach jedem Anruf** mit dem ausgewählten Assistenten
+- **Wenn das Ziel erreicht wurde** (`status` = true)
+- **Erhält der Kunde automatisch eine SMS** mit der Anrufzusammenfassung
 
-3. **Monitor automation performance:**
-   - **Click "Runs"** to see execution history
-   - **Verify SMS delivery** for successful calls  
-   - **Monitor any failed executions**
-   - **Track which calls triggered SMS** vs which didn't
+3. **Automatisierungsleistung überwachen:**
+   - **Klicken Sie auf "Runs"**, um Ausführungshistorie zu sehen
+   - **Überprüfen Sie SMS-Zustellung** für erfolgreiche Anrufe
+   - **Überwachen Sie fehlgeschlagene Ausführungen**
+   - **Verfolgen Sie, welche Anrufe SMS ausgelöst haben** vs. welche nicht
 
 <Tip>
-From now on, after each call with the objective achieved, the customer will receive an SMS automatically. This improves follow-up consistency and customer engagement.
+Von nun an erhält der Kunde nach jedem Anruf mit erreichtem Ziel automatisch eine SMS. Dies verbessert Follow-up-Konsistenz und Kundenengagement.
 </Tip>
 
-### SMS Delivery Tracking
+### SMS-Zustellungsverfolgung
 
-Monitor your SMS automation effectiveness:
-- **Delivery rates**: Track successful SMS delivery
-- **Response rates**: Monitor customer engagement
-- **Opt-out handling**: Respect customer preferences
+Überwachen Sie die Effektivität Ihrer SMS-Automatisierung:
+- **Zustellungsraten**: Verfolgen Sie erfolgreiche SMS-Zustellung
+- **Antwortraten**: Überwachen Sie Kundenengagement
+- **Opt-out-Handhabung**: Respektieren Sie Kundenpräferenzen
 
 ## Best Practices
 
-### Message Content
-- **Keep messages concise** and valuable
-- **Personalize with call data** when relevant
-- **Include clear next steps** or contact information
+### Nachrichteninhalt
+- **Halten Sie Nachrichten prägnant** und wertvoll
+- **Personalisieren Sie mit Anrufdaten**, wenn relevant
+- **Fügen Sie klare nächste Schritte** oder Kontaktinformationen hinzu
 
-### Timing Considerations
-- **Send immediately** after successful calls for best engagement
-- **Consider time zones** for your customer base
-- **Avoid late-night messaging** unless appropriate for your business
+### Zeitliche Überlegungen
+- **Senden Sie sofort** nach erfolgreichen Anrufen für bestes Engagement
+- **Berücksichtigen Sie Zeitzonen** für Ihren Kundenstamm
+- **Vermeiden Sie nächtliche Nachrichten**, es sei denn, es ist für Ihr Geschäft angemessen
 
-## Troubleshooting
+## Fehlerbehebung
 
-### Common Issues
+### Häufige Probleme
 
-**SMS not sending:**
-- Verify phone number has SMS capabilities
-- Check customer phone number format (+1234567890)
-- Confirm SMS action is on the correct branch
+**SMS wird nicht gesendet:**
+- Überprüfen Sie, ob Telefonnummer SMS-Fähigkeiten hat
+- Prüfen Sie Kunden-Telefonnummernformat (+1234567890)
+- Bestätigen Sie, dass SMS-Aktion auf korrektem Branch ist
 
-**Automation not triggering:**
-- Ensure webhook is enabled in assistant settings
-- Verify automation is published and active
-- Check that calls are completing successfully
+**Automatisierung wird nicht ausgelöst:**
+- Stellen Sie sicher, dass Webhook in Assistenteneinstellungen aktiviert ist
+- Überprüfen Sie, ob Automatisierung veröffentlicht und aktiv ist
+- Prüfen Sie, dass Anrufe erfolgreich abgeschlossen werden
 
-**Wrong message content:**
-- Verify variable mapping in SMS content
-- Check that post-call variables are being extracted
-- Test with various call scenarios
+**Falscher Nachrichteninhalt:**
+- Überprüfen Sie Variablen-Mapping in SMS-Inhalt
+- Prüfen Sie, ob Post-Call-Variablen extrahiert werden
+- Testen Sie mit verschiedenen Anrufszenarien
 
-## Next Steps
+## Nächste Schritte
 
-Once your basic SMS automation is working:
-- **Add email automation** for additional follow-up
-- **Create different messages** for different call outcomes
-- **Integrate with CRM systems** to log communication
-- **Set up advanced analytics** to track engagement
-- **A/B test different message templates** for optimal results
+Sobald Ihre grundlegende SMS-Automatisierung funktioniert:
+- **E-Mail-Automatisierung hinzufügen** für zusätzliches Follow-up
+- **Verschiedene Nachrichten erstellen** für unterschiedliche Anrufergebnisse
+- **Mit CRM-Systemen integrieren**, um Kommunikation zu protokollieren
+- **Erweiterte Analysen einrichten**, um Engagement zu verfolgen
+- **A/B-Tests verschiedener Nachrichtenvorlagen** für optimale Ergebnisse
 
-Your customers will now receive personalized SMS messages after successful calls, improving engagement and follow-up consistency!
+Ihre Kunden erhalten jetzt personalisierte SMS-Nachrichten nach erfolgreichen Anrufen, was Engagement und Follow-up-Konsistenz verbessert!

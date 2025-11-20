@@ -1,181 +1,181 @@
 ---
-title: "Post-call Actions"
+title: "Nach-Anruf-Aktionen"
 icon: "webhook"
-description: "Extract data from the call and send it to an app/webhook for automation workflows."
+description: "Extrahieren Sie Daten aus dem Anruf und senden Sie diese an eine App/einen Webhook für Automatisierungs-Workflows."
 ---
 
-Configure what happens after calls end - extract specific information from conversations and send it to external systems for further processing.
+Konfigurieren Sie, was nach Anrufende passiert - extrahieren Sie spezifische Informationen aus Gesprächen und senden Sie diese an externe Systeme zur weiteren Verarbeitung.
 
-## Overview
+## Überblick
 
-Post-call actions automatically:
-- Extract structured data from conversations using AI
-- Send extracted variables to webhooks for automation
-- Trigger workflows in connected platforms
-- Update CRM records and databases
-- Enable complex automation scenarios
+Nach-Anruf-Aktionen automatisch:
+- Extrahieren strukturierte Daten aus Gesprächen mittels KI
+- Senden extrahierte Variablen an Webhooks für Automatisierung
+- Lösen Workflows in verbundenen Plattformen aus
+- Aktualisieren CRM-Einträge und Datenbanken
+- Ermöglichen komplexe Automatisierungsszenarien
 
-## Post-call Variables
+## Nach-Anruf-Variablen
 
-Define the variables that the AI will extract from the call and send to a webhook.
+Definieren Sie die Variablen, die die KI aus dem Anruf extrahieren und an einen Webhook senden wird.
 
-### Variable Configuration
+### Variablen-Konfiguration
 
-Configure which information the AI should extract from each conversation:
+Konfigurieren Sie, welche Informationen die KI aus jedem Gespräch extrahieren soll:
 
 <AccordionGroup>
-  <Accordion title="Variable Definition" icon="code">
-    Create variables that the AI will identify and extract from conversations.
+  <Accordion title="Variablen-Definition" icon="code">
+    Erstellen Sie Variablen, die die KI aus Gesprächen identifizieren und extrahieren wird.
     
-    **How extraction works:**
-    The AI analyzes the complete call transcript and considers your system prompt context to extract the requested variables. It understands what was discussed during the call and extracts relevant information based on your variable descriptions.
+    **Wie Extraktion funktioniert:**
+    Die KI analysiert das vollständige Anruftranskript und berücksichtigt Ihren System-Prompt-Kontext, um die angeforderten Variablen zu extrahieren. Sie versteht, was während des Anrufs besprochen wurde, und extrahiert relevante Informationen basierend auf Ihren Variablenbeschreibungen.
     
-    **Configuration:**
-    - **Name:** Variable identifier (3-16 characters, lowercase, alphanumeric)
-    - **Type:** Data type for the extracted value
-    - **Description:** Clear explanation so AI understands what to extract from the conversation
+    **Konfiguration:**
+    - **Name:** Variablen-Identifikator (3-16 Zeichen, Kleinbuchstaben, alphanumerisch)
+    - **Typ:** Datentyp für den extrahierten Wert
+    - **Beschreibung:** Klare Erklärung, damit die KI versteht, was aus dem Gespräch zu extrahieren ist
     
-    **Variable Types:**
-    - **String:** Text values (names, addresses, comments)
-    - **Number:** Numeric values (quantities, prices, scores)
-    - **True/False:** Boolean values (yes/no answers, objectives achieved)
+    **Variablen-Typen:**
+    - **String:** Textwerte (Namen, Adressen, Kommentare)
+    - **Number:** Numerische Werte (Mengen, Preise, Bewertungen)
+    - **True/False:** Boolesche Werte (Ja/Nein-Antworten, erreichte Ziele)
   </Accordion>
   
-  <Accordion title="Default Variables" icon="list">
-    Every assistant includes these essential variables by default:
+  <Accordion title="Standard-Variablen" icon="list">
+    Jeder Assistent enthält standardmäßig diese wesentlichen Variablen:
     
-    **Status (True/False):** Whether the call objective was achieved or not
+    **Status (True/False):** Ob das Anrufziel erreicht wurde oder nicht
     
-    **Summary (String):** Call summary in a few words
+    **Summary (String):** Anrufzusammenfassung in wenigen Worten
     
-    You can add custom variables based on your specific use case.
+    Sie können benutzerdefinierte Variablen basierend auf Ihrem spezifischen Anwendungsfall hinzufügen.
   </Accordion>
   
-  <Accordion title="Variable Examples" icon="lightbulb">
-    Common variables for different scenarios:
+  <Accordion title="Variablen-Beispiele" icon="lightbulb">
+    Häufige Variablen für verschiedene Szenarien:
     
-    **Sales qualification:**
-    - `budget` (Number): Customer's budget range
-    - `decision_maker` (True/False): Is caller the decision maker
-    - `timeline` (String): When they need the solution
-    - `pain_points` (String): Main challenges mentioned
+    **Vertriebs-Qualifizierung:**
+    - `budget` (Number): Budgetbereich des Kunden
+    - `decision_maker` (True/False): Ist Anrufer der Entscheidungsträger
+    - `timeline` (String): Wann benötigen sie die Lösung
+    - `pain_points` (String): Hauptprobleme erwähnt
     
-    **Appointment booking:**
-    - `appointment_date` (String): Preferred appointment date
-    - `service_type` (String): Type of service requested
-    - `contact_method` (String): Preferred contact method
+    **Terminbuchung:**
+    - `appointment_date` (String): Bevorzugtes Termindatum
+    - `service_type` (String): Art der angeforderten Dienstleistung
+    - `contact_method` (String): Bevorzugte Kontaktmethode
     
-    **Support calls:**
-    - `issue_type` (String): Category of the problem
-    - `urgency_level` (Number): Priority score (1-10)
-    - `resolution_status` (True/False): Was issue resolved
+    **Support-Anrufe:**
+    - `issue_type` (String): Kategorie des Problems
+    - `urgency_level` (Number): Prioritätsbewertung (1-10)
+    - `resolution_status` (True/False): Wurde Problem gelöst
   </Accordion>
 </AccordionGroup>
 
-### Extraction Process
+### Extraktionsprozess
 
 <AccordionGroup>
-  <Accordion title="How AI Extracts Variables" icon="brain">
-    The AI uses sophisticated analysis to extract variables from your calls:
+  <Accordion title="Wie KI Variablen extrahiert" icon="brain">
+    Die KI verwendet ausgeklügelte Analyse zur Extraktion von Variablen aus Ihren Anrufen:
     
-    **Data sources:**
-    - **Complete call transcript:** Everything said by both the AI and the customer
-    - **System prompt context:** Your assistant's objectives and instructions help guide extraction
-    - **Variable descriptions:** Clear descriptions you provide for each variable
+    **Datenquellen:**
+    - **Vollständiges Anruftranskript:** Alles, was von der KI und dem Kunden gesagt wurde
+    - **System-Prompt-Kontext:** Die Ziele und Anweisungen Ihres Assistenten helfen bei der Extraktionssteuerung
+    - **Variablenbeschreibungen:** Klare Beschreibungen, die Sie für jede Variable bereitstellen
     
-    **Analysis method:**
-    1. AI reviews the entire conversation transcript
-    2. Considers the system prompt and call objectives
-    3. Identifies relevant information based on variable descriptions
-    4. Extracts and formats data according to specified types
-    5. Validates extracted values before sending to webhook
+    **Analysemethode:**
+    1. KI überprüft das gesamte Gesprächstranskript
+    2. Berücksichtigt System-Prompt und Anrufziele
+    3. Identifiziert relevante Informationen basierend auf Variablenbeschreibungen
+    4. Extrahiert und formatiert Daten entsprechend angegebener Typen
+    5. Validiert extrahierte Werte vor dem Senden an Webhook
   </Accordion>
 </AccordionGroup>
 
 ### Best Practices
 
 <Warning>
-**Variable naming:** Use lowercase, alphanumeric characters only. No spaces or special characters except underscores.
+**Variablen-Benennung:** Verwenden Sie nur Kleinbuchstaben, alphanumerische Zeichen. Keine Leerzeichen oder Sonderzeichen außer Unterstriche.
 </Warning>
 
 <Tip>
-**Clear descriptions:** Write descriptions that clearly explain what the AI should look for in the conversation transcript. The more specific and context-aware, the better the extraction accuracy.
+**Klare Beschreibungen:** Schreiben Sie Beschreibungen, die klar erklären, wonach die KI im Gesprächstranskript suchen soll. Je spezifischer und kontextbewusster, desto besser die Extraktionsgenauigkeit.
 </Tip>
 
 <Note>
-**System prompt synergy:** Your variable descriptions work best when they align with your system prompt objectives. If your assistant is designed for lead qualification, your variables should reflect that purpose.
+**System-Prompt-Synergie:** Ihre Variablenbeschreibungen funktionieren am besten, wenn sie mit Ihren System-Prompt-Zielen übereinstimmen. Wenn Ihr Assistent für Lead-Qualifizierung konzipiert ist, sollten Ihre Variablen diesen Zweck widerspiegeln.
 </Note>
 
-## Webhook Configuration
+## Webhook-Konfiguration
 
-Make a request to a URL that sends the extracted variables to external systems.
+Führen Sie eine Anfrage an eine URL durch, die die extrahierten Variablen an externe Systeme sendet.
 
-### Webhook Settings
+### Webhook-Einstellungen
 
 <AccordionGroup>
-  <Accordion title="Webhook Status" icon="check">
-    **Enabled/Disabled:** Control whether webhooks are sent after calls
+  <Accordion title="Webhook-Status" icon="check">
+    **Aktiviert/Deaktiviert:** Steuern Sie, ob Webhooks nach Anrufen gesendet werden
     
-    **Default:** Disabled - Enable only when you have a webhook endpoint ready to receive data
+    **Standard:** Deaktiviert - Nur aktivieren, wenn Sie einen Webhook-Endpunkt zum Empfang von Daten bereit haben
   </Accordion>
   
-  <Accordion title="Webhook URL" icon="link">
-    **URL endpoint:** Where to send the extracted data
+  <Accordion title="Webhook-URL" icon="link">
+    **URL-Endpunkt:** Wohin die extrahierten Daten gesendet werden
     
-    **Format:** Must be a valid URL
+    **Format:** Muss eine gültige URL sein
 
-    **Example:** `https://automate.autocalls.ai/api/v1/webhooks/your-webhook-id`
+    **Beispiel:** `https://automate.autocalls.ai/api/v1/webhooks/your-webhook-id`
     
-    **Test functionality:** Built-in test feature sends sample data to verify connectivity
+    **Test-Funktionalität:** Integrierte Test-Funktion sendet Beispieldaten zur Konnektivitätsprüfung
   </Accordion>
   
-  <Accordion title="Delivery Options" icon="gear">
-    **Send webhook only on completed:** 
-    - **Yes (Default):** Only send data for completed calls
-    - **No:** Send data for all calls regardless of completion status
+  <Accordion title="Lieferoptionen" icon="gear">
+    **Webhook nur bei Abschluss senden:** 
+    - **Ja (Standard):** Nur Daten für abgeschlossene Anrufe senden
+    - **Nein:** Daten für alle Anrufe senden, unabhängig vom Abschlussstatus
     
-    **Include recording in webhook:**
-    - **Yes (Default):** Include recording URL in the webhook payload
-    - **No:** Send only extracted variables without recording link
+    **Aufzeichnung in Webhook einschließen:**
+    - **Ja (Standard):** Aufzeichnungs-URL in Webhook-Payload einschließen
+    - **Nein:** Nur extrahierte Variablen ohne Aufzeichnungslink senden
   </Accordion>
 </AccordionGroup>
 
-### Webhook Payload
+### Webhook-Payload
 
-The webhook will receive a comprehensive JSON payload containing call details, extracted variables, and transcript. For complete API documentation, see [Post-Call Webhook API](/api-reference/webhooks/post-call-webhook).
+Der Webhook erhält eine umfassende JSON-Payload mit Anrufdetails, extrahierten Variablen und Transkript. Für vollständige API-Dokumentation siehe [Post-Call Webhook API](/api-reference/webhooks/post-call-webhook).
 
-**Key payload fields:**
+**Hauptfelder der Payload:**
 
 <AccordionGroup>
-  <Accordion title="Call Information" icon="phone">
-    - **id:** Unique call identifier
-    - **customer_phone:** Customer's phone number (E.164 format)
-    - **assistant_phone:** Assistant's phone number
-    - **duration:** Call duration in seconds
-    - **status:** Call status (initiated, ringing, busy, in-progress, ended, completed, ended_by_customer, ended_by_assistant, unanswered, failed)
-    - **created_at/finished_at:** ISO 8601 timestamps
+  <Accordion title="Anrufinformationen" icon="phone">
+    - **id:** Eindeutige Anruf-ID
+    - **customer_phone:** Telefonnummer des Kunden (E.164-Format)
+    - **assistant_phone:** Telefonnummer des Assistenten
+    - **duration:** Anrufdauer in Sekunden
+    - **status:** Anrufstatus (initiated, ringing, busy, in-progress, ended, completed, ended_by_customer, ended_by_assistant, unanswered, failed)
+    - **created_at/finished_at:** ISO 8601 Zeitstempel
   </Accordion>
   
-  <Accordion title="Extracted Variables" icon="code">
-    - **extracted_variables:** AI-extracted data based on your post-call schema configuration (see [Post-call Variables](#post-call-variables) section above)
-    - **input_variables:** Variables passed before the call (see [Call Variables](/ai-assistants/settings/prompt-and-tools#call-variables))
-    - Includes default variables (status, summary) plus your custom variables
+  <Accordion title="Extrahierte Variablen" icon="code">
+    - **extracted_variables:** KI-extrahierte Daten basierend auf Ihrer Nach-Anruf-Schema-Konfiguration (siehe Abschnitt [Nach-Anruf-Variablen](#post-call-variables) oben)
+    - **input_variables:** Vor dem Anruf übergebene Variablen (siehe [Anrufvariablen](/ai-assistants/settings/prompt-and-tools#call-variables))
+    - Enthält Standard-Variablen (Status, Zusammenfassung) plus Ihre benutzerdefinierten Variablen
   </Accordion>
   
-  <Accordion title="Conversation Data" icon="message">
-    - **transcript:** Detailed conversation transcript with timestamps
-    - **formatted_transcript:** Human-readable conversation format
-    - **recording_url:** Call recording URL (if enabled)
+  <Accordion title="Gesprächsdaten" icon="message">
+    - **transcript:** Detailliertes Gesprächstranskript mit Zeitstempeln
+    - **formatted_transcript:** Menschenlesbare Gesprächsformatierung
+    - **recording_url:** Anrufaufzeichnungs-URL (wenn aktiviert)
   </Accordion>
   
-  <Accordion title="Campaign & Lead Data" icon="users">
-    - **lead:** Lead information (for campaign calls)
-    - **campaign:** Campaign details and settings
-    - Only included for calls that are part of campaigns
+  <Accordion title="Kampagnen- & Lead-Daten" icon="users">
+    - **lead:** Lead-Informationen (für Kampagnenanrufe)
+    - **campaign:** Kampagnendetails und Einstellungen
+    - Nur für Anrufe enthalten, die Teil von Kampagnen sind
   </Accordion>
 </AccordionGroup>
 
-**Example webhook payload:**
+**Beispiel Webhook-Payload:**
 
 ```json
 {
@@ -186,182 +186,182 @@ The webhook will receive a comprehensive JSON payload containing call details, e
   "status": "completed",
   "extracted_variables": {
     "status": true,
-    "summary": "Customer interested in product demo",
-    "lead_quality": "high",
+    "summary": "Kunde interessiert an Produkt-Demo",
+    "lead_quality": "hoch",
     "budget": 5000
   },
   "input_variables": {
-    "customer_name": "John Doe",
+    "customer_name": "Max Mustermann",
     "product_interest": "Pro Plan"
   },
   "transcript": [
     {
-      "text": "Hello! This is Sarah from Autocalls.",
+      "text": "Hallo! Hier ist Sarah von Autocalls.",
       "type": "transcript",
       "sender": "bot",
       "timestamp": 1756812511.315143
     },
     {
-      "text": "Hi, I'm doing well, thanks.",
+      "text": "Hallo, mir geht es gut, danke.",
       "type": "transcript", 
       "sender": "human",
       "timestamp": 1756812514.104436
     }
   ],
-  "formatted_transcript": "AI: Hello! This is Sarah from Autocalls.\\nCustomer: Hi, I'm doing well, thanks.",
+  "formatted_transcript": "KI: Hallo! Hier ist Sarah von Autocalls.\\nKunde: Hallo, mir geht es gut, danke.",
   "recording_url": "https://app.autocalls.ai/storage/recordings/call-12345.mp4",
   "created_at": "2025-01-15T10:30:00.000000Z",
   "finished_at": "2025-01-15T10:32:05.000000Z"
 }
 ```
 
-### Testing Webhooks
+### Webhooks testen
 
 <Tip>
-**Test before going live:** Use the "Make test request" button to send sample data to your webhook endpoint and verify it's working correctly.
+**Vor der Live-Schaltung testen:** Verwenden Sie die Schaltfläche "Testanfrage durchführen", um Beispieldaten an Ihren Webhook-Endpunkt zu senden und zu überprüfen, ob er korrekt funktioniert.
 </Tip>
 
-**Test process:**
-1. Configure your variables and webhook URL
-2. Save your assistant settings
-3. Click "Make test request" 
-4. Check your webhook endpoint receives the test data
-5. Verify the payload structure matches your expectations
+**Testprozess:**
+1. Konfigurieren Sie Ihre Variablen und Webhook-URL
+2. Speichern Sie Ihre Assistenteneinstellungen
+3. Klicken Sie auf "Testanfrage durchführen"
+4. Überprüfen Sie, ob Ihr Webhook-Endpunkt die Testdaten empfängt
+5. Verifizieren Sie, dass die Payload-Struktur Ihren Erwartungen entspricht
 
-## Integration Examples
+## Integrations-Beispiele
 
-### Our Automation Platform
+### Unsere Automatisierungs-Plattform
 
-**Primary integration:** Use our built-in no-code automation platform for seamless workflows:
+**Primäre Integration:** Verwenden Sie unsere integrierte No-Code-Automatisierungsplattform für nahtlose Workflows:
 
-- **Direct webhook processing:** No external setup required
-- **250+ app integrations:** Connect to CRM, email, calendars, and more
-- **Visual workflow builder:** Create complex automation without code
-- **Real-time data sync:** Instant processing of extracted variables
-- **Pre-built templates:** Ready-to-use workflows for common scenarios
+- **Direkte Webhook-Verarbeitung:** Keine externe Einrichtung erforderlich
+- **250+ App-Integrationen:** Verbinden Sie mit CRM, E-Mail, Kalendern und mehr
+- **Visueller Workflow-Builder:** Erstellen Sie komplexe Automatisierung ohne Code
+- **Echtzeit-Datensynchronisation:** Sofortige Verarbeitung extrahierter Variablen
+- **Vorgefertigte Vorlagen:** Sofort einsatzbereite Workflows für häufige Szenarien
 
-**Common automation workflows:**
-- **CRM updates:** Automatically update contact records in HubSpot, Salesforce, Pipedrive
-- **Email follow-ups:** Send personalized emails based on call outcomes
-- **Lead scoring:** Update lead scores based on extracted variables
-- **Calendar booking:** Schedule follow-up meetings automatically
-- **Team notifications:** Alert team members about important calls
+**Häufige Automatisierungs-Workflows:**
+- **CRM-Aktualisierungen:** Automatische Aktualisierung von Kontaktdatensätzen in HubSpot, Salesforce, Pipedrive
+- **E-Mail-Follow-ups:** Senden personalisierter E-Mails basierend auf Anrufergebnissen
+- **Lead-Scoring:** Aktualisieren von Lead-Bewertungen basierend auf extrahierten Variablen
+- **Kalenderbuchung:** Automatisches Planen von Follow-up-Meetings
+- **Team-Benachrichtigungen:** Benachrichtigen von Teammitgliedern über wichtige Anrufe
 
-### External Platforms
+### Externe Plattformen
 
-**Any platform with webhook support:**
-- Receive webhook data from our platform
-- Process extracted variables in your own systems
-- Create custom automation workflows
-- Integrate with any API or service that accepts webhooks
+**Jede Plattform mit Webhook-Unterstützung:**
+- Webhook-Daten von unserer Plattform empfangen
+- Extrahierte Variablen in Ihren eigenen Systemen verarbeiten
+- Benutzerdefinierte Automatisierungs-Workflows erstellen
+- Mit jeder API oder jedem Dienst integrieren, der Webhooks akzeptiert
 
-**Use cases:**
-- Connect to any CRM, email platform, or business tool
-- Send data to custom applications
-- Trigger workflows in third-party automation platforms
-- Store data in external databases or systems
+**Anwendungsfälle:**
+- Mit jedem CRM, E-Mail-Plattform oder Geschäftstool verbinden
+- Daten an benutzerdefinierte Anwendungen senden
+- Workflows in Drittanbieter-Automatisierungsplattformen auslösen
+- Daten in externen Datenbanken oder Systemen speichern
 
-### Custom Development
+### Benutzerdefinierte Entwicklung
 
-**API endpoints:** Build custom receivers for webhook data
+**API-Endpunkte:** Erstellen Sie benutzerdefinierte Empfänger für Webhook-Daten
 
-**Database integration:** Store call data in your own systems
+**Datenbank-Integration:** Speichern Sie Anrufdaten in Ihren eigenen Systemen
 
-**Business logic:** Trigger complex workflows based on extracted variables
+**Geschäftslogik:** Lösen Sie komplexe Workflows basierend auf extrahierten Variablen aus
 
-## Testing Your Assistant
+## Testen Ihres Assistenten
 
-After configuring your assistant settings, it's important to test thoroughly before deploying to production.
+Nach der Konfiguration Ihrer Assistenteneinstellungen ist es wichtig, gründlich zu testen, bevor Sie in die Produktion gehen.
 
-### Testing Methods
+### Test-Methoden
 
 <AccordionGroup>
-  <Accordion title="Speak with Your Assistant" icon="microphone">
-    **Web-based testing:** Use the "Speak with your assistant" button to test directly from your browser
+  <Accordion title="Mit Ihrem Assistenten sprechen" icon="microphone">
+    **Webbasiertes Testen:** Verwenden Sie die Schaltfläche "Mit Ihrem Assistenten sprechen", um direkt von Ihrem Browser aus zu testen
     
-    **Features:**
-    - Real-time voice conversation through your web browser
-    - Test all assistant capabilities including tools and knowledge base
-    - No phone required - perfect for quick iterations
-    - Immediate feedback on responses and behavior
+    **Funktionen:**
+    - Echtzeit-Sprachgespräch über Ihren Webbrowser
+    - Testen aller Assistenten-Fähigkeiten einschließlich Tools und Wissensdatenbank
+    - Kein Telefon erforderlich - perfekt für schnelle Iterationen
+    - Sofortiges Feedback zu Antworten und Verhalten
     
-    **Best for:** Quick testing during development and configuration
+    **Am besten für:** Schnelles Testen während Entwicklung und Konfiguration
   </Accordion>
   
-  <Accordion title="Phone Call Testing" icon="phone">
-    **Real phone call testing:** Call your assistant from any phone number
+  <Accordion title="Telefonanruf-Testen" icon="phone">
+    **Echtes Telefonanruf-Testen:** Rufen Sie Ihren Assistenten von jeder Telefonnummer an
     
-    **Outbound assistants:**
-    - If no specific number is set: Assistant calls from a random number
-    - If caller ID is configured: Assistant calls from your specified number
-    - Test the complete outbound flow including dialing and initial message
+    **Ausgehende Assistenten:**
+    - Wenn keine spezifische Nummer gesetzt ist: Assistent ruft von einer zufälligen Nummer an
+    - Wenn Anrufer-ID konfiguriert ist: Assistent ruft von Ihrer angegebenen Nummer an
+    - Testen Sie den vollständigen ausgehenden Ablauf einschließlich Wählen und Anfangsnachricht
     
-    **Inbound assistants:**
-    - Call the assigned phone number directly
-    - Test how the assistant handles incoming calls
-    - Verify call routing and response quality
+    **Eingehende Assistenten:**
+    - Rufen Sie die zugewiesene Telefonnummer direkt an
+    - Testen Sie, wie der Assistent eingehende Anrufe bearbeitet
+    - Überprüfen Sie Anruf-Routing und Antwortqualität
     
-    **Best for:** Final testing with real phone conditions and audio quality
+    **Am besten für:** Abschließendes Testen mit echten Telefon bedingungen und Audioqualität
   </Accordion>
 </AccordionGroup>
 
-### Testing Checklist
+### Test-Checkliste
 
 <Tip>
-**Comprehensive testing:** Test all configured features including tools, knowledge base queries, variable extraction, and webhook delivery.
+**Umfassendes Testen:** Testen Sie alle konfigurierten Funktionen einschließlich Tools, Wissensdatenbank-Abfragen, Variablenextraktion und Webhook-Lieferung.
 </Tip>
 
-**Essential tests:**
-- Voice clarity and response speed
-- Knowledge base integration (if configured)
-- Tool functionality (transfer, scheduling, etc.)
-- Variable extraction accuracy
-- Webhook delivery (check your endpoint receives data)
-- Edge cases and error handling
+**Wesentliche Tests:**
+- Stimmklarheit und Antwortgeschwindigkeit
+- Wissensdatenbank-Integration (wenn konfiguriert)
+- Tool-Funktionalität (Übertragung, Planung usw.)
+- Variablenextraktions-Genauigkeit
+- Webhook-Lieferung (überprüfen Sie, ob Ihr Endpunkt Daten empfängt)
+- Edge-Cases und Fehlerbehandlung
 
-## Web Widget Integration
+## Web-Widget-Integration
 
-Configure your assistant to work as a web widget on your website for seamless customer interactions.
+Konfigurieren Sie Ihren Assistenten für die Arbeit als Web-Widget auf Ihrer Website für nahtlose Kundeninteraktionen.
 
-### Widget Configuration
+### Widget-Konfiguration
 
 <AccordionGroup>
-  <Accordion title="Widget Setup" icon="code">
-    **Easy integration:** Add your AI assistant to any website with a simple code snippet
+  <Accordion title="Widget-Einrichtung" icon="code">
+    **Einfache Integration:** Fügen Sie Ihren KI-Assistenten mit einem einfachen Code-Snippet zu jeder Website hinzu
     
-    **Features:**
-    - **Voice chat:** Customers can speak directly to your assistant
-    - **Text fallback:** Option for text-based conversations
-    - **Customizable appearance:** Match your brand colors and styling
-    - **Mobile responsive:** Works on all devices and screen sizes
+    **Funktionen:**
+    - **Sprach-Chat:** Kunden können direkt mit Ihrem Assistenten sprechen
+    - **Text-Fallback:** Option für textbasierte Gespräche
+    - **Anpassbares Erscheinungsbild:** Passen Sie Markenfarben und Styling an
+    - **Mobil-responsiv:** Funktioniert auf allen Geräten und Bildschirmgrößen
   </Accordion>
   
-  <Accordion title="Widget Behavior" icon="gear">
-    **Smart interactions:** The widget adapts to your assistant configuration
+  <Accordion title="Widget-Verhalten" icon="gear">
+    **Intelligente Interaktionen:** Das Widget passt sich Ihrer Assistenten-Konfiguration an
     
-    **Capabilities:**
-    - Uses same knowledge base and tools as phone assistant
-    - Supports all configured languages
-    - Extracts same post-call variables
-    - Sends webhooks for web conversations
-    - Respects same system prompt and personality
+    **Fähigkeiten:**
+    - Verwendet dieselbe Wissensdatenbank und Tools wie Telefon-Assistent
+    - Unterstützt alle konfigurierten Sprachen
+    - Extrahiert dieselben Nach-Anruf-Variablen
+    - Sendet Webhooks für Web-Gespräche
+    - Respektiert denselben System-Prompt und Persönlichkeit
   </Accordion>
   
-  <Accordion title="Use Cases" icon="lightbulb">
-    **Common applications:**
+  <Accordion title="Anwendungsfälle" icon="lightbulb">
+    **Häufige Anwendungen:**
     
-    **Customer support:** 24/7 automated support on your website
-    **Lead qualification:** Qualify visitors before they contact sales
-    **Appointment booking:** Allow visitors to schedule directly through the widget
-    **FAQ handling:** Answer common questions instantly
-    **Product demos:** Guide visitors through your product features
+    **Kundensupport:** 24/7 automatisierter Support auf Ihrer Website
+    **Lead-Qualifizierung:** Qualifizieren Sie Besucher, bevor sie den Vertrieb kontaktieren
+    **Terminbuchung:** Ermöglichen Sie Besuchern, direkt über das Widget zu planen
+    **FAQ-Bearbeitung:** Beantworten Sie häufige Fragen sofort
+    **Produkt-Demos:** Führen Sie Besucher durch Ihre Produktfunktionen
   </Accordion>
 </AccordionGroup>
 
 <Note>
-For detailed testing guides and widget integration instructions, see our [Testing Your Assistant](/ai-assistants/testing) documentation.
+Für detaillierte Testanleitungen und Widget-Integrationsanweisungen siehe unsere [Testen Ihres Assistenten](/ai-assistants/testing) Dokumentation.
 </Note>
 
 <Note>
-For detailed webhook integration guides and examples, see our [Automation documentation](/automation/overview).
+Für detaillierte Webhook-Integrationsanleitungen und Beispiele siehe unsere [Automatisierungs-Dokumentation](/automation/overview).
 </Note>

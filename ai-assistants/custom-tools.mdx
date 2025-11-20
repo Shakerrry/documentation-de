@@ -1,56 +1,52 @@
 ---
-title: "Custom Mid-Call Tools"
+title: "Benutzerdefinierte Mid-Call-Werkzeuge"
 icon: "code-branch"
-description: "Learn how to create and configure custom API integrations that your AI assistant can use during calls"
+description: "Erfahren Sie, wie Sie benutzerdefinierte API-Integrationen erstellen und konfigurieren, die Ihr KI-Assistent während Anrufen verwenden kann"
 ---
 
 <Note>
-  Custom Mid-Call Tools let your AI assistant interact with external systems
-  during calls. Whether checking inventory, verifying customer data, or fetching
-  real-time information, these tools make your AI more powerful and connected.
+  Benutzerdefinierte Mid-Call-Werkzeuge ermöglichen es Ihrem KI-Assistenten, während Anrufen mit externen Systemen zu interagieren. Ob Bestandsprüfung, Kundendatenverifizierung oder Abruf von Echtzeitinformationen – diese Werkzeuge machen Ihre KI leistungsfähiger und vernetzter.
 </Note>
 
-## Overview
+## Überblick
 
-Custom Mid-Call Tools enable your AI assistant to:
+Benutzerdefinierte Mid-Call-Werkzeuge ermöglichen es Ihrem KI-Assistenten:
 
-- Make real-time API calls during conversations
-- Fetch or submit data to your systems
-- Make informed decisions based on live data
-- Provide accurate, up-to-date information to callers
+- Echtzeit-API-Aufrufe während Gesprächen durchzuführen
+- Daten an Ihre Systeme zu senden oder abzurufen
+- Fundierte Entscheidungen basierend auf Live-Daten zu treffen
+- Anrufern genaue, aktuelle Informationen bereitzustellen
 
-<Card title="Key Benefits" icon="star">
-  - No coding required - just configure the API endpoint and parameters - AI
-  automatically knows when and how to use the tools - Real-time data access
-  during calls - Seamless integration with your existing systems
+<Card title="Hauptvorteile" icon="star">
+  - Keine Programmierung erforderlich - nur API-Endpunkt und Parameter konfigurieren - KI weiß automatisch, wann und wie die Werkzeuge zu verwenden sind - Echtzeit-Datenzugriff während Anrufen - Nahtlose Integration mit Ihren bestehenden Systemen
 </Card>
 
-## Setting Up Your Tool
+## Ihr Werkzeug einrichten
 
-### 1. Basic Configuration
+### 1. Grundkonfiguration
 
 <Frame>
-  <img src="/resources/mid-call.png" alt="Main Tool Configuration" />
+  <img src="/resources/mid-call.png" alt="Hauptwerkzeug-Konfiguration" />
 </Frame>
 
 <Steps>
-  <Step title="Access Tool Creation">
-    Navigate to **Mid call tools** and click **Create Mid-Call Tool**
+  <Step title="Werkzeugerstellung aufrufen">
+    Navigieren Sie zu **Mid-Call-Werkzeuge** und klicken Sie auf **Mid-Call-Werkzeug erstellen**
   </Step>
 
-  <Step title="Configure Main Settings">
-    Fill in the essential details:
+  <Step title="Haupteinstellungen konfigurieren">
+    Füllen Sie die wesentlichen Details aus:
 
-    - **Name**: Use lowercase and underscores (e.g., `check_order_status`)
-    - **Description**: Explain when and how the AI should use this tool
-    - **Endpoint**: Your API URL (e.g., `https://api.yourcompany.com/orders`)
-    - **Timeout**: How long to wait for responses (in seconds)
-    - **Method**: Choose GET, POST, PUT, PATCH, or DELETE
+    - **Name**: Verwenden Sie Kleinbuchstaben und Unterstriche (z.B. `check_order_status`)
+    - **Beschreibung**: Erklären Sie, wann und wie die KI dieses Werkzeug verwenden soll
+    - **Endpunkt**: Ihre API-URL (z.B. `https://api.yourcompany.com/orders`)
+    - **Timeout**: Wie lange auf Antworten gewartet werden soll (in Sekunden)
+    - **Methode**: Wählen Sie GET, POST, PUT, PATCH oder DELETE
 
   </Step>
 
-  <Step title="Add Headers">
-    Common headers you might need:
+  <Step title="Header hinzufügen">
+    Häufige Header, die Sie möglicherweise benötigen:
     ```yaml
     Content-Type: application/json
     Authorization: Bearer your_token
@@ -58,223 +54,219 @@ Custom Mid-Call Tools enable your AI assistant to:
   </Step>
 </Steps>
 
-### 2. Variable Configuration
+### 2. Variablenkonfiguration
 
 <Frame>
-  <img src="/resources/mid-call-param.png" alt="Variable Configuration" />
+  <img src="/resources/mid-call-param.png" alt="Variablenkonfiguration" />
 </Frame>
 
 <Steps>
-  <Step title="Define Parameters">
-    These are the pieces of information your AI will collect during the call:
-    
+  <Step title="Parameter definieren">
+    Dies sind die Informationen, die Ihre KI während des Anrufs sammelt:
+
     ```yaml
     Name: order_number
-    Type: string
-    Description: "10-digit order number from the customer"
+    Typ: string
+    Beschreibung: "10-stellige Bestellnummer vom Kunden"
     ```
   </Step>
 
-  <Step title="Set Validation Rules">
-    Add format requirements in the description:
-    
+  <Step title="Validierungsregeln festlegen">
+    Fügen Sie Formatanforderungen in der Beschreibung hinzu:
+
     ```yaml
-    "Date in dd/mm/yyyy format"
-    "Phone number without spaces"
-    "Email address for confirmation"
+    "Datum im Format TT/MM/JJJJ"
+    "Telefonnummer ohne Leerzeichen"
+    "E-Mail-Adresse zur Bestätigung"
     ```
   </Step>
 </Steps>
 
-## Understanding Parameter Types
+## Parametertypen verstehen
 
 <CardGroup cols={2}>
   <Card title="String" icon="font">
-    Text values like names, addresses, or reference numbers
+    Textwerte wie Namen, Adressen oder Referenznummern
 
     ```yaml
-    Type: string
-    Examples: "John Doe", "123 Main St"
+    Typ: string
+    Beispiele: "Max Mustermann", "Hauptstraße 123"
     ```
 
   </Card>
 
   <Card title="Number" icon="calculator">
-    Numeric values like amounts, quantities, or IDs
+    Numerische Werte wie Beträge, Mengen oder IDs
 
     ```yaml
-    Type: number
-    Examples: 42, 99.99
+    Typ: number
+    Beispiele: 42, 99.99
     ```
 
   </Card>
 
   <Card title="true_false" icon="toggle-on">
-    Boolean values for yes/no situations
+    Boolesche Werte für Ja/Nein-Situationen
 
     ```yaml
-    Type: true_false
-    Examples: true, false
+    Typ: true_false
+    Beispiele: true, false
     ```
 
   </Card>
 
-  <Card title="Formatting Help" icon="wand-magic-sparkles">
-    Add format instructions in descriptions
+  <Card title="Formatierungshilfe" icon="wand-magic-sparkles">
+    Fügen Sie Formatanweisungen in Beschreibungen hinzu
 
     ```yaml
-    "Date in dd/mm/yyyy"
-    "Phone without spaces"
+    "Datum im Format TT/MM/JJJJ"
+    "Telefon ohne Leerzeichen"
     ```
 
   </Card>
 </CardGroup>
 
-## Dynamic Endpoints
+## Dynamische Endpunkte
 
 <Warning>
-  When using variables in your endpoint URL, make sure to enclose them in curly
-  braces and use the exact parameter name.
+  Wenn Sie Variablen in Ihrer Endpunkt-URL verwenden, stellen Sie sicher, dass Sie sie in geschweifte Klammern setzen und den genauen Parameternamen verwenden.
 </Warning>
 
-You can make your endpoints dynamic using variables:
+Sie können Ihre Endpunkte mit Variablen dynamisch gestalten:
 
 ```yaml
-Basic URL:
+Basis-URL:
 https://api.example.com/orders/status
 
-With Variables:
+Mit Variablen:
 https://api.example.com/orders/{order_id}/status
 ```
 
-The AI will automatically replace `{order_id}` with the actual value collected during the conversation.
+Die KI ersetzt `{order_id}` automatisch durch den tatsächlichen Wert, der während des Gesprächs gesammelt wurde.
 
-## Testing Made Easy
+## Einfaches Testen
 
-<Card title="Automatic Testing" icon="vial">
-Click "Test Tool" to run a test with dummy data:
-- String parameters: "test"
-- Number parameters: 1
-- Boolean parameters: true
+<Card title="Automatisches Testen" icon="vial">
+Klicken Sie auf "Werkzeug testen", um einen Test mit Dummy-Daten durchzuführen:
+- String-Parameter: "test"
+- Number-Parameter: 1
+- Boolean-Parameter: true
 
-You'll see the response code and body, helping you verify everything works.
+Sie sehen den Antwortcode und -körper, was Ihnen hilft zu überprüfen, ob alles funktioniert.
 
 </Card>
 
-## Power User Feature: Automation Platform Integration
+## Power-User-Funktion: Integration der Automatisierungsplattform
 
 <Note>
-  Need more complex logic? Connect your tool to the automation platform for
-  advanced workflows.
+  Benötigen Sie komplexere Logik? Verbinden Sie Ihr Werkzeug mit der Automatisierungsplattform für erweiterte Workflows.
 </Note>
 
-For advanced integrations and complex workflows, you can combine custom tools with our [Automation Platform](/automation-platform/introduction).
+Für erweiterte Integrationen und komplexe Workflows können Sie benutzerdefinierte Werkzeuge mit unserer [Automatisierungsplattform](/automation-platform/introduction) kombinieren.
 
-Here's how to create powerful integrations:
+So erstellen Sie leistungsstarke Integrationen:
 
-1. In the automation platform:
+1. In der Automatisierungsplattform:
 
-   - Create a new flow
-   - Add a webhook trigger
-   - Build your logic (API calls, data transformation, etc.)
-   - End with "Return Response"
+   - Erstellen Sie einen neuen Flow
+   - Fügen Sie einen Webhook-Trigger hinzu
+   - Erstellen Sie Ihre Logik (API-Aufrufe, Datentransformation usw.)
+   - Enden Sie mit "Antwort zurückgeben"
 
-2. In your custom tool:
-   - Use the webhook URL as your endpoint
-   - Add `/sync` at the end
-   - Example: `https://automation.autocalls.ai/webhook/abc123/sync`
+2. In Ihrem benutzerdefinierten Werkzeug:
+   - Verwenden Sie die Webhook-URL als Ihren Endpunkt
+   - Fügen Sie `/sync` am Ende hinzu
+   - Beispiel: `https://automation.autocalls.ai/webhook/abc123/sync`
 
-This lets you:
+Dies ermöglicht Ihnen:
 
-- Transform data before/after API calls
-- Make multiple API calls in sequence
-- Apply complex business logic
-- Handle errors gracefully
+- Daten vor/nach API-Aufrufen zu transformieren
+- Mehrere API-Aufrufe nacheinander durchzuführen
+- Komplexe Geschäftslogik anzuwenden
+- Fehler elegant zu behandeln
 
-## Real-World Examples
+## Beispiele aus der Praxis
 
 <AccordionGroup>
-  <Accordion title="Order Lookup System" icon="magnifying-glass">
+  <Accordion title="Bestellauskunftssystem" icon="magnifying-glass">
     ```yaml
     Name: check_order
-    Endpoint: https://api.yourshop.com/orders/{order_number}
-    Parameters:
+    Endpunkt: https://api.yourshop.com/orders/{order_number}
+    Parameter:
       - Name: order_number
-        Type: string
-        Description: "Order reference (format: ORD-XXXXX)"
+        Typ: string
+        Beschreibung: "Bestellreferenz (Format: ORD-XXXXX)"
     ```
 
-    The AI will:
-    1. Ask for the order number
-    2. Fetch the status
-    3. Explain delivery dates and status to the customer
+    Die KI wird:
+    1. Nach der Bestellnummer fragen
+    2. Den Status abrufen
+    3. Liefertermine und Status dem Kunden erklären
 
   </Accordion>
 
-  <Accordion title="Appointment Availability" icon="calendar">
+  <Accordion title="Terminverfügbarkeit" icon="calendar">
     ```yaml
     Name: check_slots
-    Endpoint: https://api.calendar.com/availability
-    Parameters:
+    Endpunkt: https://api.calendar.com/availability
+    Parameter:
       - Name: service
-        Type: string
-        Description: "Service type (haircut, massage, consultation)"
+        Typ: string
+        Beschreibung: "Dienstleistungsart (Haarschnitt, Massage, Beratung)"
       - Name: date
-        Type: string
-        Description: "Preferred date (dd/mm/yyyy)"
+        Typ: string
+        Beschreibung: "Bevorzugtes Datum (TT/MM/JJJJ)"
     ```
 
-    The AI will:
-    1. Ask about the desired service
-    2. Get preferred date
-    3. Show available time slots
+    Die KI wird:
+    1. Nach der gewünschten Dienstleistung fragen
+    2. Bevorzugtes Datum erfragen
+    3. Verfügbare Zeitfenster anzeigen
 
   </Accordion>
 
-  <Accordion title="Customer Verification" icon="shield-check">
+  <Accordion title="Kundenverifizierung" icon="shield-check">
     ```yaml
     Name: verify_customer
-    Endpoint: https://api.crm.com/verify
-    Parameters:
+    Endpunkt: https://api.crm.com/verify
+    Parameter:
       - Name: phone
-        Type: string
-        Description: "10-digit phone number"
+        Typ: string
+        Beschreibung: "10-stellige Telefonnummer"
       - Name: email
-        Type: string
-        Description: "Email address for verification"
+        Typ: string
+        Beschreibung: "E-Mail-Adresse zur Verifizierung"
     ```
 
-    The AI will:
-    1. Collect contact details
-    2. Verify against your CRM
-    3. Proceed based on verification status
+    Die KI wird:
+    1. Kontaktdaten sammeln
+    2. Gegen Ihr CRM verifizieren
+    3. Basierend auf dem Verifizierungsstatus fortfahren
 
   </Accordion>
 </AccordionGroup>
 
-## Configuring Your AI
+## Ihre KI konfigurieren
 
 <Info>
-  The AI needs clear instructions in its system prompt to effectively use your
-  custom tools.
+  Die KI benötigt klare Anweisungen in ihrem System-Prompt, um Ihre benutzerdefinierten Werkzeuge effektiv zu nutzen.
 </Info>
 
-Example prompt section:
+Beispiel-Prompt-Abschnitt:
 
 ```yaml
-When to use check_order tool:
-1. Customer asks about order status
-2. Mentions tracking or delivery
-3. Wants to know where their package is
+Wann das check_order-Werkzeug zu verwenden ist:
+1. Kunde fragt nach Bestellstatus
+2. Erwähnt Tracking oder Lieferung
+3. Möchte wissen, wo sein Paket ist
 
-How to use it:
-1. Ask for order number if not provided
-2. Verify format (ORD-XXXXX)
-3. Use tool to fetch status
-4. Explain results in simple terms
+Wie es zu verwenden ist:
+1. Nach Bestellnummer fragen, falls nicht angegeben
+2. Format verifizieren (ORD-XXXXX)
+3. Werkzeug verwenden, um Status abzurufen
+4. Ergebnisse in einfachen Worten erklären
 ```
 
 <Tip>
-  Test your tools with various conversation flows to ensure the AI handles all
-  scenarios smoothly. Start with simple test calls before going live.
+  Testen Sie Ihre Werkzeuge mit verschiedenen Gesprächsabläufen, um sicherzustellen, dass die KI alle Szenarien reibungslos handhabt. Beginnen Sie mit einfachen Testanrufen, bevor Sie live gehen.
 </Tip>

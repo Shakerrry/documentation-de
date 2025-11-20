@@ -1,41 +1,41 @@
 ---
-title: "Update campaign status"
+title: "Kampagnenstatus aktualisieren"
 api: "POST /user/campaigns/update-status"
-description: "Start or stop a campaign in the Autocalls system"
+description: "Eine Kampagne im Autocalls-System starten oder stoppen"
 ---
 
-This endpoint allows you to start or stop a campaign in the Autocalls system.
+Dieser Endpunkt ermöglicht es Ihnen, eine Kampagne im Autocalls-System zu starten oder zu stoppen.
 
-### Request body
+### Anfragekörper
 
 <ParamField body="campaign_id" type="integer" required>
-  The ID of the campaign to update
+  Die ID der zu aktualisierenden Kampagne
 </ParamField>
 
 <ParamField body="action" type="string" required>
-  The action to perform on the campaign. Must be either "start" or "stop"
+  Die Aktion, die für die Kampagne ausgeführt werden soll. Muss entweder "start" oder "stop" sein
 </ParamField>
 
-### Response
+### Antwort
 
 <ResponseField name="message" type="string" default="Campaign started successfully.">
-  The message of the response
+  Die Nachricht der Antwort
 </ResponseField>
 
 <ResponseField name="success" type="boolean" default="true">
-  Whether the operation was successful
+  Ob die Operation erfolgreich war
 </ResponseField>
 
 <ResponseField name="data" type="object">
-  The data of the response
+  Die Daten der Antwort
   
-  <Expandable title="data properties">
+  <Expandable title="Daten-Eigenschaften">
     <ResponseField name="campaign_id" type="integer">
-      The ID of the updated campaign
+      Die ID der aktualisierten Kampagne
     </ResponseField>
     
     <ResponseField name="status" type="string" default="in-progress">
-      The new status of the campaign (e.g., "in-progress" for started campaigns, "stopped" for stopped campaigns)
+      Der neue Status der Kampagne (z. B. "in-progress" für gestartete Kampagnen, "stopped" für gestoppte Kampagnen)
     </ResponseField>
   </Expandable>
 </ResponseField>

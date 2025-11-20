@@ -1,326 +1,326 @@
 ---
-title: "White Label Setup"
+title: "White-Label-Einrichtung"
 icon: "rocket"
-description: "Step-by-step guide for setting up your white labeled platform"
+description: "Schritt-für-Schritt-Anleitung zur Einrichtung Ihrer White-Label-Plattform"
 ---
 
-Follow these steps to configure your white label platform:
+Folgen Sie diesen Schritten, um Ihre White-Label-Plattform zu konfigurieren:
 
-## 1. Activate White Label
+## 1. White Label aktivieren
 
-1. Purchase the white label plan
-2. Wait for activation confirmation
-3. Access your dashboard
+1. Kaufen Sie den White-Label-Plan
+2. Warten Sie auf Aktivierungsbestätigung
+3. Greifen Sie auf Ihr Dashboard zu
 
-## 2. Access Administration Panel
+## 2. Auf Verwaltungspanel zugreifen
 
-1. Look for the "Administration Panel" button in your dashboard
+1. Suchen Sie nach dem "Administration Panel"-Button in Ihrem Dashboard
    <Frame>
      <img
        src="/resources/white-label-button.png"
-       alt="Administration Panel Button Location"
+       alt="Administration Panel Button-Standort"
      />
    </Frame>
-2. Click to access administration settings
+2. Klicken Sie, um auf Verwaltungseinstellungen zuzugreifen
 
-## 3. Configure Platform Settings
+## 3. Plattformeinstellungen konfigurieren
 
-Navigate to your Administration Panel settings page to customize your platform. Each configuration section controls different aspects of your branded platform:
+Navigieren Sie zu Ihrer Administration Panel-Einstellungsseite, um Ihre Plattform anzupassen. Jeder Konfigurationsbereich steuert verschiedene Aspekte Ihrer gebrandeten Plattform:
 
-### Brand Identity Configuration
-
-<Frame>
-  <img src="/resources/white-label-brand-identity.png" alt="Brand Identity Settings" />
-</Frame>
-
-**Complete Branding Setup:**
-- **Platform Name:** Company name displayed throughout the interface and emails
-- **Main Logo:** Primary logo for dashboard header and user interface (light mode)
-- **Dark Mode Logo:** Alternative logo for dark theme compatibility  
-- **Auth Page Image:** Custom image for login/registration pages (light mode)
-- **Auth Page Image (Dark):** Alternative auth image for dark theme
-- **Favicon:** Browser tab icon (.ico or .png format)
-- **Header Background:** Login page background image (light mode)
-- **Header Background (Dark):** Login page background for dark theme
-- **Logo Height:** Custom logo height in pixels (default: 35px)
-- **Page Title:** Authentication page headline text
-- **Page Description:** Authentication page subtitle/description
-- **SEO Title:** Browser title and search engine optimization
-- **SEO Description:** Meta description for search engines
-- **SEO Keywords:** Meta keywords for search optimization
-
-**Image Requirements:**
-- Logo: PNG/SVG recommended, transparent background
-- Auth Images: High resolution JPEG/PNG/WebP (1920x1080 recommended)
-- Favicon: 32x32 or 16x16 pixels
-- Header Backgrounds: 1920x1080 minimum resolution
-
-### Custom Domain Setup
+### Markenidentitätskonfiguration
 
 <Frame>
-  <img src="/resources/white-label-custom-domain.png" alt="Custom Domain Configuration" />
+  <img src="/resources/white-label-brand-identity.png" alt="Markenidentitätseinstellungen" />
 </Frame>
 
-**Domain Configuration:**
-- **Custom Domain:** Your branded URL (e.g., app.yourcompany.com, platform.yourcompany.com)
-- **SSL Certificate:** Automatic HTTPS setup for security (generated automatically)
-- **Subdomain Support:** Use any subdomain (app, platform, ai, phone, etc.)
+**Vollständige Branding-Einrichtung:**
+- **Platform Name:** Firmenname, der in der gesamten Benutzeroberfläche und E-Mails angezeigt wird
+- **Main Logo:** Primäres Logo für Dashboard-Header und Benutzeroberfläche (Lichtmodus)
+- **Dark Mode Logo:** Alternatives Logo für Dunkelmodus-Kompatibilität  
+- **Auth Page Image:** Benutzerdefiniertes Bild für Anmelde-/Registrierungsseiten (Lichtmodus)
+- **Auth Page Image (Dark):** Alternatives Auth-Bild für Dunkelmodus
+- **Favicon:** Browser-Tab-Symbol (.ico- oder .png-Format)
+- **Header Background:** Anmeldeseiten-Hintergrundbild (Lichtmodus)
+- **Header Background (Dark):** Anmeldeseiten-Hintergrund für Dunkelmodus
+- **Logo Height:** Benutzerdefinierte Logohöhe in Pixeln (Standard: 35px)
+- **Page Title:** Authentifizierungsseiten-Überschriftstext
+- **Page Description:** Authentifizierungsseiten-Untertitel/-Beschreibung
+- **SEO Title:** Browser-Titel und Suchmaschinenoptimierung
+- **SEO Description:** Meta-Beschreibung für Suchmaschinen
+- **SEO Keywords:** Meta-Schlüsselwörter für Suchoptimierung
 
-**DNS Setup Requirements:**
-- **Record Type:** A record (not CNAME)
-- **Host/Name:** Your chosen subdomain (e.g., app, platform)
-- **Value/Points to:** Server IP address (provided in settings)
+**Bildanforderungen:**
+- Logo: PNG/SVG empfohlen, transparenter Hintergrund
+- Auth-Bilder: Hochauflösende JPEG/PNG/WebP (1920x1080 empfohlen)
+- Favicon: 32x32 oder 16x16 Pixel
+- Header-Hintergründe: 1920x1080 Mindestauflösung
 
-**Critical SSL Requirements:**
-- **Add DNS directly without proxy to make SSL work**
-
-**Troubleshooting Domain Issues:**
-- SSL certificates generate automatically when DNS is configured correctly
-- If SSL fails, check that nameservers aren't adding proxy on top
-- Cloudflare users must disable the proxy feature on the DNS record
-- Contact support to regenerate SSL if domain setup doesn't work initially
-- Allow 24-48 hours for DNS propagation worldwide
-
-### Colors & Theme Customization
+### Benutzerdefiniertes Domain-Setup
 
 <Frame>
-  <img src="/resources/white-label-colors-theme.png" alt="Theme Customization Settings" />
+  <img src="/resources/white-label-custom-domain.png" alt="Benutzerdefinierte Domain-Konfiguration" />
 </Frame>
 
-**Color Scheme Configuration:**
-- **Primary Color:** Main brand color for buttons, links, and accents (default: #01df4a)
-- **Gray Color:** Secondary color for borders, backgrounds, and neutral elements  
-- **Email Header Color:** Color used in email template headers and footers
+**Domain-Konfiguration:**
+- **Custom Domain:** Ihre gebrandete URL (z.B. app.yourcompany.com, platform.yourcompany.com)
+- **SSL Certificate:** Automatische HTTPS-Einrichtung für Sicherheit (automatisch generiert)
+- **Subdomain Support:** Verwenden Sie beliebige Subdomain (app, platform, ai, phone usw.)
 
-**Color Application Areas:**
-- Button backgrounds and hover states
-- Navigation highlights and active states  
-- Progress bars and loading indicators
-- Form focus states and validation
-- Email branding consistency
+**DNS-Setup-Anforderungen:**
+- **Record Type:** A-Record (kein CNAME)
+- **Host/Name:** Ihre gewählte Subdomain (z.B. app, platform)
+- **Value/Points to:** Server-IP-Adresse (in Einstellungen bereitgestellt)
+
+**Kritische SSL-Anforderungen:**
+- **DNS direkt ohne Proxy hinzufügen, damit SSL funktioniert**
+
+**Fehlerbehebung bei Domain-Problemen:**
+- SSL-Zertifikate werden automatisch generiert, wenn DNS korrekt konfiguriert ist
+- Wenn SSL fehlschlägt, prüfen Sie, ob Nameserver keinen Proxy hinzufügen
+- Cloudflare-Benutzer müssen die Proxy-Funktion auf dem DNS-Record deaktivieren
+- Kontaktieren Sie den Support, um SSL neu zu generieren, wenn Domain-Setup anfangs nicht funktioniert
+- Erlauben Sie 24-48 Stunden für weltweite DNS-Propagierung
+
+### Farben & Theme-Anpassung
+
+<Frame>
+  <img src="/resources/white-label-colors-theme.png" alt="Theme-Anpassungseinstellungen" />
+</Frame>
+
+**Farbschema-Konfiguration:**
+- **Primary Color:** Hauptmarkenfarbe für Buttons, Links und Akzente (Standard: #01df4a)
+- **Gray Color:** Sekundärfarbe für Rahmen, Hintergründe und neutrale Elemente  
+- **Email Header Color:** Farbe in E-Mail-Vorlagen-Headern und -Footern
+
+**Farbanwendungsbereiche:**
+- Button-Hintergründe und Hover-Zustände
+- Navigations-Highlights und aktive Zustände  
+- Fortschrittsbalken und Ladeindikatoren
+- Formularfokus-Zustände und Validierung
+- E-Mail-Branding-Konsistenz
 
 **Best Practices:**
-- Choose colors with sufficient contrast (WCAG 2.1 AA compliance)
-- Test colors in both light and dark modes
-- Maintain consistency across all interface elements
-- Consider colorblind accessibility when selecting schemes
+- Wählen Sie Farben mit ausreichendem Kontrast (WCAG 2.1 AA-Konformität)
+- Testen Sie Farben sowohl im hellen als auch im dunklen Modus
+- Behalten Sie Konsistenz über alle Oberflächenelemente bei
+- Berücksichtigen Sie Farbenblindheits-Zugänglichkeit bei der Auswahl von Schemata
 
-### Website URLs Configuration
-
-<Frame>
-  <img src="/resources/white-label-website-urls.png" alt="Website URLs Settings" />
-</Frame>
-
-**Essential Platform Links:**
-- **Terms of Service URL:** Legal terms and conditions page (displayed in registration)
-- **Documentation URL:** Custom documentation site link (replaces default docs)
-
-**URL Requirements:**
-- Must use HTTPS protocol (https://)
-- Links should point to your own domain
-- Terms of Service link appears in user registration
-- Documentation URL replaces default help links throughout platform
-
-**Usage Examples:**
-- Terms: `https://yourcompany.com/terms-and-conditions`
-- Docs: `https://docs.yourcompany.com` or `https://help.yourcompany.com`
-
-### Footer Links Management
+### Website-URLs-Konfiguration
 
 <Frame>
-  <img src="/resources/white-label-footer-links.png" alt="Footer Links Configuration" />
+  <img src="/resources/white-label-website-urls.png" alt="Website-URLs-Einstellungen" />
 </Frame>
 
-**Custom Footer Links:**
-- **Link Text:** Display name (max 50 characters)
-- **URL:** Destination link (must be valid URL with https://)
-- **Text Color:** Optional custom color for individual links
+**Wesentliche Plattform-Links:**
+- **Terms of Service URL:** Rechtliche Geschäftsbedingungen-Seite (angezeigt bei Registrierung)
+- **Documentation URL:** Benutzerdefinierter Dokumentations-Site-Link (ersetzt Standard-Dokumentation)
 
-**Link Features:**
-- Unlimited footer links (recommended: 3-6 links)
-- Drag and drop reordering with arrow buttons
-- Links only visible to your users (not in tenant admin)
+**URL-Anforderungen:**
+- Muss HTTPS-Protokoll verwenden (https://)
+- Links sollten auf Ihre eigene Domain verweisen
+- Nutzungsbedingungen-Link erscheint bei Benutzerregistrierung
+- Dokumentations-URL ersetzt Standard-Hilfe-Links in der gesamten Plattform
 
-**Common Link Types:**
-- Company pages: About Us, Contact, Careers
-- Support: Help Center, Documentation, Tutorials  
-- Legal: Privacy Policy, Terms, Cookie Policy
-- Social: LinkedIn, Twitter, Facebook profiles
-- Product: Features, Pricing, Case Studies
+**Verwendungsbeispiele:**
+- Nutzungsbedingungen: `https://yourcompany.com/terms-and-conditions`
+- Dokumentation: `https://docs.yourcompany.com` oder `https://help.yourcompany.com`
 
-### Social Login Integration
+### Footer-Links-Verwaltung
 
 <Frame>
-  <img src="/resources/white-label-social-logins.png" alt="Social Login Settings" />
+  <img src="/resources/white-label-footer-links.png" alt="Footer-Links-Konfiguration" />
 </Frame>
 
-**Social Login Control:**
-- **Enable Social Logins:** Master toggle for all social authentication
-- **Google OAuth Integration:** Google account sign-in for users
-- **LinkedIn OAuth Integration:** LinkedIn professional login option
+**Benutzerdefinierte Footer-Links:**
+- **Link Text:** Anzeigename (max. 50 Zeichen)
+- **URL:** Ziel-Link (muss gültige URL mit https:// sein)
+- **Text Color:** Optionale benutzerdefinierte Farbe für einzelne Links
 
-**Google OAuth Configuration:**
-- **Google Client ID:** OAuth application identifier from Google Cloud Console
-- **Google Client Secret:** Secret key for authentication (hidden/revealable)
+**Link-Funktionen:**
+- Unbegrenzte Footer-Links (empfohlen: 3-6 Links)
+- Drag-and-Drop-Neuanordnung mit Pfeil-Buttons
+- Links nur für Ihre Benutzer sichtbar (nicht im Tenant-Admin)
+
+**Häufige Link-Typen:**
+- Firmenseiten: Über uns, Kontakt, Karriere
+- Support: Hilfe-Center, Dokumentation, Tutorials  
+- Rechtliches: Datenschutzrichtlinie, Nutzungsbedingungen, Cookie-Richtlinie
+- Soziales: LinkedIn, Twitter, Facebook-Profile
+- Produkt: Funktionen, Preise, Fallstudien
+
+### Social-Login-Integration
+
+<Frame>
+  <img src="/resources/white-label-social-logins.png" alt="Social-Login-Einstellungen" />
+</Frame>
+
+**Social-Login-Kontrolle:**
+- **Enable Social Logins:** Master-Toggle für alle sozialen Authentifizierungen
+- **Google OAuth Integration:** Google-Konto-Anmeldung für Benutzer
+- **LinkedIn OAuth Integration:** LinkedIn-Professional-Login-Option
+
+**Google-OAuth-Konfiguration:**
+- **Google Client ID:** OAuth-Anwendungs-Identifikator aus Google Cloud Console
+- **Google Client Secret:** Geheimer Schlüssel für Authentifizierung (verborgen/anzeigbar)
 - **Redirect URL:** `https://yourdomain.com/login/google/callback`
-- **Required Scopes:** Profile information and email access
+- **Required Scopes:** Profilinformationen und E-Mail-Zugriff
 
-**LinkedIn OAuth Configuration:**
-- **LinkedIn Client ID:** Application ID from LinkedIn Developer Portal
-- **LinkedIn Client Secret:** Secret key for LinkedIn authentication
+**LinkedIn-OAuth-Konfiguration:**
+- **LinkedIn Client ID:** Anwendungs-ID aus LinkedIn Developer Portal
+- **LinkedIn Client Secret:** Geheimer Schlüssel für LinkedIn-Authentifizierung
 - **Redirect URL:** `https://yourdomain.com/login/linkedin-openid/callback`
-- **OpenID Connect:** Uses LinkedIn's OpenID Connect protocol
+- **OpenID Connect:** Verwendet LinkedIns OpenID Connect-Protokoll
 
-**Important Notes:**
-- Disabling social logins clears all OAuth credentials
-- Contact support if social login fails after setup
-- Test with actual accounts before going live
-- Users can still create regular accounts even with social login enabled
+**Wichtige Hinweise:**
+- Deaktivierung von Social Logins löscht alle OAuth-Anmeldeinformationen
+- Kontaktieren Sie den Support, wenn Social Login nach der Einrichtung fehlschlägt
+- Testen Sie mit echten Konten vor dem Live-Gang
+- Benutzer können weiterhin reguläre Konten erstellen, auch wenn Social Login aktiviert ist
 
-**Setup Documentation:**
-- [Google OAuth Setup Guide](/white-label/social-logins/google)
-- [LinkedIn OAuth Setup Guide](/white-label/social-logins/linkedin)
+**Setup-Dokumentation:**
+- [Google OAuth Setup-Anleitung](/white-label/social-logins/google)
+- [LinkedIn OAuth Setup-Anleitung](/white-label/social-logins/linkedin)
 
-### Email Templates Customization
-
-<Frame>
-  <img src="/resources/white-label-email-templates.png" alt="Email Templates Configuration" />
-</Frame>
-
-**Welcome Email Configuration:**
-- **Email Subject:** Custom subject line for new user welcome emails
-- **Email Content (HTML):** Rich text editor for email body content with variables
-- **Journey Message:** Text before contact information section
-- **Questions Text:** Text before contact email display  
-- **Contact Email:** Support email address displayed in email footer
-- **Email Signature:** Custom signature with tenant name variable
-
-**Available Variables:**
-- `{user_name}` - New user's name
-- `{tenant_name}` - Your platform name
-- `{tenant_domain}` - Your custom domain
-
-**Content Editor Features:**
-- Rich text formatting (headings, lists, bold, italic, underline)
-- Text alignment and color customization
-- Link insertion and blockquotes
-- Load default content templates
-
-**Email Branding:**
-- Uses email header color from Colors & Theme tab
-- Incorporates your platform name and branding
-- Professional layout with your contact information
-- Responsive design for mobile and desktop
-
-**Testing Templates:**
-- Configure SMTP settings first (next section)
-- Use the built-in test email feature to preview your template
-- Test email shows exactly how your welcome emails will appear to users
-
-### Email SMTP Configuration
+### E-Mail-Vorlagen-Anpassung
 
 <Frame>
-  <img src="/resources/white-label-smtp.png" alt="SMTP Email Settings" />
+  <img src="/resources/white-label-email-templates.png" alt="E-Mail-Vorlagen-Konfiguration" />
 </Frame>
 
-**SMTP Server Settings:**
-- **SMTP Host:** Mail server hostname (e.g., smtp.gmail.com, smtp.sendgrid.net)
-- **SMTP Port:** Server port number (465 for SSL, 587 for TLS, 25 for unsecured)
-- **SMTP Username:** Authentication username (usually your email address)
-- **SMTP Password:** Authentication password or app-specific password
-- **SMTP Encryption:** Security protocol (e.g. TLS)
-- **From Address:** Sender email address (e.g., no-reply@yourdomain.com)
-- **From Name:** Display name for outgoing emails (e.g., "YourCompany Platform")
+**Willkommens-E-Mail-Konfiguration:**
+- **Email Subject:** Benutzerdefinierte Betreffzeile für neue Benutzer-Willkommens-E-Mails
+- **Email Content (HTML):** Rich-Text-Editor für E-Mail-Body-Inhalt mit Variablen
+- **Journey Message:** Text vor dem Kontaktinformationsbereich
+- **Questions Text:** Text vor der Anzeige der Kontakt-E-Mail  
+- **Contact Email:** Support-E-Mail-Adresse, die im E-Mail-Footer angezeigt wird
+- **Email Signature:** Benutzerdefinierte Signatur mit Tenant-Name-Variable
 
-**Email Testing:**
-- Built-in SMTP test functionality sends test email to your account
-- Verifies all SMTP settings before saving
-- Test email includes welcome email preview
-- 10-second timeout for connection testing
+**Verfügbare Variablen:**
+- `{user_name}` - Name des neuen Benutzers
+- `{tenant_name}` - Ihr Plattformname
+- `{tenant_domain}` - Ihre benutzerdefinierte Domain
 
-### Custom Scripts Integration
+**Inhaltseditor-Funktionen:**
+- Rich-Text-Formatierung (Überschriften, Listen, fett, kursiv, unterstrichen)
+- Textausrichtung und Farbanpassung
+- Linkeinfügung und Blockzitate
+- Standard-Inhaltsvorlagen laden
+
+**E-Mail-Branding:**
+- Verwendet E-Mail-Headerfarbe aus Farben & Theme-Tab
+- Integriert Ihren Plattformnamen und Branding
+- Professionelles Layout mit Ihren Kontaktinformationen
+- Responsive Design für Mobil und Desktop
+
+**Vorlagen testen:**
+- Konfigurieren Sie zuerst SMTP-Einstellungen (nächster Abschnitt)
+- Verwenden Sie die integrierte Test-E-Mail-Funktion, um Ihre Vorlage in der Vorschau anzuzeigen
+- Test-E-Mail zeigt genau, wie Ihre Willkommens-E-Mails für Benutzer erscheinen werden
+
+### E-Mail-SMTP-Konfiguration
 
 <Frame>
-  <img src="/resources/white-label-custom-scripts.png" alt="Custom Scripts Configuration" />
+  <img src="/resources/white-label-smtp.png" alt="SMTP-E-Mail-Einstellungen" />
 </Frame>
 
-**Available Script Fields:**
-- **Custom Scripts:** Add your custom scripts here (live chat, feedback, etc). These scripts will be added to all pages.
-- **Custom Scripts (Auth):** Add your custom scripts here (live chat, feedback, etc). These scripts will be added to the authentication page.
+**SMTP-Server-Einstellungen:**
+- **SMTP Host:** Mail-Server-Hostname (z.B. smtp.gmail.com, smtp.sendgrid.net)
+- **SMTP Port:** Server-Portnummer (465 für SSL, 587 für TLS, 25 für ungesichert)
+- **SMTP Username:** Authentifizierungs-Benutzername (normalerweise Ihre E-Mail-Adresse)
+- **SMTP Password:** Authentifizierungs-Passwort oder app-spezifisches Passwort
+- **SMTP Encryption:** Sicherheitsprotokoll (z.B. TLS)
+- **From Address:** Absender-E-Mail-Adresse (z.B. no-reply@yourdomain.com)
+- **From Name:** Anzeigename für ausgehende E-Mails (z.B. "YourCompany Platform")
 
-**Common Use Cases:**
-- Live chat widgets (Intercom, Zendesk Chat)
-- Analytics tracking (Google Analytics, Facebook Pixel)
-- Feedback tools and customer support widgets
-- Custom styling or functionality
+**E-Mail-Test:**
+- Integrierte SMTP-Testfunktionalität sendet Test-E-Mail an Ihr Konto
+- Verifiziert alle SMTP-Einstellungen vor dem Speichern
+- Test-E-Mail enthält Willkommens-E-Mail-Vorschau
+- 10-Sekunden-Timeout für Verbindungstest
 
-### Custom Appearance Controls
+### Benutzerdefinierte Skript-Integration
 
 <Frame>
-  <img src="/resources/white-label-custom-appearance.png" alt="Custom Appearance Settings" />
+  <img src="/resources/white-label-custom-scripts.png" alt="Benutzerdefinierte Skript-Konfiguration" />
 </Frame>
 
-**Pages & Navigation Control:**
-Hide entire sections from user navigation:
-- **⚡ Automation:** Hide automation/workflow page
-- **🤖 Assistants:** Hide AI assistants management page  
-- **🛠️ Tools:** Hide tools and integrations page
-- **📞 Phone Numbers:** Hide phone number management page
-- **💬 SMS History:** Hide SMS messaging history page
-- **🔑 API Keys:** Hide API documentation and keys page
+**Verfügbare Skriptfelder:**
+- **Custom Scripts:** Fügen Sie hier Ihre benutzerdefinierten Skripte hinzu (Live-Chat, Feedback usw.). Diese Skripte werden zu allen Seiten hinzugefügt.
+- **Custom Scripts (Auth):** Fügen Sie hier Ihre benutzerdefinierten Skripte hinzu (Live-Chat, Feedback usw.). Diese Skripte werden zur Authentifizierungsseite hinzugefügt.
 
-**Features & Buttons Control:**  
-Hide specific functionality within pages:
-- **📱 Caller ID Button:** Hide caller ID configuration option
-- **🔗 SIP Integration:** Hide SIP trunking integration button
-- **📅 Calendar Integration:** Hide calendar booking features
-- **💰 Carrier Costs Display:** Hide call cost information from users
+**Häufige Anwendungsfälle:**
+- Live-Chat-Widgets (Intercom, Zendesk Chat)
+- Analytics-Tracking (Google Analytics, Facebook Pixel)
+- Feedback-Tools und Kundensupport-Widgets
+- Benutzerdefiniertes Styling oder Funktionalität
 
-**Phone Number Countries:**
-- **Country Restrictions:** Select countries to hide from phone number purchase
-- **Available Countries:** US, Canada, Australia, UK, South Africa, Romania, Italy, Puerto Rico, Denmark, Israel, Poland, Finland, Netherlands, Spain
-- **Search & Multi-select:** Easy country selection with search functionality
-- **Purchase Control:** Hidden countries won't appear in phone number purchase flow
+### Benutzerdefinierte Erscheinungsbild-Kontrollen
 
-**Use Cases:**
-- **Simplified Interface:** Remove unused features for cleaner user experience  
-- **Regional Restrictions:** Hide phone number countries not relevant to your market
-- **Feature Limitations:** Control access to premium features based on user plans
-- **Compliance Requirements:** Hide features not available in certain jurisdictions
+<Frame>
+  <img src="/resources/white-label-custom-appearance.png" alt="Benutzerdefinierte Erscheinungsbild-Einstellungen" />
+</Frame>
 
-## 4. Set Up Billing
+**Seiten- & Navigationssteuerung:**
+Ganze Abschnitte aus der Benutzernavigation ausblenden:
+- **⚡ Automation:** Automatisierungs-/Workflow-Seite ausblenden
+- **🤖 Assistants:** KI-Assistenten-Verwaltungsseite ausblenden  
+- **🛠️ Tools:** Tools- und Integrationsseite ausblenden
+- **📞 Phone Numbers:** Telefonnummer-Verwaltungsseite ausblenden
+- **💬 SMS History:** SMS-Nachrichtenverlaufsseite ausblenden
+- **🔑 API Keys:** API-Dokumentations- und Schlüsselseite ausblenden
 
-1. Click your user profile
-2. Select "Billing platform"
+**Funktionen & Button-Kontrolle:**  
+Spezifische Funktionalität innerhalb von Seiten ausblenden:
+- **📱 Caller ID Button:** Anrufer-ID-Konfigurationsoption ausblenden
+- **🔗 SIP Integration:** SIP-Trunking-Integrationsbutton ausblenden
+- **📅 Calendar Integration:** Kalenderbuchungsfunktionen ausblenden
+- **💰 Carrier Costs Display:** Anrufkosteninformationen vor Benutzern ausblenden
+
+**Telefonnummer-Länder:**
+- **Country Restrictions:** Wählen Sie Länder aus, die beim Telefonnummernkauf ausgeblendet werden sollen
+- **Available Countries:** USA, Kanada, Australien, Großbritannien, Südafrika, Rumänien, Italien, Puerto Rico, Dänemark, Israel, Polen, Finnland, Niederlande, Spanien
+- **Search & Multi-select:** Einfache Länderauswahl mit Suchfunktionalität
+- **Purchase Control:** Ausgeblendete Länder erscheinen nicht im Telefonnummernkauf-Flow
+
+**Anwendungsfälle:**
+- **Vereinfachte Benutzeroberfläche:** Entfernen Sie ungenutzte Funktionen für sauberere Benutzererfahrung  
+- **Regionale Einschränkungen:** Blenden Sie Telefonnummernländer aus, die für Ihren Markt nicht relevant sind
+- **Funktionsbeschränkungen:** Steuern Sie den Zugriff auf Premium-Funktionen basierend auf Benutzerplänen
+- **Compliance-Anforderungen:** Blenden Sie Funktionen aus, die in bestimmten Jurisdiktionen nicht verfügbar sind
+
+## 4. Abrechnung einrichten
+
+1. Klicken Sie auf Ihr Benutzerprofil
+2. Wählen Sie "Billing platform"
    <Frame>
-     <img src="/resources/stripe-button.jpg" alt="Billing Dashboard Access" />
+     <img src="/resources/stripe-button.jpg" alt="Abrechnungs-Dashboard-Zugriff" />
    </Frame>
-3. Connect your Stripe account to start collecting payments
-4. Configure payment settings
+3. Verbinden Sie Ihr Stripe-Konto, um Zahlungen zu sammeln
+4. Konfigurieren Sie Zahlungseinstellungen
 
-## 5. Domain Configuration
+## 5. Domain-Konfiguration
 
-1. Choose your domain (e.g., app.yourbrand.com)
-2. Add the provided DNS records to your domain
-3. Wait for SSL certificate provisioning
-4. Test domain access
+1. Wählen Sie Ihre Domain (z.B. app.yourbrand.com)
+2. Fügen Sie die bereitgestellten DNS-Records zu Ihrer Domain hinzu
+3. Warten Sie auf SSL-Zertifikatsbereitstellung
+4. Testen Sie Domain-Zugriff
 
-## 6. Testing
+## 6. Testen
 
-Before launch:
+Vor dem Start:
 
-1. Create a test account
-2. Verify all branding elements
-3. Test the signup process
-4. Make test calls
-5. Verify billing flow
+1. Erstellen Sie ein Testkonto
+2. Überprüfen Sie alle Brandingelemente
+3. Testen Sie den Registrierungsprozess
+4. Führen Sie Testanrufe durch
+5. Überprüfen Sie den Abrechnungs-Flow
 
-## Next Steps
+## Nächste Schritte
 
-- [Configure your pricing plans](/white-label/plans-setup)
-- Set up your support channels
-- Prepare your marketing materials
+- [Konfigurieren Sie Ihre Preispläne](/white-label/plans-setup)
+- Richten Sie Ihre Support-Kanäle ein
+- Bereiten Sie Ihre Marketingmaterialien vor
 
 ---
 
-**Need help?** Contact our support team for assistance with any step of the setup process.
+**Benötigen Sie Hilfe?** Kontaktieren Sie unser Support-Team für Unterstützung bei jedem Schritt des Einrichtungsprozesses.

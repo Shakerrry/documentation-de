@@ -1,65 +1,65 @@
 ---
-title: "GoHighLevel Issues"
+title: "GoHighLevel-Probleme"
 icon: "calendar-days"
-description: "Common GoHighLevel integration problems and solutions"
+description: "Häufige Probleme und Lösungen bei der GoHighLevel-Integration"
 ---
 
-This page covers common issues when using GoHighLevel integrations with Autocalls.ai.
+Diese Seite behandelt häufige Probleme bei der Verwendung von GoHighLevel-Integrationen mit Autocalls.ai.
 
-## Appointment Scheduling Issues
+## Probleme bei der Terminplanung
 
-### Missing API Key Error
+### Fehlender API-Schlüssel-Fehler
 
-**Problem:** Getting error "missing api_key location_id or calendar_id for GoHighLevel"
+**Problem:** Fehler "missing api_key location_id or calendar_id for GoHighLevel"
 
-**Solution:**
-1. Go to [assistant settings](/ai-assistants/settings/prompt-and-tools#default-tools)
-2. Navigate to **Appointment Scheduling** section
-3. Click **Disconnect** to remove current GoHighLevel connection
-4. Click **Connect** again to re-authorize
-5. **Select an calendar** from the dropdown
-6. **Click Save** to apply the configuration
-7. **Verify** the connection shows as active after reconnecting
+**Lösung:**
+1. Gehen Sie zu [Assistenteneinstellungen](/ai-assistants/settings/prompt-and-tools#default-tools)
+2. Navigieren Sie zum Abschnitt **Terminplanung**
+3. Klicken Sie auf **Trennen**, um die aktuelle GoHighLevel-Verbindung zu entfernen
+4. Klicken Sie erneut auf **Verbinden**, um die Autorisierung erneut durchzuführen
+5. **Wählen Sie einen Kalender** aus dem Dropdown-Menü
+6. **Klicken Sie auf Speichern**, um die Konfiguration anzuwenden
+7. **Überprüfen Sie**, ob die Verbindung nach der erneuten Verbindung als aktiv angezeigt wird
 
-### Connection Problems
+### Verbindungsprobleme
 
-**OAuth Authorization Fails:**
-- **Try incognito mode** to resolve authentication conflicts
-- **Verify account selection** - ensure you selected the correct GoHighLevel account
-- **Check permissions** - confirm you have admin access to the GoHighLevel account
+**OAuth-Autorisierung schlägt fehl:**
+- **Inkognito-Modus ausprobieren**, um Authentifizierungskonflikte zu lösen
+- **Kontoauswahl überprüfen** - stellen Sie sicher, dass Sie das richtige GoHighLevel-Konto ausgewählt haben
+- **Berechtigungen prüfen** - bestätigen Sie, dass Sie Admin-Zugriff auf das GoHighLevel-Konto haben
 
-### Calendar Not Appearing
+### Kalender wird nicht angezeigt
 
-**Calendars don't show in assistant settings:**
-- **Refresh connection** by disconnecting and reconnecting
-- **Verify calendar setup** in your GoHighLevel account
-- **Check account permissions** for calendar access
+**Kalender werden nicht in den Assistenteneinstellungen angezeigt:**
+- **Verbindung aktualisieren**, indem Sie trennen und erneut verbinden
+- **Kalender-Einrichtung überprüfen** in Ihrem GoHighLevel-Konto
+- **Kontoberechtigungen prüfen** für Kalenderzugriff
 
-### Booking Failures
+### Buchungsfehler
 
-**Appointments not being scheduled:**
-- **Email Required:** Ensure the assistant has an email defined in [assistant settings](/ai-assistants/settings/prompt-and-tools#default-tools) and the lead has an email in inbound variables or from conversation. See [Email Requirement for Appointments](/ai-assistants/gohighlevel-scheduling#email-requirement-for-appointments) for detailed setup.
-- **Test calendar availability** - verify the calendar has open slots
-- **Check time zones** - ensure correct time zone configuration in both systems
-- **Review assistant logs** - check call transcripts for booking attempts
-- **Verify calendar settings** in GoHighLevel for booking restrictions
+**Termine werden nicht geplant:**
+- **E-Mail erforderlich:** Stellen Sie sicher, dass der Assistent eine E-Mail in den [Assistenteneinstellungen](/ai-assistants/settings/prompt-and-tools#default-tools) definiert hat und der Lead eine E-Mail in eingehenden Variablen oder aus dem Gespräch hat. Siehe [E-Mail-Anforderung für Termine](/ai-assistants/gohighlevel-scheduling#email-requirement-for-appointments) für detaillierte Einrichtung.
+- **Kalenderverfügbarkeit testen** - überprüfen Sie, ob der Kalender offene Zeitfenster hat
+- **Zeitzonen prüfen** - stellen Sie korrekte Zeitzonenkonfiguration in beiden Systemen sicher
+- **Assistenten-Logs überprüfen** - prüfen Sie Anruftranskripte auf Buchungsversuche
+- **Kalendereinstellungen überprüfen** in GoHighLevel auf Buchungsbeschränkungen
 
-### Data Mapping Problems
+### Probleme bei der Datenzuordnung
 
-**Lead data not syncing correctly:**
-- **Verify field mapping** in automation platform
-- **Check required fields** in GoHighLevel
-- **Test with sample data** before live campaigns
+**Lead-Daten werden nicht korrekt synchronisiert:**
+- **Feldzuordnung überprüfen** in der Automatisierungsplattform
+- **Erforderliche Felder prüfen** in GoHighLevel
+- **Mit Beispieldaten testen** vor Live-Kampagnen
 
-## Getting Help
+## Hilfe erhalten
 
-If these solutions don't resolve your issue:
+Wenn diese Lösungen Ihr Problem nicht beheben:
 
-1. **Check call transcripts** to see exactly what the AI attempted
-2. **Test the integration** with a simple appointment booking
-3. **Contact support** with specific error messages and screenshots
+1. **Anruftranskripte überprüfen**, um zu sehen, was die KI genau versucht hat
+2. **Integration testen** mit einer einfachen Terminbuchung
+3. **Support kontaktieren** mit spezifischen Fehlermeldungen und Screenshots
 
-**Common Support Information Needed:**
-- Screenshot of the error message
-- Calendar configuration details
-- Assistant settings configuration
+**Häufig benötigte Support-Informationen:**
+- Screenshot der Fehlermeldung
+- Kalenderkonfigurationsdetails
+- Assistenteneinstellungskonfiguration

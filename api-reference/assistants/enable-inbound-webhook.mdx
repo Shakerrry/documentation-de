@@ -1,55 +1,55 @@
 ---
-title: "Enable assistant inbound webhook"
+title: "Eingehenden Assistenten-Webhook aktivieren"
 api: "POST /user/assistants/enable-inbound-webhook"
-description: "Enable inbound webhook notifications for a specific assistant"
+description: "Eingehende Webhook-Benachrichtigungen für einen bestimmten Assistenten aktivieren"
 ---
 
-This endpoint enables inbound webhook notifications for an assistant, allowing you to receive real-time updates about inbound call completions and data.
+Dieser Endpunkt aktiviert eingehende Webhook-Benachrichtigungen für einen Assistenten und ermöglicht es Ihnen, Echtzeit-Updates über eingehende Anrufabschlüsse und Daten zu erhalten.
 
-### Request Body
+### Anfragekörper
 
 <ParamField body="assistant_id" type="integer" required>
-  The ID of the assistant to enable webhook for
+  Die ID des Assistenten, für den der Webhook aktiviert werden soll
 </ParamField>
 
 <ParamField body="webhook_url" type="string" required>
-  The URL where webhook notifications will be sent
+  Die URL, an die Webhook-Benachrichtigungen gesendet werden
 </ParamField>
 
-### Response
+### Antwort
 
 <ResponseField name="message" type="string">
-  Success message confirming webhook was enabled
+  Erfolgsmeldung, die bestätigt, dass der Webhook aktiviert wurde
 </ResponseField>
 
 <ResponseField name="data" type="array">
-  Empty array (reserved for future use)
+  Leeres Array (für zukünftige Verwendung reserviert)
 </ResponseField>
 
-### Error Responses
+### Fehlerantworten
 
 <ResponseField name="404 Not Found">
-  <Expandable title="Error Response">
+  <Expandable title="Fehlerantwort">
     <ResponseField name="message" type="string">
-      Error message when the assistant is not found or doesn't belong to the authenticated user
+      Fehlermeldung, wenn der Assistent nicht gefunden wurde oder dem authentifizierten Benutzer nicht gehört
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="422 Validation Error">
-  <Expandable title="Error Response">
+  <Expandable title="Fehlerantwort">
     <ResponseField name="message" type="string">
-      Error message indicating validation failure
+      Fehlermeldung, die einen Validierungsfehler anzeigt
     </ResponseField>
     <ResponseField name="errors" type="object">
-      Detailed validation errors for each field
+      Detaillierte Validierungsfehler für jedes Feld
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseExample>
 
-```json 200 Success Response
+```json 200 Erfolgsantwort
 {
   "message": "Webhook enabled successfully",
   "data": []
@@ -62,7 +62,7 @@ This endpoint enables inbound webhook notifications for an assistant, allowing y
 }
 ```
 
-```json 422 Validation Error
+```json 422 Validierungsfehler
 {
   "message": "The given data was invalid.",
   "errors": {

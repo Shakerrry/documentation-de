@@ -1,32 +1,32 @@
 ---
-title: "Importing Leads"
+title: "Leads importieren"
 icon: "file-import"
-description: "Import leads from CSV and Excel files with validation and error handling"
+description: "Importieren Sie Leads aus CSV- und Excel-Dateien mit Validierung und Fehlerbehandlung"
 ---
 
-Import large numbers of leads from CSV or Excel files with automatic validation, background processing, and comprehensive error reporting.
+Importieren Sie große Mengen von Leads aus CSV- oder Excel-Dateien mit automatischer Validierung, Hintergrundverarbeitung und umfassender Fehlerberichterstattung.
 
-## Import Process Overview
+## Import-Prozess-Übersicht
 
-The lead import system supports:
-- **CSV and Excel files** (.csv, .xlsx, .xls)
-- **Background processing** for large files
-- **Automatic validation** with error reporting
-- **Secondary contacts** in same import
-- **Variable mapping** from assistant configuration
+Das Lead-Import-System unterstützt:
+- **CSV- und Excel-Dateien** (.csv, .xlsx, .xls)
+- **Hintergrundverarbeitung** für große Dateien
+- **Automatische Validierung** mit Fehlerberichterstattung
+- **Sekundäre Kontakte** im selben Import
+- **Variablenzuordnung** aus Assistentenkonfiguration
 
-## Preparing Your Import File
+## Vorbereitung Ihrer Import-Datei
 
-### Required Columns
-Your import file must include:
-- **phone_number:** Primary contact phone number (required)
-- **Variables:** Columns matching your [assistant's configured variables](/ai-assistants/settings/prompt-and-tools#call-variables)
+### Erforderliche Spalten
+Ihre Import-Datei muss enthalten:
+- **phone_number:** Primäre Kontakttelefonnummer (erforderlich)
+- **Variablen:** Spalten, die mit Ihren [konfigurierten Variablen des Assistenten](/ai-assistants/settings/prompt-and-tools#call-variables) übereinstimmen
 
-### Optional Columns
-- **Secondary contact columns:** Additional phone numbers
-- **Variable overrides:** Custom values for specific leads
+### Optionale Spalten
+- **Sekundäre Kontaktspalten:** Zusätzliche Telefonnummern
+- **Variablenüberschreibungen:** Benutzerdefinierte Werte für spezifische Leads
 
-### File Format Example
+### Dateiformat-Beispiel
 ```csv
 phone_number,customer_name,company,budget_range,secondary_phone_1,secondary_phone_2
 +14155551234,John Smith,ABC Corp,10k-50k,+14155551235,+14155551236
@@ -34,134 +34,134 @@ phone_number,customer_name,company,budget_range,secondary_phone_1,secondary_phon
 +14155554567,Bob Johnson,Tech Start,5k-10k,,
 ```
 
-## Campaign Selection
+## Kampagnenauswahl
 
-### Choose Target Campaign
-1. **Select campaign** from dropdown during import
-2. **Assistant variables** automatically determine expected columns  
-3. **Variable inheritance** applies assistant defaults to all imported leads
+### Zielkampagne wählen
+1. **Kampagne auswählen** aus Dropdown während Import
+2. **Assistentenvariablen** bestimmen automatisch erwartete Spalten  
+3. **Variablenvererbung** wendet Assistenten-Standards auf alle importierten Leads an
 
-### Variable Mapping
-- **Assistant variables** become column headers in sample file
-- **Default values** from assistant configuration
-- **Override capability** with custom values per lead
+### Variablenzuordnung
+- **Assistentenvariablen** werden zu Spaltenüberschriften in Beispieldatei
+- **Standardwerte** aus Assistentenkonfiguration
+- **Überschreibungsfähigkeit** mit benutzerdefinierten Werten pro Lead
 
 <Note>
-**Download sample file:** The import dialog provides a sample CSV with proper headers based on your selected campaign's assistant variables.
+**Beispieldatei herunterladen:** Der Import-Dialog bietet eine Beispiel-CSV mit korrekten Kopfzeilen basierend auf den Assistentenvariablen Ihrer ausgewählten Kampagne.
 </Note>
 
-## Import Steps
+## Import-Schritte
 
-### 1. Start Import Process
-1. **Navigate to Leads** section or Campaign leads tab
-2. **Click "Import Leads"** button  
-3. **Select campaign** for lead assignment
-4. **Download sample** file to see expected format
+### 1. Import-Prozess starten
+1. **Navigieren Sie zum Leads-Bereich** oder zum Kampagnen-Leads-Tab
+2. **Klicken Sie auf "Leads importieren"**
+3. **Wählen Sie Kampagne** für Lead-Zuweisung
+4. **Beispieldatei herunterladen**, um das erwartete Format zu sehen
 
-### 2. Upload File
-1. **Choose file:** Select your CSV or Excel file
-2. **Ignore errors option:** Enable to skip invalid rows
-3. **Review settings:** Confirm campaign and options
-4. **Start import:** Click "Import now" to begin
+### 2. Datei hochladen
+1. **Datei auswählen:** Wählen Sie Ihre CSV- oder Excel-Datei
+2. **Fehler ignorieren-Option:** Aktivieren, um ungültige Zeilen zu überspringen
+3. **Einstellungen überprüfen:** Kampagne und Optionen bestätigen
+4. **Import starten:** Klicken Sie auf "Jetzt importieren"
 
-### 3. Background Processing
-- **Queue processing:** Large files processed in background
-- **Progress tracking:** Import status updates automatically
-- **Notification:** Email notification when import completes
-- **Error reporting:** Download report of any failed rows
+### 3. Hintergrundverarbeitung
+- **Warteschlangenverarbeitung:** Große Dateien werden im Hintergrund verarbeitet
+- **Fortschrittsverfolgung:** Import-Status wird automatisch aktualisiert
+- **Benachrichtigung:** E-Mail-Benachrichtigung bei Import-Abschluss
+- **Fehlerberichterstattung:** Herunterladen eines Berichts über fehlgeschlagene Zeilen
 
-## Validation Rules
+## Validierungsregeln
 
-### Phone Number Validation
-- **Format checking:** International format preferred (+1234567890)
-- **Duplicate detection:** Prevents duplicate phone numbers
-- **Invalid numbers:** Automatically flagged and skipped
+### Telefonnummern-Validierung
+- **Formatprüfung:** Internationales Format bevorzugt (+1234567890)
+- **Duplikaterkennung:** Verhindert doppelte Telefonnummern
+- **Ungültige Nummern:** Automatisch markiert und übersprungen
 
-### Variable Validation
-- **Required fields:** Variables marked as required must have values
-- **Data types:** Text, number, boolean validation where applicable
-- **Length limits:** Maximum character limits enforced
+### Variablen-Validierung
+- **Erforderliche Felder:** Als erforderlich markierte Variablen müssen Werte haben
+- **Datentypen:** Text-, Zahlen-, Boolean-Validierung wo zutreffend
+- **Längenbeschränkungen:** Maximale Zeichenlimits werden durchgesetzt
 
-### Secondary Contact Validation
-- **Phone format:** Same validation as primary numbers
-- **Unique numbers:** Secondary contacts must differ from primary
-- **Variable consistency:** Secondary contact variables validated independently
+### Validierung sekundärer Kontakte
+- **Telefonformat:** Gleiche Validierung wie primäre Nummern
+- **Einzigartige Nummern:** Sekundäre Kontakte müssen sich vom Primärkontakt unterscheiden
+- **Variablenkonsistenz:** Variablen sekundärer Kontakte werden unabhängig validiert
 
-## Error Handling
+## Fehlerbehandlung
 
-### Skip Invalid Rows
-When "Ignore errors" is enabled:
-- **Valid rows imported:** Successfully validated leads added
-- **Invalid rows skipped:** Problem rows excluded from import
-- **Error report generated:** Download detailed report of skipped rows
-- **Partial success:** Import completes with valid subset
+### Ungültige Zeilen überspringen
+Wenn "Fehler ignorieren" aktiviert ist:
+- **Gültige Zeilen importiert:** Erfolgreich validierte Leads werden hinzugefügt
+- **Ungültige Zeilen übersprungen:** Problemzeilen werden vom Import ausgeschlossen
+- **Fehlerbericht generiert:** Detaillierten Bericht der übersprungenen Zeilen herunterladen
+- **Teilerfolg:** Import wird mit gültiger Teilmenge abgeschlossen
 
-### Common Validation Errors
-- **Invalid phone numbers:** Incorrect format or impossible numbers
-- **Missing required fields:** Empty values for required variables
-- **Duplicate phone numbers:** Phone number already exists in system
-- **File format issues:** Corrupted or unsupported file format
+### Häufige Validierungsfehler
+- **Ungültige Telefonnummern:** Falsches Format oder unmögliche Nummern
+- **Fehlende erforderliche Felder:** Leere Werte für erforderliche Variablen
+- **Doppelte Telefonnummern:** Telefonnummer existiert bereits im System
+- **Dateiformat-Probleme:** Beschädigte oder nicht unterstützte Dateiformate
 
-### Error Report Download
-After import completion:
-- **Download link** provided in notification
-- **Detailed error descriptions** for each failed row
-- **Correction guidance** for fixing issues
-- **Re-import capability** with corrected data
+### Fehlerbericht herunterladen
+Nach Import-Abschluss:
+- **Download-Link** in Benachrichtigung bereitgestellt
+- **Detaillierte Fehlerbeschreibungen** für jede fehlgeschlagene Zeile
+- **Korrekturhilfe** zum Beheben von Problemen
+- **Erneuter Import möglich** mit korrigierten Daten
 
-## Secondary Contacts Import
+## Import sekundärer Kontakte
 
-### Multiple Phone Numbers per Lead
-Include additional columns for secondary contacts:
+### Mehrere Telefonnummern pro Lead
+Fügen Sie zusätzliche Spalten für sekundäre Kontakte hinzu:
 ```csv
 phone_number,customer_name,secondary_phone_1,secondary_phone_2,secondary_phone_3
 +14155551234,John Smith,+14155551235,+14155551236,+14155551237
 ```
 
-### Secondary Contact Variables
-Add variables specific to secondary contacts:
+### Variablen für sekundäre Kontakte
+Fügen Sie spezifische Variablen für sekundäre Kontakte hinzu:
 ```csv
 phone_number,customer_name,secondary_phone_1,secondary_1_name,secondary_1_role
-+14155551234,John Smith,+14155551235,Jane Smith,Decision Maker
++14155551234,John Smith,+14155551235,Jane Smith,Entscheidungsträger
 ```
 
-### Contact Ordering
-- **Primary contact:** Always called first
-- **Secondary order:** Called in column order (secondary_phone_1, then secondary_phone_2, etc.)
-- **Campaign coordination:** Respects campaign retry settings between contacts
+### Kontakt-Reihenfolge
+- **Primärkontakt:** Wird immer zuerst angerufen
+- **Sekundäre Reihenfolge:** Werden in Spaltenreihenfolge angerufen (secondary_phone_1, dann secondary_phone_2, etc.)
+- **Kampagnen-Koordination:** Respektiert Kampagnen-Wiederholungseinstellungen zwischen Kontakten
 
-## Large File Handling
+## Handhabung großer Dateien
 
-### Background Processing
-- **Automatic queuing:** Files over 1000 rows processed in background
-- **Memory efficiency:** Streaming processing prevents timeouts
-- **Progress tracking:** Real-time status updates
-- **System performance:** No impact on platform performance during import
+### Hintergrundverarbeitung
+- **Automatische Warteschlange:** Dateien mit über 1000 Zeilen werden im Hintergrund verarbeitet
+- **Speichereffizienz:** Streaming-Verarbeitung verhindert Timeouts
+- **Fortschrittsverfolgung:** Echtzeit-Statusaktualisierungen
+- **Systemleistung:** Keine Auswirkung auf Plattformleistung während Import
 
-### Notification System
-- **Email notifications:** Sent when import completes
-- **Success summary:** Number of leads imported successfully
-- **Error summary:** Count and details of failed rows
-- **Download links:** Access to error reports and imported data
+### Benachrichtigungssystem
+- **E-Mail-Benachrichtigungen:** Gesendet bei Import-Abschluss
+- **Erfolgszusammenfassung:** Anzahl erfolgreich importierter Leads
+- **Fehlerzusammenfassung:** Anzahl und Details fehlgeschlagener Zeilen
+- **Download-Links:** Zugriff auf Fehlerberichte und importierte Daten
 
-### Processing Time
-- **Small files (< 100 rows):** Usually complete within 1 minute
-- **Medium files (100-1000 rows):** 2-5 minutes typical
-- **Large files (1000+ rows):** 10-30 minutes depending on complexity
-- **Very large files (10k+ rows):** May take several hours
+### Verarbeitungszeit
+- **Kleine Dateien (< 100 Zeilen):** Normalerweise innerhalb 1 Minute abgeschlossen
+- **Mittlere Dateien (100-1000 Zeilen):** 2-5 Minuten typisch
+- **Große Dateien (1000+ Zeilen):** 10-30 Minuten je nach Komplexität
+- **Sehr große Dateien (10k+ Zeilen):** Kann mehrere Stunden dauern
 
 ## Best Practices
 
-- **Use sample file:** Download provided template for correct format
-- **Phone format:** International format without separators (+1234567890)
-- **Clean data:** Remove empty rows and validate content
-- **Test first:** Start with small batch to verify format
-- **Match variables:** Ensure columns align with assistant configuration
+- **Beispieldatei verwenden:** Bereitgestellte Vorlage für korrektes Format herunterladen
+- **Telefonformat:** Internationales Format ohne Trennzeichen (+1234567890)
+- **Saubere Daten:** Leere Zeilen entfernen und Inhalt validieren
+- **Zuerst testen:** Mit kleiner Batch beginnen, um Format zu verifizieren
+- **Variablen abgleichen:** Sicherstellen, dass Spalten mit Assistentenkonfiguration übereinstimmen
 
 <Note>
-For detailed troubleshooting and common import issues, see [Leads Troubleshooting](/troubleshooting/leads).
+Für detaillierte Fehlerbehebung und häufige Import-Probleme siehe [Leads-Fehlerbehebung](/troubleshooting/leads).
 </Note>
 
 <Note>
-For information about managing imported leads, see [Managing Leads](/leads/managing-leads).
+Für Informationen zur Verwaltung importierter Leads siehe [Leads verwalten](/leads/managing-leads).
 </Note>

@@ -1,152 +1,152 @@
 ---
-title: "Campaigns Overview"
+title: "Kampagnen-Übersicht"
 icon: "bullhorn"
-description: "Learn how to create and manage automated calling campaigns to reach multiple leads efficiently"
+description: "Erfahren Sie, wie Sie automatisierte Anrufkampagnen erstellen und verwalten, um mehrere Leads effizient zu erreichen"
 ---
 
-Campaigns enable you to automate calls to multiple leads using your AI assistant. Set up scheduling, retry logic, and lead management to run efficient outbound calling operations.
+Kampagnen ermöglichen es Ihnen, Anrufe an mehrere Leads mithilfe Ihres KI-Assistenten zu automatisieren. Richten Sie Planung, Wiederholungslogik und Lead-Verwaltung ein, um effiziente ausgehende Anrufoperationen durchzuführen.
 
-## What is a Campaign?
+## Was ist eine Kampagne?
 
-A campaign is an automated system that calls multiple leads on your behalf using a configured AI assistant. Each campaign includes:
+Eine Kampagne ist ein automatisiertes System, das in Ihrem Namen mehrere Leads mit einem konfigurierten KI-Assistenten anruft. Jede Kampagne umfasst:
 
 <CardGroup cols={2}>
-  <Card title="Lead Management" icon="users">
-    **Primary and secondary contacts** for comprehensive outreach
+  <Card title="Lead-Verwaltung" icon="users">
+    **Primäre und sekundäre Kontakte** für umfassende Kontaktaufnahme
     
-    Import leads from CSV, integrations, or add manually
+    Importieren Sie Leads aus CSV, Integrationen oder fügen Sie manuell hinzu
   </Card>
   
-  <Card title="Scheduling Control" icon="calendar">
-    **Time and day restrictions** to respect customer preferences
+  <Card title="Planungssteuerung" icon="calendar">
+    **Zeit- und Tagesbeschränkungen** zur Respektierung von Kundenpräferenzen
     
-    Set allowed calling hours and days of the week
+    Legen Sie erlaubte Anrufzeiten und Wochentage fest
   </Card>
   
-  <Card title="Retry Logic" icon="repeat">
-    **Intelligent retry system** for unanswered calls
+  <Card title="Wiederholungslogik" icon="repeat">
+    **Intelligentes Wiederholungssystem** für unbeantwortete Anrufe
     
-    Configure retry attempts, intervals, and conditions
+    Konfigurieren Sie Wiederholungsversuche, Intervalle und Bedingungen
   </Card>
   
-  <Card title="Goal Tracking" icon="bullseye">
-    **Success measurement** with completion variables
+  <Card title="Zielverfolgung" icon="bullseye">
+    **Erfolgsmessung** mit Abschlussvariablen
     
-    Track campaign objectives and lead conversion
+    Verfolgen Sie Kampagnenziele und Lead-Konvertierung
   </Card>
 </CardGroup>
 
-## Campaign Status
+## Kampagnenstatus
 
 <AccordionGroup>
-  <Accordion title="Draft" icon="file">
-    Campaign is being configured but not yet active. Add leads and configure settings.
+  <Accordion title="Entwurf" icon="file">
+    Kampagne wird konfiguriert, ist aber noch nicht aktiv. Fügen Sie Leads hinzu und konfigurieren Sie Einstellungen.
   </Accordion>
   
-  <Accordion title="In Progress" icon="play">
-    Campaign is actively making calls according to your schedule and retry settings.
+  <Accordion title="In Bearbeitung" icon="play">
+    Kampagne führt aktiv Anrufe gemäß Ihrem Zeitplan und Wiederholungseinstellungen durch.
   </Accordion>
   
-  <Accordion title="Paused" icon="pause">
-    Campaign is temporarily stopped. Can be resumed without losing progress.
+  <Accordion title="Pausiert" icon="pause">
+    Kampagne ist vorübergehend gestoppt. Kann ohne Fortschrittsverlust fortgesetzt werden.
   </Accordion>
   
-  <Accordion title="Completed" icon="check">
-    All leads have been successfully contacted or marked complete.
+  <Accordion title="Abgeschlossen" icon="check">
+    Alle Leads wurden erfolgreich kontaktiert oder als abgeschlossen markiert.
   </Accordion>
 </AccordionGroup>
 
-## Key Features
+## Hauptfunktionen
 
-### Scheduling & Timing
-- **Allowed calling hours:** Set start and end times (e.g., 9:00 AM - 6:00 PM)
-- **Allowed days:** Choose specific days of the week for calling
-- **Timezone support:** Uses assistant's configured timezone
-- **Call window validation:** System automatically respects time restrictions
+### Planung & Timing
+- **Erlaubte Anrufzeiten:** Start- und Endzeiten festlegen (z.B. 9:00 - 18:00 Uhr)
+- **Erlaubte Tage:** Spezifische Wochentage für Anrufe auswählen
+- **Zeitzonen-Unterstützung:** Verwendet die konfigurierte Zeitzone des Assistenten
+- **Anruffenster-Validierung:** System respektiert automatisch Zeitbeschränkungen
 
-### Retry System
-- **Max retries:** 1-5 attempts for unanswered calls (default: 3)
-- **Retry interval:** 10-4320 minutes between attempts (default: 60 minutes)
-- **Retry on voicemail:** Continue calling until human answers
-- **Goal-based retry:** Keep calling until objective is achieved (requires [post-call variables](/ai-assistants/settings/post-call-actions#post-call-variables) with boolean type)
+### Wiederholungssystem
+- **Max. Wiederholungen:** 1-5 Versuche für unbeantwortete Anrufe (Standard: 3)
+- **Wiederholungsintervall:** 10-4320 Minuten zwischen Versuchen (Standard: 60 Minuten)
+- **Wiederholen bei Voicemail:** Weiter anrufen, bis ein Mensch antwortet
+- **Zielbasierte Wiederholung:** Weiter anrufen, bis Ziel erreicht ist (erfordert [Nach-Anruf-Variablen](/ai-assistants/settings/post-call-actions#post-call-variables) mit booleschem Typ)
 
-### Lead Types
-- **Primary leads:** Main contacts imported or added to campaign
-- **Secondary contacts:** Additional contacts linked to primary leads
-- **Lead status tracking:** Monitor call progress and outcomes
+### Lead-Typen
+- **Primäre Leads:** Hauptkontakte, die in die Kampagne importiert oder hinzugefügt wurden
+- **Sekundäre Kontakte:** Zusätzliche Kontakte, die mit primären Leads verknüpft sind
+- **Lead-Statusverfolgung:** Anruffortschritt und Ergebnisse überwachen
 
-## Requirements
+## Anforderungen
 
-Before starting a campaign:
+Vor dem Start einer Kampagne:
 
 <Warning>
-**Phone Number Required:** Your assistant must have a [phone number configured](/ai-assistants/settings/general#phone-number-configuration) for outbound calls.
+**Telefonnummer erforderlich:** Ihr Assistent muss eine [konfigurierte Telefonnummer](/ai-assistants/settings/general#phone-number-configuration) für ausgehende Anrufe haben.
 </Warning>
 
-- **Configured AI assistant** with outbound calling capability
-- **Sufficient account balance** for call costs
-- **Leads added** to the campaign (manual, import, or integration)
-- **Valid phone numbers** for all leads
+- **Konfigurierter KI-Assistent** mit ausgehender Anruffähigkeit
+- **Ausreichendes Kontoguthaben** für Anrufkosten
+- **Leads hinzugefügt** zur Kampagne (manuell, Import oder Integration)
+- **Gültige Telefonnummern** für alle Leads
 
-## Quick Start
+## Schnellstart
 
-1. **Create Campaign:** Choose a name and select your AI assistant
-2. **Set Schedule:** Define allowed calling hours and days
-3. **Configure Retries:** Set retry attempts and intervals
-4. **Add Leads:** Import from CSV or add manually
-5. **Start Campaign:** Click start when ready to begin calling
+1. **Kampagne erstellen:** Namen wählen und KI-Assistent auswählen
+2. **Zeitplan festlegen:** Erlaubte Anrufzeiten und -tage definieren
+3. **Wiederholungen konfigurieren:** Wiederholungsversuche und Intervalle festlegen
+4. **Leads hinzufügen:** Aus CSV importieren oder manuell hinzufügen
+5. **Kampagne starten:** Auf Start klicken, wenn bereit
 
 <Note>
-For detailed setup instructions, see [Creating a Campaign](/campaigns/creating-campaigns).
+Für detaillierte Einrichtungsanweisungen siehe [Kampagne erstellen](/campaigns/creating-campaigns).
 </Note>
 
-## Campaign Monitoring
+## Kampagnenüberwachung
 
-### Lead Status Tracking
-Monitor individual lead progress through the campaign:
-- **Created:** Ready to be called
-- **Scheduled:** Queued for next call attempt
-- **Processing:** Currently being called
-- **Completed:** Successfully contacted or goal achieved
-- **Rescheduled:** Scheduled for retry attempt
-- **Max Retries:** Reached maximum retry attempts
+### Lead-Statusverfolgung
+Überwachen Sie den individuellen Lead-Fortschritt durch die Kampagne:
+- **Erstellt:** Bereit zum Anrufen
+- **Geplant:** In Warteschlange für nächsten Anrufversuch
+- **In Bearbeitung:** Wird gerade angerufen
+- **Abgeschlossen:** Erfolgreich kontaktiert oder Ziel erreicht
+- **Neu geplant:** Für Wiederholungsversuch geplant
+- **Max. Wiederholungen:** Maximale Wiederholungsversuche erreicht
 
-**Manual lead management:** You can change lead status in the leads table:
-- **Set to "Created":** Reset lead to be called again
-- **Set to "Completed":** Mark lead as finished to stop calling
+**Manuelle Lead-Verwaltung:** Sie können den Lead-Status in der Leads-Tabelle ändern:
+- **Auf "Erstellt" setzen:** Lead zurücksetzen, um erneut angerufen zu werden
+- **Auf "Abgeschlossen" setzen:** Lead als beendet markieren, um Anrufe zu stoppen
 
-### Call Results
-Individual call outcomes with detailed status:
-- **Initiated:** Call started
-- **Ringing:** Phone is ringing
-- **In Progress:** Call connected and active
-- **Completed:** Call finished successfully
-- **Busy:** Line was busy
-- **Unanswered:** No one answered
-- **Failed:** Technical issue prevented call
+### Anrufergebnisse
+Individuelle Anrufergebnisse mit detailliertem Status:
+- **Initiiert:** Anruf gestartet
+- **Klingelt:** Telefon klingelt
+- **In Bearbeitung:** Anruf verbunden und aktiv
+- **Abgeschlossen:** Anruf erfolgreich beendet
+- **Besetzt:** Leitung war besetzt
+- **Unbea ntwortet:** Niemand hat geantwortet
+- **Fehlgeschlagen:** Technisches Problem verhinderte Anruf
 
-## Troubleshooting
+## Fehlerbehebung
 
-**Campaign won't start:**
-- Check if assistant has phone number configured
-- Verify sufficient account balance
-- Ensure leads are added to campaign
+**Kampagne startet nicht:**
+- Prüfen Sie, ob Assistent Telefonnummer konfiguriert hat
+- Ausreichendes Kontoguthaben überprüfen
+- Sicherstellen, dass Leads zur Kampagne hinzugefügt wurden
 
-**No calls being made:**
-- Wait 10-15 minutes after starting - campaigns take time to initialize
-- Check if current time is within allowed calling hours
-- Verify allowed days include current day
-- Confirm leads have valid phone numbers
+**Keine Anrufe werden getätigt:**
+- Warten Sie 10-15 Minuten nach dem Start - Kampagnen brauchen Zeit zur Initialisierung
+- Prüfen Sie, ob aktuelle Zeit innerhalb erlaubter Anrufzeiten liegt
+- Überprüfen Sie, ob erlaubte Tage den aktuellen Tag einschließen
+- Bestätigen Sie, dass Leads gültige Telefonnummern haben
 
-**Too many/few retries:**
-- Adjust max retries setting (1-5 attempts)
-- Modify retry interval (10-4320 minutes)
-- Review retry conditions (voicemail, goal completion)
+**Zu viele/wenige Wiederholungen:**
+- Max. Wiederholungseinstellung anpassen (1-5 Versuche)
+- Wiederholungsintervall ändern (10-4320 Minuten)
+- Wiederholungsbedingungen überprüfen (Voicemail, Zielabschluss)
 
 <Tip>
-**Best Practice:** Start with conservative retry settings and adjust based on campaign performance and customer feedback.
+**Best Practice:** Beginnen Sie mit konservativen Wiederholungseinstellungen und passen Sie basierend auf Kampagnenleistung und Kundenfeedback an.
 </Tip>
 
 <Note>
-For detailed troubleshooting guidance, see [Campaign Troubleshooting](/troubleshooting/campaigns).
+Für detaillierte Fehlerbehebungsanleitung siehe [Kampagnen-Fehlerbehebung](/troubleshooting/campaigns).
 </Note>

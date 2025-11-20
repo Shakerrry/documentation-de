@@ -1,45 +1,45 @@
 ---
-title: "Google Sheets Live Sync"
+title: "Google Sheets Live-Synchronisation"
 icon: "table"
-description: "Learn how to sync leads from a live Google Sheet and trigger AI calls automatically"
+description: "Erfahren Sie, wie Sie Leads aus einem Live-Google-Sheet synchronisieren und automatisch KI-Anrufe auslösen"
 ---
 
-This tutorial shows how to set up an automation that monitors a Google Sheet for new leads and automatically triggers AI calls when new rows are added.
+Dieses Tutorial zeigt, wie Sie eine Automatisierung einrichten, die ein Google Sheet auf neue Leads überwacht und automatisch KI-Anrufe auslöst, wenn neue Zeilen hinzugefügt werden.
 
 <iframe
   width="100%"
   height="400"
   src="https://www.youtube.com/embed/FoqCXx6ehII?si=9Ic3VHwV-QeL5YER"
-  title="Tutorial: How to sync leads from a live Google Sheet"
+  title="Tutorial: Wie man Leads aus einem Live-Google-Sheet synchronisiert"
   frameBorder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen></iframe>
 
-## What You'll Learn
+## Was Sie lernen werden
 
-- Creating an AI assistant optimized for Google Sheets integration
-- Setting up Google Sheets trigger for new row additions
-- Configuring proper data mapping from spreadsheet to assistant
-- Testing and deploying your live sync automation
-- Best practices for spreadsheet formatting
+- Einen KI-Assistenten erstellen, der für Google Sheets-Integration optimiert ist
+- Google Sheets-Trigger für neue Zeilenhinzufügungen einrichten
+- Korrekte Datenmapping von Spreadsheet zu Assistent konfigurieren
+- Ihre Live-Sync-Automatisierung testen und bereitstellen
+- Best Practices für Spreadsheet-Formatierung
 
-## Prerequisites
+## Voraussetzungen
 
-- Google account with Google Sheets access
-- Phone number configured for outbound calls
-- Basic understanding of spreadsheet structure
+- Google-Konto mit Google Sheets-Zugriff
+- Telefonnummer für ausgehende Anrufe konfiguriert
+- Grundlegendes Verständnis der Spreadsheet-Struktur
 
-## Step 1: Create Your AI Assistant
+## Schritt 1: Ihren KI-Assistenten erstellen
 
-We'll start by creating an AI assistant specifically configured for Google Sheets lead processing.
+Wir beginnen mit der Erstellung eines KI-Assistenten, der speziell für Google Sheets-Lead-Verarbeitung konfiguriert ist.
 
 <Frame>
-  <img src="/resources/tutorials/google-sheets-sync/01-create-assistant.png" alt="Creating new AI assistant for Google Sheets" />
+  <img src="/resources/tutorials/google-sheets-sync/01-create-assistant.png" alt="Neuen KI-Assistenten für Google Sheets erstellen" />
 </Frame>
 
-1. **Navigate to Assistants page** and click "Assistants" in the sidebar
-2. **Click "New Assistant"** button
-3. **Name your assistant** - we'll use "Test GoogleSheets"
+1. **Navigieren Sie zur Assistants-Seite** und klicken Sie auf "Assistants" in der Sidebar
+2. **Klicken Sie auf "New Assistant"**-Button
+3. **Benennen Sie Ihren Assistenten** - wir verwenden "Test GoogleSheets"
 
 <video
   autoPlay
@@ -48,21 +48,21 @@ We'll start by creating an AI assistant specifically configured for Google Sheet
   playsinline
   src="/resources/tutorials/google-sheets-sync/02-assistant-configuration.mp4"></video>
 
-4. **Complete the basic settings:**
-   - Select a phone number for outbound calls
-   - Choose an appropriate voice
-   - Set your timezone
+4. **Vervollständigen Sie die Grundeinstellungen:**
+   - Wählen Sie eine Telefonnummer für ausgehende Anrufe
+   - Wählen Sie eine geeignete Stimme
+   - Setzen Sie Ihre Zeitzone
 
-## Step 2: Configure Call Variables for Spreadsheet Data
+## Schritt 2: Anrufvariablen für Spreadsheet-Daten konfigurieren
 
-Call variables will map directly to columns in your Google Sheet, so plan your spreadsheet structure accordingly.
+Anrufvariablen werden direkt auf Spalten in Ihrem Google Sheet gemappt, also planen Sie Ihre Spreadsheet-Struktur entsprechend.
 
 <Frame>
-  <img src="/resources/tutorials/google-sheets-sync/03-prompts-and-tools-tab.png" alt="Navigating to Prompts and Tools tab" />
+  <img src="/resources/tutorials/google-sheets-sync/03-prompts-and-tools-tab.png" alt="Navigation zum Prompts and Tools-Tab" />
 </Frame>
 
-1. **Go to the "Prompts and Tools" tab** (second tab)
-2. **Locate the "Call Variables" section**
+1. **Gehen Sie zum "Prompts and Tools"-Tab** (zweiter Tab)
+2. **Finden Sie den "Call Variables"-Abschnitt**
 
 <video
   autoPlay
@@ -71,25 +71,25 @@ Call variables will map directly to columns in your Google Sheet, so plan your s
   playsinline
   src="/resources/tutorials/google-sheets-sync/04-add-email-variable.mp4"></video>
 
-3. **Configure your call variables:**
-   - You'll see `customer_name` with default value "John"
-   - **Add `email` variable** with your email as default value for testing
-   - Add any additional variables that match your spreadsheet columns
+3. **Konfigurieren Sie Ihre Anrufvariablen:**
+   - Sie sehen `customer_name` mit Standardwert "John"
+   - **Fügen Sie `email`-Variable hinzu** mit Ihrer E-Mail als Standardwert zum Testen
+   - Fügen Sie beliebige zusätzliche Variablen hinzu, die Ihren Spreadsheet-Spalten entsprechen
 
-4. **Variables can be used in multiple ways:**
-   - **In the system prompt**: "Hi `{customer_name}`"
-   - **For mid-call tools**: Personalized API calls
-   - **For file imports**: Bulk lead processing
-   - **For automation platform**: Dynamic data mapping
+4. **Variablen können auf mehrere Arten verwendet werden:**
+   - **Im System-Prompt**: "Hi `{customer_name}`"
+   - **Für Mid-Call-Tools**: Personalisierte API-Aufrufe
+   - **Für Dateiimporte**: Massen-Lead-Verarbeitung
+   - **Für Automatisierungsplattform**: Dynamisches Datenmapping
 
-## Step 3: Create Campaign for Sheet Leads
+## Schritt 3: Kampagne für Sheet-Leads erstellen
 
 <Frame>
-  <img src="/resources/tutorials/google-sheets-sync/06-create-campaign.png" alt="Creating campaign for Google Sheets leads" />
+  <img src="/resources/tutorials/google-sheets-sync/06-create-campaign.png" alt="Kampagne für Google Sheets-Leads erstellen" />
 </Frame>
 
-1. **Navigate to Campaigns** page in the sidebar
-2. **Click "New Campaign"** button
+1. **Navigieren Sie zur Campaigns-Seite** in der Sidebar
+2. **Klicken Sie auf "New Campaign"**-Button
 
 <video
   autoPlay
@@ -98,16 +98,16 @@ Call variables will map directly to columns in your Google Sheet, so plan your s
   playsinline
   src="/resources/tutorials/google-sheets-sync/07-campaign-settings.mp4"></video>
 
-3. **Configure your campaign:**
-   - **Give it a descriptive name**
-   - **Select the assistant** you just created
-   - **Keep default retry settings** (can be adjusted later)
+3. **Konfigurieren Sie Ihre Kampagne:**
+   - **Geben Sie ihr einen beschreibenden Namen**
+   - **Wählen Sie den Assistenten**, den Sie gerade erstellt haben
+   - **Behalten Sie Standard-Retry-Einstellungen** (können später angepasst werden)
 
-4. **Click "Create"** to save the campaign
+4. **Klicken Sie auf "Create"**, um die Kampagne zu speichern
 
-## Step 4: Set Up Google Sheets Automation
+## Schritt 4: Google Sheets-Automatisierung einrichten
 
-Now we'll create the automation that monitors your Google Sheet for new leads.
+Jetzt erstellen wir die Automatisierung, die Ihr Google Sheet auf neue Leads überwacht.
 
 <video
   autoPlay
@@ -116,8 +116,8 @@ Now we'll create the automation that monitors your Google Sheet for new leads.
   playsinline
   src="/resources/tutorials/google-sheets-sync/08-automation-platform.mp4"></video>
 
-1. **Click "Automation Platform"** in the sidebar
-2. **Create a new flow** from scratch
+1. **Klicken Sie auf "Automation Platform"** in der Sidebar
+2. **Erstellen Sie einen neuen Flow** von Grund auf
 
 <video
   autoPlay
@@ -126,8 +126,8 @@ Now we'll create the automation that monitors your Google Sheet for new leads.
   playsinline
   src="/resources/tutorials/google-sheets-sync/09-search-google-sheets.mp4"></video>
 
-3. **Search for "Google Sheets"** in the trigger search
-4. **Select "New Row Added"** trigger
+3. **Suchen Sie nach "Google Sheets"** in der Trigger-Suche
+4. **Wählen Sie "New Row Added"**-Trigger
 
 <video
   autoPlay
@@ -136,14 +136,14 @@ Now we'll create the automation that monitors your Google Sheet for new leads.
   playsinline
   src="/resources/tutorials/google-sheets-sync/10-create-connection.mp4"></video>
 
-5. **Create a new connection:**
-   - Click "New Connection"
-   - Authorize with your Google account
-   - Click "Save" once connected
+5. **Erstellen Sie eine neue Verbindung:**
+   - Klicken Sie auf "New Connection"
+   - Autorisieren Sie mit Ihrem Google-Konto
+   - Klicken Sie auf "Save", sobald verbunden
 
-## Step 5: Create and Configure Your Test Spreadsheet and add sample data
+## Schritt 5: Test-Spreadsheet erstellen und konfigurieren und Beispieldaten hinzufügen
 
-For this tutorial, we'll create a properly formatted test spreadsheet.
+Für dieses Tutorial erstellen wir ein korrekt formatiertes Test-Spreadsheet.
 
 <video
   autoPlay
@@ -152,20 +152,20 @@ For this tutorial, we'll create a properly formatted test spreadsheet.
   playsinline
   src="/resources/tutorials/google-sheets-sync/11-create-new-sheet.mp4"></video>
 
-1. **Go to Google Sheets** and create a new spreadsheet
-2. **Name it "testnewleads"** (or any descriptive name)
-3. **Add a test lead in the first row:**
-   - **Phone number**: Use international format (+1234567890)
-   - **Customer name**: Your name for testing
-   - **Email**: Your email address
+1. **Gehen Sie zu Google Sheets** und erstellen Sie ein neues Spreadsheet
+2. **Benennen Sie es "testnewleads"** (oder einen beschreibenden Namen)
+3. **Fügen Sie einen Test-Lead in der ersten Zeile hinzu:**
+   - **Telefonnummer**: Verwenden Sie internationales Format (+1234567890)
+   - **Kundenname**: Ihr Name zum Testen
+   - **E-Mail**: Ihre E-Mail-Adresse
 
 <Warning>
-**Phone Number Format**: Always use international format with + sign and no spaces or parentheses. Example: +1234567890, not (123) 456-7890
+**Telefonnummernformat**: Verwenden Sie immer internationales Format mit + Zeichen und ohne Leerzeichen oder Klammern. Beispiel: +1234567890, nicht (123) 456-7890
 </Warning>
 
-2. **Save the spreadsheet** - this data will be used for testing
+2. **Speichern Sie das Spreadsheet** - diese Daten werden zum Testen verwendet
 
-## Step 7: Configure the Automation Trigger
+## Schritt 7: Automatisierungs-Trigger konfigurieren
 
 <video
   autoPlay
@@ -174,9 +174,9 @@ For this tutorial, we'll create a properly formatted test spreadsheet.
   playsinline
   src="/resources/tutorials/google-sheets-sync/14-select-spreadsheet.mp4"></video>
 
-1. **Return to the automation platform**
-2. **Select your spreadsheet** ("testnewleads")
-3. **Select the specific sheet** (usually "Sheet1")
+1. **Kehren Sie zur Automatisierungsplattform zurück**
+2. **Wählen Sie Ihr Spreadsheet** ("testnewleads")
+3. **Wählen Sie das spezifische Sheet** (normalerweise "Sheet1")
 
 <video
   autoPlay
@@ -185,10 +185,10 @@ For this tutorial, we'll create a properly formatted test spreadsheet.
   playsinline
   src="/resources/tutorials/google-sheets-sync/15-load-data.mp4"></video>
 
-4. **Click "Load Data"** to fetch the sample lead
-5. **Verify** that you can see the lead data you just created
+4. **Klicken Sie auf "Load Data"**, um den Beispiel-Lead abzurufen
+5. **Überprüfen Sie**, dass Sie die Lead-Daten sehen, die Sie gerade erstellt haben
 
-## Step 8: Configure the Campaign Action
+## Schritt 8: Kampagnen-Aktion konfigurieren
 
 <video
   autoPlay
@@ -197,9 +197,9 @@ For this tutorial, we'll create a properly formatted test spreadsheet.
   playsinline
   src="/resources/tutorials/google-sheets-sync/16-add-action.mp4"></video>
 
-1. **Click the "+" sign** to add an action
-2. **Search for your calling platform**
-3. **Select "Add Lead to Campaign"**
+1. **Klicken Sie auf das "+"-Zeichen**, um eine Aktion hinzuzufügen
+2. **Suchen Sie nach Ihrer Anrufplattform**
+3. **Wählen Sie "Add Lead to Campaign"**
 
 <video
   autoPlay
@@ -208,11 +208,11 @@ For this tutorial, we'll create a properly formatted test spreadsheet.
   playsinline
   src="/resources/tutorials/google-sheets-sync/17-select-campaign.mp4"></video>
 
-4. **Select the campaign** you created for this automation
+4. **Wählen Sie die Kampagne**, die Sie für diese Automatisierung erstellt haben
 
-## Step 9: Map Spreadsheet Data to Assistant Variables
+## Schritt 9: Spreadsheet-Daten zu Assistenten-Variablen mappen
 
-This step connects your spreadsheet columns to your assistant's call variables.
+Dieser Schritt verbindet Ihre Spreadsheet-Spalten mit den Anrufvariablen Ihres Assistenten.
 
 <video
   autoPlay
@@ -221,10 +221,10 @@ This step connects your spreadsheet columns to your assistant's call variables.
   playsinline
   src="/resources/tutorials/google-sheets-sync/18-map-phone-number.mp4"></video>
 
-1. **Click on the "Phone Number" input field**
-2. **A sidebar will open** showing available data from the trigger
-3. **Search for and select the phone number** from your spreadsheet
-4. **Click "Insert"** to map the field
+1. **Klicken Sie auf das "Phone Number"-Eingabefeld**
+2. **Eine Sidebar öffnet sich** mit verfügbaren Daten vom Trigger
+3. **Suchen und wählen Sie die Telefonnummer** aus Ihrem Spreadsheet
+4. **Klicken Sie auf "Insert"**, um das Feld zu mappen
 
 <video
   autoPlay
@@ -233,16 +233,16 @@ This step connects your spreadsheet columns to your assistant's call variables.
   playsinline
   src="/resources/tutorials/google-sheets-sync/19-map-variables.mp4"></video>
 
-5. **Map your call variables:**
-   - **customer_name**: Select from spreadsheet data
-   - **email**: Select from spreadsheet data
-   - Map any additional variables you defined
+5. **Mappen Sie Ihre Anrufvariablen:**
+   - **customer_name**: Wählen Sie aus Spreadsheet-Daten
+   - **email**: Wählen Sie aus Spreadsheet-Daten
+   - Mappen Sie beliebige zusätzliche Variablen, die Sie definiert haben
 
 <Tip>
-The variable names in your assistant must match the data you're mapping. If you have more columns in your spreadsheet, make sure to define corresponding variables in your assistant first. Learn more about [configuring call variables](/ai-assistants/settings/prompt-and-tools#call-variables).
+Die Variablennamen in Ihrem Assistenten müssen mit den Daten übereinstimmen, die Sie mappen. Wenn Sie mehr Spalten in Ihrem Spreadsheet haben, stellen Sie sicher, dass Sie zuerst entsprechende Variablen in Ihrem Assistenten definieren. Erfahren Sie mehr über [Konfiguration von Anrufvariablen](/ai-assistants/settings/prompt-and-tools#call-variables).
 </Tip>
 
-## Step 10: Test the Integration
+## Schritt 10: Integration testen
 
 <video
   autoPlay
@@ -251,78 +251,78 @@ The variable names in your assistant must match the data you're mapping. If you 
   playsinline
   src="/resources/tutorials/google-sheets-sync/20-test-step.mp4"></video>
 
-1. **Click "Test Step"** to verify the lead creation
-2. **Check for success confirmation**
-3. **Navigate to your Leads page** to confirm:
-   - The lead appears in your platform
-   - All variables are correctly populated
-   - Data matches your spreadsheet entry
+1. **Klicken Sie auf "Test Step"**, um die Lead-Erstellung zu überprüfen
+2. **Prüfen Sie auf Erfolgsbestätigung**
+3. **Navigieren Sie zu Ihrer Leads-Seite**, um zu bestätigen:
+   - Der Lead erscheint in Ihrer Plattform
+   - Alle Variablen sind korrekt ausgefüllt
+   - Daten stimmen mit Ihrem Spreadsheet-Eintrag überein
 
-## Step 11: Publish and Monitor
+## Schritt 11: Veröffentlichen und überwachen
 
 <Frame>
-  <img src="/resources/tutorials/google-sheets-sync/22-publish-automation.png" alt="Publishing the automation" />
+  <img src="/resources/tutorials/google-sheets-sync/22-publish-automation.png" alt="Automatisierung veröffentlichen" />
 </Frame>
 
-1. **Click "Publish"** to activate your automation
-2. **Your spreadsheet is now being monitored** for new rows
-3. **Test the live sync:**
-   - Add new leads to your spreadsheet
-   - Check that they automatically appear in your platform
-   - Monitor the automation runs for any issues
-4. **Monitor automation performance:**
-   - Click "Runs" button in your automation
-   - Review each execution for success/failure
-   - Check timing and data accuracy
+1. **Klicken Sie auf "Publish"**, um Ihre Automatisierung zu aktivieren
+2. **Ihr Spreadsheet wird jetzt überwacht** auf neue Zeilen
+3. **Testen Sie die Live-Synchronisation:**
+   - Fügen Sie neue Leads zu Ihrem Spreadsheet hinzu
+   - Prüfen Sie, dass sie automatisch in Ihrer Plattform erscheinen
+   - Überwachen Sie die Automatisierungs-Runs auf Probleme
+4. **Überwachen Sie die Automatisierungsleistung:**
+   - Klicken Sie auf "Runs"-Button in Ihrer Automatisierung
+   - Überprüfen Sie jede Ausführung auf Erfolg/Fehler
+   - Prüfen Sie Timing und Datengenauigkeit
 
 ## Best Practices
 
-### Spreadsheet Management
-- **Maintain consistent data format** across all entries
-- **Keep phone numbers in international format** consistently
-- **Avoid empty rows** between data entries
+### Spreadsheet-Verwaltung
+- **Behalten Sie konsistentes Datenformat** über alle Einträge bei
+- **Halten Sie Telefonnummern im internationalen Format** konsistent
+- **Vermeiden Sie leere Zeilen** zwischen Dateneinträgen
 
-## Advanced Features
+## Erweiterte Funktionen
 
-### Multiple Variable Support
-If your business needs more lead data:
+### Unterstützung für mehrere Variablen
+Wenn Ihr Unternehmen mehr Lead-Daten benötigt:
 
-1. **Add columns** to your spreadsheet (company_name, address, etc.)
-2. **Define corresponding variables** in your assistant
-3. **Map the new fields** in your automation
-4. **Test with sample data** before adding real leads
+1. **Fügen Sie Spalten hinzu** zu Ihrem Spreadsheet (company_name, address usw.)
+2. **Definieren Sie entsprechende Variablen** in Ihrem Assistenten
+3. **Mappen Sie die neuen Felder** in Ihrer Automatisierung
+4. **Testen Sie mit Beispieldaten**, bevor Sie echte Leads hinzufügen
 
-## Troubleshooting
+## Fehlerbehebung
 
-### Common Issues
+### Häufige Probleme
 
-**Leads not syncing:**
-- Check Google Sheets connection authorization
-- Verify spreadsheet permissions and sharing settings
-- Ensure new rows contain data in all mapped columns
+**Leads werden nicht synchronisiert:**
+- Prüfen Sie Google Sheets-Verbindungsautorisierung
+- Überprüfen Sie Spreadsheet-Berechtigungen und Freigabeeinstellungen
+- Stellen Sie sicher, dass neue Zeilen Daten in allen gemappten Spalten enthalten
 
-**Phone number format errors:**
-- Use international format: +1234567890
-- Remove spaces, parentheses, and dashes
-- Verify country code is included
+**Telefonnummernformat-Fehler:**
+- Verwenden Sie internationales Format: +1234567890
+- Entfernen Sie Leerzeichen, Klammern und Bindestriche
+- Überprüfen Sie, dass die Ländervorwahl enthalten ist
 
-**Variable mapping issues:**
-- Confirm variable names match between assistant and spreadsheet
-- Check that columns contain data
-- Verify mapping configuration in automation
+**Variable-Mapping-Probleme:**
+- Bestätigen Sie, dass Variablennamen zwischen Assistent und Spreadsheet übereinstimmen
+- Prüfen Sie, dass Spalten Daten enthalten
+- Überprüfen Sie Mapping-Konfiguration in Automatisierung
 
-**Automation not triggering:**
-- Ensure automation is published and active
-- Check that new rows are actually being added
-- Verify Google Sheets trigger is properly configured
+**Automatisierung wird nicht ausgelöst:**
+- Stellen Sie sicher, dass die Automatisierung veröffentlicht und aktiv ist
+- Prüfen Sie, dass neue Zeilen tatsächlich hinzugefügt werden
+- Überprüfen Sie, dass der Google Sheets-Trigger korrekt konfiguriert ist
 
-## Next Steps
+## Nächste Schritte
 
-Once your Google Sheets integration is working:
-- **Scale up** with larger lead lists
-- **Add more variables** for better personalization
-- **Integrate with other tools** like CRM systems
-- **Set up follow-up automations** for call results
-- **Monitor and optimize** your conversion rates
+Sobald Ihre Google Sheets-Integration funktioniert:
+- **Skalieren Sie** mit größeren Lead-Listen
+- **Fügen Sie mehr Variablen hinzu** für bessere Personalisierung
+- **Integrieren Sie mit anderen Tools** wie CRM-Systemen
+- **Richten Sie Follow-up-Automatisierungen ein** für Anrufergebnisse
+- **Überwachen und optimieren Sie** Ihre Konversionsraten
 
-Your Google Sheet is now a powerful lead management tool that automatically triggers AI calls for every new lead you add!
+Ihr Google Sheet ist jetzt ein leistungsstarkes Lead-Management-Tool, das automatisch KI-Anrufe für jeden neuen Lead auslöst, den Sie hinzufügen!

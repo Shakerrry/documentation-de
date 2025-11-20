@@ -1,153 +1,153 @@
 ---
-title: "Plans & Pricing Setup"
+title: "Pläne & Preise einrichten"
 icon: "money-bill"
-description: "Learn how to configure your own pricing plans and limitations for your white labeled platform"
+description: "Erfahren Sie, wie Sie Ihre eigenen Preispläne und Einschränkungen für Ihre White-Label-Plattform konfigurieren"
 ---
 
-Configure custom pricing plans for your platform users through the Administration Panel.
+Konfigurieren Sie benutzerdefinierte Preispläne für Ihre Plattformbenutzer über das Verwaltungspanel.
 
-## Accessing Plan Settings
+## Zugriff auf Plan-Einstellungen
 
-1. Open your Administration Panel
-2. Navigate to "Plans" section
+1. Öffnen Sie Ihr Verwaltungspanel
+2. Navigieren Sie zum Abschnitt "Plans"
    <Frame>
-     <img src="/resources/plans.png" alt="Plans & Pricing Section" />
+     <img src="/resources/plans.png" alt="Pläne & Preise-Abschnitt" />
    </Frame>
 
-## Creating Plans
+## Pläne erstellen
 
-Create comprehensive pricing plans with detailed configuration options, limits, and pricing structures.
+Erstellen Sie umfassende Preispläne mit detaillierten Konfigurationsoptionen, Limits und Preisstrukturen.
 
-### Plan Configuration Form
-
-<Frame>
-  <img src="/resources/white-label-plan-form.png" alt="Plan Creation Form" />
-</Frame>
-
-### General Information Section
-
-**Basic Plan Settings:**
-- **Name:** Plan display name shown to customers
-- **Description:** Detailed plan description and benefits (required)
-- **Order:** Display order in pricing page (numeric value)
-- **Is Active:** Enable/disable plan availability
-- **Is Featured:** Display featured badge on plan
-- **Color:** Plan theme color (Info, Success, Purple, Danger)
-
-**Pricing Configuration:**
-- **Included Minutes:** Base minutes included in plan (cannot be changed after creation)
-- **Extra Minutes Cost:** Price per additional minute (minimum: your platform cost)
-
-### Plan Limits Section
+### Plan-Konfigurationsformular
 
 <Frame>
-  <img src="/resources/white-label-plan-limits.png" alt="Plan Limits Configuration" />
+  <img src="/resources/white-label-plan-form.png" alt="Plan-Erstellungsformular" />
 </Frame>
 
-**Count-Based Limits** (Value -1 for unlimited, 0 to disable):
+### Allgemeine Informations-Sektion
 
-- **Max Assistants:** Number of AI assistants (default: 1)
-- **Max Campaigns:** Outbound calling campaigns (default: 1)
-- **Max Cloned Voices:** Voice cloning limit (default: 1, max: 200)
-- **Max Knowledgebases:** Knowledge base documents (default: 1)
-- **Max Mid Call Tools:** Custom API integrations (default: 1)
-- **Max Parallel Calls:** Simultaneous calls (default: 3)
-- **Max Automation Runs:** Monthly automation executions (default: 500)
-- **Max Own Numbers:** Phone numbers owned (default: 1)
+**Grundlegende Plan-Einstellungen:**
+- **Name:** Plan-Anzeigename, der Kunden gezeigt wird
+- **Description:** Detaillierte Planbeschreibung und Vorteile (erforderlich)
+- **Order:** Anzeigereihenfolge auf der Preisseite (numerischer Wert)
+- **Is Active:** Plan-Verfügbarkeit aktivieren/deaktivieren
+- **Is Featured:** Featured-Badge auf Plan anzeigen
+- **Color:** Plan-Theme-Farbe (Info, Success, Purple, Danger)
 
-**Feature Toggles:**
-- **Web Widget:** Embeddable web calling widget (default: enabled)
-- **Secondary Languages:** Multi-language support for assistants (default: enabled)
-- **Automation Platform:** Access to workflow automation tools (default: enabled)
-- **Calendar Integrations:** Cal.com and GoHighLevel scheduling (default: enabled)
-- **Custom Dashboards:** Build personalized analytics dashboards with widgets (default: enabled)
+**Preiskonfiguration:**
+- **Included Minutes:** Basis-Minuten im Plan enthalten (kann nach Erstellung nicht geändert werden)
+- **Extra Minutes Cost:** Preis pro zusätzlicher Minute (Minimum: Ihre Plattformkosten)
 
-### Features Display Section
+### Plan-Limits-Sektion
 
 <Frame>
-  <img src="/resources/white-label-plan-features.png" alt="Plan Features List" />
+  <img src="/resources/white-label-plan-limits.png" alt="Plan-Limits-Konfiguration" />
 </Frame>
 
-**Plan Features List:**
-- Add up to 15 custom features per plan
-- Each feature limited to 80 characters
-- Features appear as bullet points on pricing page
-- Use descriptive benefits and capabilities
+**Anzahl-basierte Limits** (Wert -1 für unbegrenzt, 0 zum Deaktivieren):
 
-**Common Feature Examples:**
-- "120 included minutes, then $0.20 / extra minute"
-- "1 assistant"  
-- "1 outbound campaign"
-- "3 calls in parallel"
-- "1 cloned voice"
-- "24/7 Customer Support"
+- **Max Assistants:** Anzahl der KI-Assistenten (Standard: 1)
+- **Max Campaigns:** Ausgehende Anrufkampagnen (Standard: 1)
+- **Max Cloned Voices:** Stimmklon-Limit (Standard: 1, max: 200)
+- **Max Knowledgebases:** Wissensdatenbank-Dokumente (Standard: 1)
+- **Max Mid Call Tools:** Benutzerdefinierte API-Integrationen (Standard: 1)
+- **Max Parallel Calls:** Gleichzeitige Anrufe (Standard: 3)
+- **Max Automation Runs:** Monatliche Automatisierungsausführungen (Standard: 500)
+- **Max Own Numbers:** Eigene Telefonnummern (Standard: 1)
 
+**Feature-Toggles:**
+- **Web Widget:** Einbettbares Web-Calling-Widget (Standard: aktiviert)
+- **Secondary Languages:** Mehrsprachige Unterstützung für Assistenten (Standard: aktiviert)
+- **Automation Platform:** Zugriff auf Workflow-Automatisierungstools (Standard: aktiviert)
+- **Calendar Integrations:** Cal.com und GoHighLevel-Planung (Standard: aktiviert)
+- **Custom Dashboards:** Personalisierte Analytik-Dashboards mit Widgets erstellen (Standard: aktiviert)
 
-### Adding Prices to Plans
-
-After creating a plan, scroll down to the **Prices** table:
+### Funktionsanzeige-Sektion
 
 <Frame>
-  <img src="/resources/wl-price.jpg" alt="Plan Creation Interface" />
+  <img src="/resources/white-label-plan-features.png" alt="Plan-Funktionsliste" />
 </Frame>
 
-**Price Configuration Interface:**
-- **Billing Type:** Monthly or Yearly (can have both options)
-- **Set Your Price:** Customer price with automatic cost validation
-- **Cost & Profit Breakdown:** Real-time calculation showing platform costs and your profit
+**Plan-Funktionsliste:**
+- Fügen Sie bis zu 15 benutzerdefinierte Funktionen pro Plan hinzu
+- Jede Funktion auf 80 Zeichen begrenzt
+- Funktionen erscheinen als Aufzählungspunkte auf der Preisseite
+- Verwenden Sie beschreibende Vorteile und Fähigkeiten
 
-## Default Plan Limits
+**Häufige Funktionsbeispiele:**
+- "120 inkludierte Minuten, dann 0,20 $ / zusätzliche Minute"
+- "1 Assistent"  
+- "1 ausgehende Kampagne"
+- "3 Anrufe parallel"
+- "1 geklonte Stimme"
+- "24/7 Kundensupport"
 
-Navigate to **Default plan limits** in the sidebar to configure global settings:
+
+### Preise zu Plänen hinzufügen
+
+Nach dem Erstellen eines Plans scrollen Sie nach unten zur **Prices**-Tabelle:
 
 <Frame>
-  <img src="/resources/white-label-default-plan-limits.png" alt="Default Plan Limits Configuration" />
+  <img src="/resources/wl-price.jpg" alt="Plan-Erstellungs-Oberfläche" />
 </Frame>
 
-### Billing Configuration
+**Preis-Konfigurationsoberfläche:**
+- **Billing Type:** Monatlich oder Jährlich (kann beide Optionen haben)
+- **Set Your Price:** Kundenpreis mit automatischer Kostenvalidierung
+- **Cost & Profit Breakdown:** Echtzeitberechnung mit Plattformkosten und Ihrem Gewinn
 
-**Free Account Settings:**
-- **Allow Free Accounts:** Enable users to register without payment
-- **Free Account Extra Minutes Cost:** Price per additional minute for free users
+## Standard-Plan-Limits
 
-### Default Limits
+Navigieren Sie zu **Default plan limits** in der Sidebar, um globale Einstellungen zu konfigurieren:
 
 <Frame>
-  <img src="/resources/white-label-default-plan-limits1.png" alt="Default Plan Limits Configuration" />
+  <img src="/resources/white-label-default-plan-limits.png" alt="Standard-Plan-Limits-Konfiguration" />
 </Frame>
 
-Configure baseline limits applied to all new plans:
+### Abrechnungskonfiguration
+
+**Kostenlose Kontoeinstellungen:**
+- **Allow Free Accounts:** Benutzern ermöglichen, sich ohne Zahlung zu registrieren
+- **Free Account Extra Minutes Cost:** Preis pro zusätzlicher Minute für kostenlose Benutzer
+
+### Standard-Limits
+
+<Frame>
+  <img src="/resources/white-label-default-plan-limits1.png" alt="Standard-Plan-Limits-Konfiguration" />
+</Frame>
+
+Konfigurieren Sie Basis-Limits, die auf alle neuen Pläne angewendet werden:
 - **Max Assistants, Campaigns, Cloned Voices**
 - **Max Parallel Calls, Knowledge Bases, Own Numbers**
 - **Max Mid Call Tools, Automation Runs**
-- **Feature toggles:** Web Widget, Secondary Languages, Automation Platform, Calendar Integrations, Custom Dashboards
+- **Feature-Toggles:** Web Widget, Secondary Languages, Automation Platform, Calendar Integrations, Custom Dashboards
 
-### Plan Structure
-- Start with 2-3 clear tiers
-- Offer monthly and annual options
-- Include reasonable usage limits
-- Provide clear upgrade paths
+### Plan-Struktur
+- Beginnen Sie mit 2-3 klaren Stufen
+- Bieten Sie monatliche und jährliche Optionen an
+- Fügen Sie angemessene Nutzungslimits hinzu
+- Bieten Sie klare Upgrade-Pfade
 
-### Pricing Strategy
-- Research market rates
-- Consider your costs
-- Plan for scalability
-- Include profit margins
+### Preisstrategie
+- Recherchieren Sie Marktpreise
+- Berücksichtigen Sie Ihre Kosten
+- Planen Sie für Skalierbarkeit
+- Fügen Sie Gewinnmargen hinzu
 
-### Feature Distribution
-- Clearly differentiate tiers
-- Reserve premium features
-- Balance value proposition
-- Consider upsell opportunities
+### Funktionsverteilung
+- Differenzieren Sie Stufen klar
+- Reservieren Sie Premium-Funktionen
+- Balancieren Sie Wertversprechen
+- Berücksichtigen Sie Upsell-Möglichkeiten
 
-## Testing Plans
+## Pläne testen
 
-Before launching:
-- Create test accounts
-- Try different plan combinations
-- Test upgrade/downgrade flows
-- Verify billing accuracy
+Vor dem Start:
+- Erstellen Sie Testkonten
+- Probieren Sie verschiedene Plankombinationen
+- Testen Sie Upgrade-/Downgrade-Flows
+- Überprüfen Sie Abrechnungsgenauigkeit
 
 <Tip>
-Start with competitive pricing and adjust based on market response and usage patterns.
+Beginnen Sie mit wettbewerbsfähigen Preisen und passen Sie diese basierend auf Marktreaktionen und Nutzungsmustern an.
 </Tip>

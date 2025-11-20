@@ -1,133 +1,133 @@
 ---
-title: "SIP Integration Issues"
+title: "SIP-Integrationsprobleme"
 icon: "phone-volume"
-description: "Troubleshoot SIP trunk connection problems and configuration issues"
+description: "Beheben Sie Verbindungsprobleme mit SIP-Trunks und Konfigurationsprobleme"
 ---
 
-This guide helps resolve common SIP integration issues when connecting your SIP provider to Autocalls.ai.
+Dieser Leitfaden hilft bei der Lösung häufiger SIP-Integrationsprobleme beim Verbinden Ihres SIP-Anbieters mit Autocalls.ai.
 
-## Testing Strategy
+## Teststrategie
 
-1. **Test Outbound calls first** - easier to configure
-2. **Test Inbound calls second** - after outbound works
+1. **Ausgehende Anrufe zuerst testen** - einfacher zu konfigurieren
+2. **Eingehende Anrufe zweitens testen** - nachdem ausgehende funktionieren
 
-## Outbound SIP Issues
+## Probleme mit ausgehendem SIP
 
-### Connection Problems
+### Verbindungsprobleme
 
-**SIP trunk not connecting for outbound calls:**
+**SIP-Trunk verbindet sich nicht für ausgehende Anrufe:**
 
-1. **Verify SIP Credentials** - username, password, server details
-2. **Phone Type Selection** - check with provider for correct type
-3. **Fixed IP Configuration** - usually enable and enter provider's IP address
-4. **Provider Settings** - verify codec, transport, port settings
+1. **SIP-Anmeldedaten überprüfen** - Benutzername, Passwort, Serverdetails
+2. **Telefontypauswahl** - mit Anbieter auf korrekten Typ prüfen
+3. **Feste IP-Konfiguration** - normalerweise aktivieren und IP-Adresse des Anbieters eingeben
+4. **Anbietereinstellungen** - Codec, Transport, Port-Einstellungen überprüfen
 
-### SIP Registration Issues
+### SIP-Registrierungsprobleme
 
-**Important:** Autocalls.ai platform:
-- **Does NOT send SIP REGISTER** messages to your provider
-- **Does NOT require receiving SIP REGISTER** from your provider
-- Uses **direct call authentication** instead
+**Wichtig:** Autocalls.ai-Plattform:
+- **Sendet KEINE SIP REGISTER**-Nachrichten an Ihren Anbieter
+- **Benötigt KEINEN Empfang von SIP REGISTER** von Ihrem Anbieter
+- Verwendet stattdessen **direkte Anrufauthentifizierung**
 
-### Testing Outbound
+### Ausgehende Tests
 
-1. Configure SIP trunk settings
-2. **Make a direct test call** through platform
-3. Check call logs for errors
+1. SIP-Trunk-Einstellungen konfigurieren
+2. **Direkten Testanruf** über Plattform durchführen
+3. Anrufprotokolle auf Fehler überprüfen
 
-## Inbound SIP Issues
+## Probleme mit eingehendem SIP
 
-### Authentication Setup
+### Authentifizierungs-Setup
 
-**For inbound calls:**
+**Für eingehende Anrufe:**
 
-1. **Use IP Authentication** - instead of username/password
-2. **Whitelist Provider IPs** - add ALL provider IPs in our platform
-3. **Provider Configuration - IMPORTANT**
-   - **Use our FQDN domain** for routing (NOT the outbound IP)
-   - **Send to domain** - ensures correct routing
-   - **Do NOT send to IP** - causes routing issues
+1. **IP-Authentifizierung verwenden** - anstelle von Benutzername/Passwort
+2. **Anbieter-IPs auf Whitelist setzen** - ALLE Anbieter-IPs in unserer Plattform hinzufügen
+3. **Anbieterkonfiguration - WICHTIG**
+   - **Unsere FQDN-Domain verwenden** für Routing (NICHT die ausgehende IP)
+   - **An Domain senden** - stellt korrektes Routing sicher
+   - **NICHT an IP senden** - verursacht Routing-Probleme
 
-### Common Inbound Issues
+### Häufige Probleme mit eingehenden Anrufen
 
-**Calls not reaching assistant:**
-- Verify all provider IPs whitelisted
-- Ensure provider sends to FQDN domain (not IP)
-- Check destination number format
+**Anrufe erreichen Assistenten nicht:**
+- Alle Anbieter-IPs auf Whitelist überprüfen
+- Sicherstellen, dass Anbieter an FQDN-Domain sendet (nicht IP)
+- Zielnummernformat überprüfen
 
-## General Issues
+## Allgemeine Probleme
 
-**Network problems:**
-- Check internet connectivity
-- Verify no firewall blocking SIP traffic
+**Netzwerkprobleme:**
+- Internetverbindung überprüfen
+- Überprüfen, ob keine Firewall SIP-Traffic blockiert
 
-**Provider compatibility:**
-- Verify provider supports direct calling (no registration)
-- Check IP authentication support
+**Anbieterkompatibilität:**
+- Überprüfen, ob Anbieter direkte Anrufe unterstützt (keine Registrierung)
+- IP-Authentifizierungsunterstützung prüfen
 
-## Testing Checklist
+## Test-Checkliste
 
-### Before Contacting Support
+### Vor Kontaktaufnahme mit Support
 
-1. **Outbound Test:**
-   - [ ] Credentials verified
-   - [ ] Phone type selected correctly
-   - [ ] Fixed IP enabled with provider's IP address
-   - [ ] Direct test call attempted
+1. **Ausgehender Test:**
+   - [ ] Anmeldedaten überprüft
+   - [ ] Telefontyp korrekt ausgewählt
+   - [ ] Feste IP mit IP-Adresse des Anbieters aktiviert
+   - [ ] Direkter Testanruf versucht
 
-2. **Inbound Test:**
-   - [ ] IP authentication configured
-   - [ ] All provider IPs whitelisted in our platform
-   - [ ] Provider configured to send to FQDN domain (not direct IP)
-   - [ ] Test call from external number
+2. **Eingehender Test:**
+   - [ ] IP-Authentifizierung konfiguriert
+   - [ ] Alle Anbieter-IPs in unserer Plattform auf Whitelist gesetzt
+   - [ ] Anbieter konfiguriert, um an FQDN-Domain zu senden (nicht direkte IP)
+   - [ ] Testanruf von externer Nummer
 
-3. **General:**
-   - [ ] Network connectivity verified
+3. **Allgemein:**
+   - [ ] Netzwerkkonnektivität überprüft
 
 ## FAQ
 
-### Transfer Phone Call Not Working
+### Telefonanrufweiterleitung funktioniert nicht
 
-**Q: Why is the Transfer Phone Call function not working?**
+**F: Warum funktioniert die Telefonanrufweiterleitung nicht?**
 
-**A:** If call transfers are failing, try these solutions:
+**A:** Wenn Anrufweiterleitungen fehlschlagen, versuchen Sie diese Lösungen:
 
-1. **Check SIP Transfer Settings:**
-   - Set transfer call to "Advanced" mode
-   - Use SIP URI format: `sip:number@sip-server`
-   - Example: `sip:+1234567890@sip.provider.com:5060`
+1. **SIP-Transfer-Einstellungen überprüfen:**
+   - Transfer-Anruf auf "Erweitert"-Modus setzen
+   - SIP-URI-Format verwenden: `sip:nummer@sip-server`
+   - Beispiel: `sip:+1234567890@sip.provider.com:5060`
 
-2. **Verify Provider Support:**
-   - Confirm your SIP provider supports SIP REFER
-   - Check if transfer functionality is enabled on your account
-   - Some providers require specific configuration for transfers
+2. **Anbieterunterstützung überprüfen:**
+   - Bestätigen Sie, dass Ihr SIP-Anbieter SIP REFER unterstützt
+   - Prüfen Sie, ob Transfer-Funktionalität auf Ihrem Konto aktiviert ist
+   - Einige Anbieter erfordern spezifische Konfiguration für Transfers
 
-3. **Test Different Formats:**
-   - Try with port: `sip:+1234567890@sip-server:5060`
-   - Try without port: `sip:+1234567890@sip-server`
-   - Try simple format: `sip:+1234567890`
+3. **Verschiedene Formate testen:**
+   - Mit Port versuchen: `sip:+1234567890@sip-server:5060`
+   - Ohne Port versuchen: `sip:+1234567890@sip-server`
+   - Einfaches Format versuchen: `sip:+1234567890`
 
-4. **Verify Destination:**
-   - Ensure the target number is reachable
-   - Test if the number answers calls normally
-   - Check if the number is blocked or restricted
+4. **Ziel überprüfen:**
+   - Sicherstellen, dass die Zielnummer erreichbar ist
+   - Testen, ob die Nummer Anrufe normal beantwortet
+   - Prüfen, ob die Nummer blockiert oder eingeschränkt ist
 
-5. **Common Issues:**
-   - Provider doesn't support SIP REFER
-   - Incorrect SIP URI format
-   - Network/firewall blocking transfer requests
-   - Destination number not answering
+5. **Häufige Probleme:**
+   - Anbieter unterstützt SIP REFER nicht
+   - Falsches SIP-URI-Format
+   - Netzwerk/Firewall blockiert Transfer-Anfragen
+   - Zielnummer antwortet nicht
 
-**Troubleshooting steps:**
-1. Test with a known working number first
-2. Try different SIP URI formats
-3. Contact your SIP provider to confirm transfer support
-4. Check call logs for specific error messages
+**Fehlerbehebungsschritte:**
+1. Zuerst mit einer bekannt funktionierenden Nummer testen
+2. Verschiedene SIP-URI-Formate ausprobieren
+3. Ihren SIP-Anbieter kontaktieren, um Transfer-Unterstützung zu bestätigen
+4. Anrufprotokolle auf spezifische Fehlermeldungen prüfen
 
-## Getting Help
+## Hilfe erhalten
 
-**When contacting support, provide:**
-- Error messages from call logs
-- SIP trunk configuration
-- Test results (outbound and inbound)
-- Transfer attempt details and SIP URI format used
+**Bei Kontaktaufnahme mit Support bereitstellen:**
+- Fehlermeldungen aus Anrufprotokollen
+- SIP-Trunk-Konfiguration
+- Testergebnisse (ausgehend und eingehend)
+- Details zu Transfer-Versuchen und verwendetes SIP-URI-Format

@@ -1,38 +1,38 @@
 ---
-title: "Get available voices"
+title: "Verfügbare Stimmen abrufen"
 api: "GET /user/assistants/voices"
-description: "Retrieve all available voices for assistant configuration"
+description: "Alle verfügbaren Stimmen für Assistentenkonfiguration abrufen"
 ---
 
-This endpoint returns a list of all available voices that can be used when creating or updating assistants, with optional filtering by assistant mode.
+Dieser Endpunkt gibt eine Liste aller verfügbaren Stimmen zurück, die beim Erstellen oder Aktualisieren von Assistenten verwendet werden können, mit optionalem Filtern nach Assistentenmodus.
 
-### Query Parameters
+### Abfrage-Parameter
 
 <ParamField query="mode" type="string" optional>
-  Filter voices by assistant mode. Options: `pipeline`, `multimodal`
+  Stimmen nach Assistentenmodus filtern. Optionen: `pipeline`, `multimodal`
 </ParamField>
 
-### Response fields
+### Antwortfelder
 
 <ResponseField name="data" type="array">
-  <Expandable title="properties">
+  <Expandable title="Eigenschaften">
     <ResponseField name="id" type="integer">
-      The unique identifier of the voice
+      Die eindeutige Kennung der Stimme
     </ResponseField>
 
     <ResponseField name="name" type="string">
-      The display name of the voice
+      Der Anzeigename der Stimme
     </ResponseField>
 
     <ResponseField name="mode" type="string">
-      The assistant mode this voice is compatible with (`pipeline` or `multimodal`)
+      Der Assistentenmodus, mit dem diese Stimme kompatibel ist (`pipeline` oder `multimodal`)
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseExample>
 
-```json 200 Response
+```json 200 Antwort
 [
   {
     "id": 1,
@@ -64,10 +64,10 @@ This endpoint returns a list of all available voices that can be used when creat
 
 </ResponseExample>
 
-### Notes
+### Hinweise
 
-- Use the `id` field when creating or updating assistants
-- The `mode` field indicates which assistant engine the voice is compatible with
-- Filter by mode to get only voices compatible with your intended assistant type
-- If no mode filter is provided, all available voices are returned
-- Only voices that are public or belong to the authenticated user are returned
+- Verwenden Sie das `id`-Feld beim Erstellen oder Aktualisieren von Assistenten
+- Das `mode`-Feld zeigt an, mit welcher Assistenten-Engine die Stimme kompatibel ist
+- Filtern Sie nach Modus, um nur Stimmen zu erhalten, die mit Ihrem beabsichtigten Assistententyp kompatibel sind
+- Wenn kein Modusfilter angegeben wird, werden alle verfügbaren Stimmen zurückgegeben
+- Nur Stimmen, die öffentlich sind oder dem authentifizierten Benutzer gehören, werden zurückgegeben

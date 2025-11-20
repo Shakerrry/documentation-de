@@ -1,36 +1,36 @@
 ---
-title: "Delete call"
+title: "Anruf löschen"
 api: "DELETE /user/calls/{call}"
-description: "Delete a specific call record"
+description: "Einen bestimmten Anrufdatensatz löschen"
 ---
 
-This endpoint allows you to delete a specific call record that belongs to the authenticated user.
+Dieser Endpunkt ermöglicht es Ihnen, einen bestimmten Anrufdatensatz zu löschen, der dem authentifizierten Benutzer gehört.
 
-### Path Parameters
+### Pfad-Parameter
 
 <ParamField path="call" type="integer" required>
-  The unique identifier of the call to delete
+  Die eindeutige Kennung des zu löschenden Anrufs
 </ParamField>
 
-### Response
+### Antwort
 
 <ResponseField name="message" type="string">
-  Confirmation message indicating the call was deleted successfully
+  Bestätigungsnachricht, die anzeigt, dass der Anruf erfolgreich gelöscht wurde
 </ResponseField>
 
-### Error Responses
+### Fehlerantworten
 
 <ResponseField name="404 Not Found">
-  <Expandable title="Error Response">
+  <Expandable title="Fehlerantwort">
     <ResponseField name="message" type="string">
-      Error message when the call is not found or doesn't belong to the authenticated user
+      Fehlermeldung, wenn der Anruf nicht gefunden wurde oder dem authentifizierten Benutzer nicht gehört
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseExample>
 
-```json 200 Success Response
+```json 200 Erfolgsantwort
 {
   "message": "Call deleted successfully"
 }
@@ -44,9 +44,9 @@ This endpoint allows you to delete a specific call record that belongs to the au
 
 </ResponseExample>
 
-### Notes
+### Hinweise
 
-- Only calls that belong to assistants owned by the authenticated user can be deleted
-- Once a call is deleted, it cannot be recovered
-- This action will permanently remove the call record, including any associated transcript, recording, and metadata
-- The call recording file (if exists) will also be deleted from storage
+- Nur Anrufe, die zu Assistenten gehören, die dem authentifizierten Benutzer gehören, können gelöscht werden
+- Sobald ein Anruf gelöscht wurde, kann er nicht wiederhergestellt werden
+- Diese Aktion entfernt den Anrufdatensatz dauerhaft, einschließlich aller zugehörigen Transkripte, Aufzeichnungen und Metadaten
+- Die Anrufaufzeichnungsdatei (falls vorhanden) wird ebenfalls aus dem Speicher gelöscht

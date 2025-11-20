@@ -1,287 +1,283 @@
 ---
-title: "Overview"
-description: "Connect your existing phone system and numbers to Autocalls.ai"
+title: "Übersicht"
+description: "Verbinden Sie Ihr bestehendes Telefonsystem und Nummern mit Autocalls.ai"
 ---
 
 <Note>
-  This guide will help you understand and set up SIP integration. If you need
-  clarification during setup, our support team is available to assist.
+  Dieser Leitfaden hilft Ihnen, die SIP-Integration zu verstehen und einzurichten. Wenn Sie während der Einrichtung Klärungsbedarf haben, steht unser Support-Team zur Verfügung.
 </Note>
 
-## What is SIP Integration?
+## Was ist SIP-Integration?
 
-SIP (Session Initiation Protocol) integration allows you to connect your existing phone system to Autocalls.ai. Think of it as building a bridge between your current phone setup and our AI platform. This means you can:
+SIP-Integration (Session Initiation Protocol) ermöglicht es Ihnen, Ihr bestehendes Telefonsystem mit Autocalls.ai zu verbinden. Stellen Sie es sich vor wie eine Brücke zwischen Ihrem aktuellen Telefon-Setup und unserer KI-Plattform. Das bedeutet, Sie können:
 
-- Use your existing phone numbers with our AI assistants
-- Keep your current phone system and provider
-- Make and receive calls through your existing setup
-- Maintain full control of your numbers
-- Reduce carrier costs by using local VoIP providers with better rates
+- Ihre bestehenden Telefonnummern mit unseren KI-Assistenten verwenden
+- Ihr aktuelles Telefonsystem und Ihren Anbieter behalten
+- Anrufe über Ihr bestehendes Setup tätigen und empfangen
+- Volle Kontrolle über Ihre Nummern behalten
+- Carrier-Kosten reduzieren, indem Sie lokale VoIP-Anbieter mit besseren Tarifen nutzen
 
-## How It Works
+## Wie es funktioniert
 
-When you integrate your phone system with Autocalls.ai:
+Wenn Sie Ihr Telefonsystem mit Autocalls.ai integrieren:
 
-1. **Inbound Calls**: Calls to your numbers are routed through your phone system to our AI assistants
-2. **Outbound Calls**: Our AI assistants can make calls appearing from your numbers
-3. **Management**: You keep managing your numbers through your current provider
-4. **Cost Efficiency**: Leverage your VoIP provider's competitive rates for call termination
+1. **Eingehende Anrufe**: Anrufe an Ihre Nummern werden über Ihr Telefonsystem an unsere KI-Assistenten weitergeleitet
+2. **Ausgehende Anrufe**: Unsere KI-Assistenten können Anrufe tätigen, die von Ihren Nummern zu stammen scheinen
+3. **Verwaltung**: Sie verwalten Ihre Nummern weiterhin über Ihren aktuellen Anbieter
+4. **Kosteneffizienz**: Nutzen Sie die wettbewerbsfähigen Tarife Ihres VoIP-Anbieters für die Anrufbeendigung
 
-## Integration Options
+## Integrationsoptionen
 
-You can connect your phone system to Autocalls.ai in two ways:
+Sie können Ihr Telefonsystem auf zwei Arten mit Autocalls.ai verbinden:
 
-### 1. PBX Extension Integration
+### 1. PBX-Nebenstellen-Integration
 
-This is like giving our AI platform an "extension" on your phone system:
+Das ist wie unserer KI-Plattform eine "Nebenstelle" auf Ihrem Telefonsystem zu geben:
 
-- **What it is**: Connect a specific extension from your PBX/phone system
-- **Perfect for**:
-  - Testing the integration
-  - Routing specific extensions to AI
-  - Simple setup with existing phone systems
-- **You'll need**:
-  - Your extension number (e.g., 1000)
-  - Extension username and password
-  - Your PBX server address (e.g., pbx.yourcompany.com)
+- **Was es ist**: Verbinden Sie eine bestimmte Nebenstelle von Ihrer PBX/Ihrem Telefonsystem
+- **Perfekt für**:
+  - Testen der Integration
+  - Weiterleitung bestimmter Nebenstellen zur KI
+  - Einfache Einrichtung mit bestehenden Telefonsystemen
+- **Sie benötigen**:
+  - Ihre Nebenstellennummer (z.B. 1000)
+  - Nebenstellen-Benutzername und Passwort
+  - Ihre PBX-Serveradresse (z.B. pbx.ihrefirma.com)
 
-**Real-world example**:
-
-```
-Your office uses extensions 1001-1010 for staff
-You set up extension 1011 for the AI assistant
-Calls to 1011 go to the AI
-The AI can make calls appearing as extension 1011
-```
-
-### 2. Direct Number Integration
-
-This connects specific phone numbers to our platform:
-
-- **What it is**: Route one or more of your phone numbers to our AI
-- **Perfect for**:
-  - Dedicated AI phone lines
-  - Customer service numbers
-  - Sales or support lines
-- **You'll need**:
-  - Your phone number (e.g., +1 555 0123)
-  - SIP credentials from your provider
-  - Provider's SIP server address
-
-**Real-world example**:
+**Reales Beispiel**:
 
 ```
-You have a support number: +1 555 0123
-You connect this number to our AI
-All calls to +1 555 0123 are handled by the AI assistant
-The AI makes outbound calls showing +1 555 0123
+Ihr Büro verwendet Nebenstellen 1001-1010 für Mitarbeiter
+Sie richten Nebenstelle 1011 für den KI-Assistenten ein
+Anrufe an 1011 gehen zur KI
+Die KI kann Anrufe tätigen, die als Nebenstelle 1011 erscheinen
 ```
 
-## Authentication & Call Flow
+### 2. Direkte Nummern-Integration
 
-### Bidirectional Configuration
+Dies verbindet bestimmte Telefonnummern mit unserer Plattform:
 
-The SIP integration uses the same credentials for both inbound and outbound calls:
+- **Was es ist**: Leiten Sie eine oder mehrere Ihrer Telefonnummern zu unserer KI weiter
+- **Perfekt für**:
+  - Dedizierte KI-Telefonleitungen
+  - Kundenservice-Nummern
+  - Vertriebs- oder Support-Leitungen
+- **Sie benötigen**:
+  - Ihre Telefonnummer (z.B. +1 555 0123)
+  - SIP-Anmeldedaten von Ihrem Anbieter
+  - SIP-Serveradresse des Anbieters
 
-- **Inbound Calls** (VoIP → Autocalls.ai):
+**Reales Beispiel**:
+
+```
+Sie haben eine Support-Nummer: +1 555 0123
+Sie verbinden diese Nummer mit unserer KI
+Alle Anrufe an +1 555 0123 werden vom KI-Assistenten bearbeitet
+Die KI tätigt ausgehende Anrufe mit +1 555 0123
+```
+
+## Authentifizierung & Anruffluss
+
+### Bidirektionale Konfiguration
+
+Die SIP-Integration verwendet die gleichen Anmeldedaten für sowohl eingehende als auch ausgehende Anrufe:
+
+- **Eingehende Anrufe** (VoIP → Autocalls.ai):
 
   ```
-  Your VoIP system authenticates using username/password
+  Ihr VoIP-System authentifiziert sich mit Benutzername/Passwort
   ↓
-  Calls reach our platform
+  Anrufe erreichen unsere Plattform
   ↓
-  AI assistant answers
+  KI-Assistent antwortet
   ```
 
-- **Outbound Calls** (Autocalls.ai → VoIP):
+- **Ausgehende Anrufe** (Autocalls.ai → VoIP):
   ```
-  AI initiates call
+  KI initiiert Anruf
   ↓
-  Our platform authenticates to your VoIP using same username/password
+  Unsere Plattform authentifiziert sich bei Ihrem VoIP mit denselben Benutzername/Passwort
   ↓
-  Call reaches destination
+  Anruf erreicht Ziel
   ```
 
-### Credential Synchronization
+### Anmeldedaten-Synchronisation
 
-For the integration to work properly:
+Damit die Integration ordnungsgemäß funktioniert:
 
-1. The credentials you set in Autocalls.ai dashboard must match exactly with your VoIP configuration
-2. The same username/password combination is used for both directions
-3. Any changes to credentials must be updated in both systems
+1. Die Anmeldedaten, die Sie im Autocalls.ai-Dashboard festlegen, müssen exakt mit Ihrer VoIP-Konfiguration übereinstimmen
+2. Die gleiche Benutzername/Passwort-Kombination wird für beide Richtungen verwendet
+3. Alle Änderungen an den Anmeldedaten müssen in beiden Systemen aktualisiert werden
 
 <Warning>
-  If you change credentials in your VoIP system, remember to update them in
-  Autocalls.ai dashboard (and vice versa) to maintain the connection.
+  Wenn Sie Anmeldedaten in Ihrem VoIP-System ändern, denken Sie daran, sie im Autocalls.ai-Dashboard zu aktualisieren (und umgekehrt), um die Verbindung aufrechtzuerhalten.
 </Warning>
 
-## Setting Up Your Integration
+## Ihre Integration einrichten
 
-### Step 1: Gather Your Information
+### Schritt 1: Sammeln Sie Ihre Informationen
 
-For PBX Extension:
-
-```
-Extension number: e.g., 1000
-Server address: e.g., pbx.company.com
-Username: Your extension username
-Password: Your extension password
-```
-
-For Direct Number:
+Für PBX-Nebenstelle:
 
 ```
-Phone number: e.g., +1 555 0123
-SIP server: e.g., sip.provider.com
-Username: Provided by your phone company
-Password: Provided by your phone company
+Nebenstellennummer: z.B. 1000
+Serveradresse: z.B. pbx.firma.com
+Benutzername: Ihr Nebenstellen-Benutzername
+Passwort: Ihr Nebenstellen-Passwort
 ```
 
-### Step 2: Configure in Dashboard
+Für Direkte Nummer:
 
-1. Go to your Autocalls.ai dashboard
-2. Navigate to **Your Phone Numbers**
-3. Click "Integrate SIP trunk"
-
-### Step 3: Select SIP Trunk Type 
-
-At the top of the form, select one of these trunk types:
-
-- **SIP Extension** - Use this if you already have an existing SIP credential (an extension) provided by your VoIP provider.
-- **Phone Number (DID)** - Use this if you want to integrate a dedicated Direct Inward Dial (DID) number instead of a generic SIP extension.
-
-For PBX Extension:
 ```
-Extension number: e.g., 1000
-Username: Your extension username
-Password: Your extension password
+Telefonnummer: z.B. +1 555 0123
+SIP-Server: z.B. sip.anbieter.com
+Benutzername: Von Ihrer Telefongesellschaft bereitgestellt
+Passwort: Von Ihrer Telefongesellschaft bereitgestellt
+```
+
+### Schritt 2: Im Dashboard konfigurieren
+
+1. Gehen Sie zu Ihrem Autocalls.ai-Dashboard
+2. Navigieren Sie zu **Ihre Telefonnummern**
+3. Klicken Sie auf "SIP-Trunk integrieren"
+
+### Schritt 3: SIP-Trunk-Typ auswählen
+
+Wählen Sie oben im Formular einen dieser Trunk-Typen aus:
+
+- **SIP-Nebenstelle** - Verwenden Sie dies, wenn Sie bereits eine vorhandene SIP-Anmeldedaten (eine Nebenstelle) von Ihrem VoIP-Anbieter erhalten haben.
+- **Telefonnummer (DID)** - Verwenden Sie dies, wenn Sie eine dedizierte Direct Inward Dial (DID)-Nummer anstelle einer generischen SIP-Nebenstelle integrieren möchten.
+
+Für PBX-Nebenstelle:
+```
+Nebenstellennummer: z.B. 1000
+Benutzername: Ihr Nebenstellen-Benutzername
+Passwort: Ihr Nebenstellen-Passwort
 ```
 <img height="200" src="/resources/sip-integration-sip-type.png" />
 
-For Direct Number:
+Für Direkte Nummer:
 
 ```
-Phone number: e.g., +1 555 0123
-Username: Provided by your phone company
-Password: Provided by your phone company
+Telefonnummer: z.B. +1 555 0123
+Benutzername: Von Ihrer Telefongesellschaft bereitgestellt
+Passwort: Von Ihrer Telefongesellschaft bereitgestellt
 ```
 <img height="200" src="/resources/sip-integration-did.png" />
 
-### Step 4: Outbound Settings
+### Schritt 4: Ausgehende Einstellungen
 
-These settings control how Autocalls.ai sends outbound calls through your SIP provider.
+Diese Einstellungen steuern, wie Autocalls.ai ausgehende Anrufe über Ihren SIP-Anbieter sendet.
 
-- **SIP Address** - Enter the address/server of the SIP trunk without the port.
-- **Outbound Proxy (Fixed IP)** - Some SIP providers require calls to originate from a single, whitelisted IP address. Configure this as follows:
-  - **Toggle ON** - If your SIP provider requires a fixed source IP, enable Outbound proxy will come from a fixed IP address. Autocalls.ai will then send all outbound requests through a known static IP.
-  Use this option only if your provider explicitly requires a single source IP.
-  - **Toggle OFF:** - If your provider accepts calls from any IP, leave this option off. In that case, Autocalls.ai will send calls from dynamic IPs.
+- **SIP-Adresse** - Geben Sie die Adresse/den Server des SIP-Trunks ohne Port ein.
+- **Outbound-Proxy (Feste IP)** - Einige SIP-Anbieter verlangen, dass Anrufe von einer einzelnen, auf der Whitelist stehenden IP-Adresse stammen. Konfigurieren Sie dies wie folgt:
+  - **EIN schalten** - Wenn Ihr SIP-Anbieter eine feste Quell-IP benötigt, aktivieren Sie den Outbound-Proxy, der von einer festen IP-Adresse kommt. Autocalls.ai sendet dann alle ausgehenden Anfragen über eine bekannte statische IP.
+  Verwenden Sie diese Option nur, wenn Ihr Anbieter explizit eine einzelne Quell-IP verlangt.
+  - **AUS schalten:** - Wenn Ihr Anbieter Anrufe von jeder IP akzeptiert, lassen Sie diese Option deaktiviert. In diesem Fall sendet Autocalls.ai Anrufe von dynamischen IPs.
 
 ```
-SIP address: (e.g., pbx.company.com/sip.provider.com)
+SIP-Adresse: (z.B. pbx.firma.com/sip.anbieter.com)
 ```
 <img height="200" src="/resources/sip-integration-outbound.png" />
 
-### Step 5: Number Format Configuration
+### Schritt 5: Nummernformat-Konfiguration
 
-This tells our system how to format phone numbers when making calls. Choose based on your provider's requirements:
+Dies teilt unserem System mit, wie Telefonnummern beim Tätigen von Anrufen formatiert werden sollen. Wählen Sie basierend auf den Anforderungen Ihres Anbieters:
 
-1. **International with +**
-
-   ```
-   Format: +[country][number]
-   Example: +1 202 555 0123
-   SIP Request: sip:+12025550123@your.pbx.com
-   ```
-
-2. **International without +**
+1. **International mit +**
 
    ```
-   Format: [country][number]
-   Example: 1 202 555 0123
-   SIP Request: sip:12025550123@your.pbx.com
+   Format: +[Land][Nummer]
+   Beispiel: +1 202 555 0123
+   SIP-Anfrage: sip:+12025550123@ihre.pbx.com
    ```
 
-3. **National format**
+2. **International ohne +**
+
    ```
-   Format: [local number]
-   Example: 0741926265
-   SIP Request: sip:0741926265@your.pbx.com
+   Format: [Land][Nummer]
+   Beispiel: 1 202 555 0123
+   SIP-Anfrage: sip:12025550123@ihre.pbx.com
    ```
 
-### Step 6: Inbound Settings
+3. **Nationales Format**
+   ```
+   Format: [Lokale Nummer]
+   Beispiel: 0741926265
+   SIP-Anfrage: sip:0741926265@ihre.pbx.com
+   ```
 
-These settings determine how Autocalls.ai receives and authenticates inbound calls from your SIP provider.
+### Schritt 6: Eingehende Einstellungen
 
-1. **Our SIP Address** - Autocalls.ai assigns a unique inbound SIP URI ```5wed79aeavr.sip.livekit.cloud```. Your SIP provider must be configured to send inbound calls to this address by pointing their outbound trunk or routing rule to this URI.
-2. **IP Address (Whitelist IPs)** - If your SIP provider can send calls from a known set of public IP addresses, choose IP Address. Then add each provider IP to the whitelist under Inbound Authentication.
-3. **Username and Password** - If your provider supports SIP auth, choose Username and password. The same credentials you entered under Outbound Settings (username/password) will be used to authenticate inbound calls. Make sure your provider’s PBX is configured to include those credentials.
+Diese Einstellungen bestimmen, wie Autocalls.ai eingehende Anrufe von Ihrem SIP-Anbieter empfängt und authentifiziert.
+
+1. **Unsere SIP-Adresse** - Autocalls.ai weist eine eindeutige eingehende SIP-URI zu ```5wed79aeavr.sip.livekit.cloud```. Ihr SIP-Anbieter muss so konfiguriert sein, dass er eingehende Anrufe an diese Adresse sendet, indem er seinen ausgehenden Trunk oder seine Routing-Regel auf diese URI verweist.
+2. **IP-Adresse (Whitelist-IPs)** - Wenn Ihr SIP-Anbieter Anrufe von einem bekannten Satz öffentlicher IP-Adressen senden kann, wählen Sie IP-Adresse. Fügen Sie dann jede Anbieter-IP zur Whitelist unter Eingehende Authentifizierung hinzu.
+3. **Benutzername und Passwort** - Wenn Ihr Anbieter SIP-Authentifizierung unterstützt, wählen Sie Benutzername und Passwort. Die gleichen Anmeldedaten, die Sie unter Ausgehende Einstellungen eingegeben haben (Benutzername/Passwort), werden zur Authentifizierung eingehender Anrufe verwendet. Stellen Sie sicher, dass die PBX Ihres Anbieters so konfiguriert ist, dass sie diese Anmeldedaten enthält.
 
 <img height="200" src="/resources/sip-integration-inbound.png" />
 
-### Step 7: Country Selection 
-Select the country where your SIP trunk is provisioned.
+### Schritt 7: Länderauswahl
+Wählen Sie das Land aus, in dem Ihr SIP-Trunk bereitgestellt ist.
 
 <img height="200" src="/resources/sip-integration-country.png" />
 
-### Step 8: Verify Setup
+### Schritt 8: Einrichtung überprüfen
 
-After configuration:
+Nach der Konfiguration:
 
-1. Make a test call to your number/extension
-2. Check that the AI assistant answers
-3. Use the test call feature to verify outbound calling
+1. Tätigen Sie einen Testanruf an Ihre Nummer/Nebenstelle
+2. Überprüfen Sie, dass der KI-Assistent antwortet
+3. Verwenden Sie die Testanruf-Funktion, um ausgehende Anrufe zu überprüfen
 
-## Security Requirements
+## Sicherheitsanforderungen
 
-Your SIP credentials need to be secure:
+Ihre SIP-Anmeldedaten müssen sicher sein:
 
-- **Username**: Your extension number or provider-supplied username
-- **Password must have**:
-  - 12 or more characters
-  - Numbers
-  - Upper and lowercase letters
-  - Special characters recommended
+- **Benutzername**: Ihre Nebenstellennummer oder vom Anbieter bereitgestellter Benutzername
+- **Passwort muss haben**:
+  - 12 oder mehr Zeichen
+  - Zahlen
+  - Groß- und Kleinbuchstaben
+  - Sonderzeichen empfohlen
 
-## Common Questions
+## Häufige Fragen
 
 <AccordionGroup>
-  <Accordion title="Can I use multiple numbers?">
-    Yes! You can integrate multiple extensions or direct numbers with our platform.
+  <Accordion title="Kann ich mehrere Nummern verwenden?">
+    Ja! Sie können mehrere Nebenstellen oder direkte Nummern mit unserer Plattform integrieren.
   </Accordion>
 
 {" "}
 
-<Accordion title="Will I lose control of my numbers?">
-  No, you maintain full control through your current provider. The integration
-  only establishes a connection between your system and our platform.
+<Accordion title="Verliere ich die Kontrolle über meine Nummern?">
+  Nein, Sie behalten die volle Kontrolle über Ihren aktuellen Anbieter. Die Integration
+  stellt nur eine Verbindung zwischen Ihrem System und unserer Plattform her.
 </Accordion>
 
 {" "}
 
-<Accordion title="Can I still use my numbers for regular calls?">
-  Yes, you can set up routing rules in your phone system to decide which calls
-  go to the AI and which go to your regular phone system.
+<Accordion title="Kann ich meine Nummern noch für reguläre Anrufe verwenden?">
+  Ja, Sie können Routing-Regeln in Ihrem Telefonsystem einrichten, um zu entscheiden, welche Anrufe
+  zur KI gehen und welche zu Ihrem regulären Telefonsystem.
 </Accordion>
 
 {" "}
 
-<Accordion title="What if I need to change settings later?">
-  You can update your integration settings anytime through the dashboard. All
-  configuration options remain accessible after initial setup.
+<Accordion title="Was ist, wenn ich später Einstellungen ändern muss?">
+  Sie können Ihre Integrationseinstellungen jederzeit über das Dashboard aktualisieren. Alle
+  Konfigurationsoptionen bleiben nach der ersten Einrichtung zugänglich.
 </Accordion>
 
-  <Accordion title="How does this help with call costs?">
-    By using your own VoIP provider, you can take advantage of their local rates
-    and existing agreements, which are often more competitive than standard carrier
-    rates. This is especially beneficial for international calls.
+  <Accordion title="Wie hilft dies bei den Anrufkosten?">
+    Durch die Verwendung Ihres eigenen VoIP-Anbieters können Sie dessen lokale Tarife
+    und bestehende Vereinbarungen nutzen, die oft wettbewerbsfähiger sind als Standard-Carrier-
+    Tarife. Dies ist besonders vorteilhaft für internationale Anrufe.
   </Accordion>
 </AccordionGroup>
 
 ---
 
 <Note>
-  Need help setting up? Our support team specializes in helping customers
-  integrate their phone systems. We'll guide you through the entire process,
-  ensuring a smooth setup with your specific phone system configuration.
+  Benötigen Sie Hilfe bei der Einrichtung? Unser Support-Team ist darauf spezialisiert, Kunden bei der Integration ihrer Telefonsysteme zu helfen. Wir führen Sie durch den gesamten Prozess und sorgen für eine reibungslose Einrichtung mit Ihrer spezifischen Telefonsystem-Konfiguration.
 </Note>

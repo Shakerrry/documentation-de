@@ -1,27 +1,27 @@
 ---
-title: "General Setup Issues"
+title: "Allgemeine Einrichtungsprobleme"
 icon: "wrench"
-description: "Troubleshoot common setup problems including AI response issues, OTP verification, and credential errors"
+description: "Beheben Sie häufige Einrichtungsprobleme einschließlich KI-Antwortproblemen, OTP-Verifizierung und Anmeldedatenfehlern"
 ---
 
-Some common pitfalls when first configuring Autocalls.ai:
+Einige häufige Fallstricke bei der ersten Konfiguration von Autocalls.ai:
 
-## 1. AI Not Responding or Call Dropping
+## 1. KI antwortet nicht oder Anruf wird abgebrochen
 
-- **Check the System Prompt**: Possibly missing instructions.
-- **Voice Activity Detection**: If set too low or high, it may cause awkward silences or interruptions.
-- **Connection**: If your internet or SIP trunk is unstable, calls might drop.
+- **System-Prompt überprüfen**: Möglicherweise fehlen Anweisungen.
+- **Sprachaktivitätserkennung**: Wenn zu niedrig oder zu hoch eingestellt, kann es zu unangenehmen Pausen oder Unterbrechungen kommen.
+- **Verbindung**: Wenn Ihr Internet oder SIP-Trunk instabil ist, können Anrufe abbrechen.
 
-## 2. Not Receiving OTP (for Caller ID Verification)
+## 2. Kein OTP erhalten (für Anrufer-ID-Verifizierung)
 
-- **Carrier Blocks**: Some operators filter out short codes or unknown international SMS.
-- **Try Alternate Method**: Ask support if you can verify by a quick voice call or another phone line.
+- **Anbieter-Blockierungen**: Einige Betreiber filtern Kurzwahlnummern oder unbekannte internationale SMS aus.
+- **Alternative Methode versuchen**: Fragen Sie den Support, ob Sie per Sprachanruf oder über eine andere Telefonleitung verifizieren können.
 
-## 3. Credential Errors
+## 3. Anmeldefehlerdaten
 
-- **SIP**: Wrong username/password? Double-check with your PBX provider.
-- **API/Webhooks**: Ensure you copied the correct token or endpoint URL.
+- **SIP**: Falscher Benutzername/Passwort? Überprüfen Sie mit Ihrem PBX-Anbieter.
+- **API/Webhooks**: Stellen Sie sicher, dass Sie das richtige Token oder die richtige Endpoint-URL kopiert haben.
 
 ---
 
-**Tip:** Look at call logs for error codes if a call fails. Usually, it'll show a reason like "Number not found" or "Network unreachable."
+**Tipp:** Sehen Sie sich Anrufprotokolle auf Fehlercodes an, wenn ein Anruf fehlschlägt. Normalerweise wird ein Grund angezeigt wie "Nummer nicht gefunden" oder "Netzwerk nicht erreichbar."

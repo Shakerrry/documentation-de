@@ -1,61 +1,61 @@
 ---
-title: "List campaigns"
+title: "Kampagnen auflisten"
 api: "GET /user/campaigns"
-description: "List all campaigns"
+description: "Alle Kampagnen auflisten"
 ---
 
-This endpoint allows you to list all campaigns.
+Dieser Endpunkt ermöglicht es Ihnen, alle Kampagnen aufzulisten.
 
-### Response fields
+### Antwortfelder
 
 <ResponseField name="campaigns" type="array">
-  <Expandable title="properties">
+  <Expandable title="Eigenschaften">
     <ResponseField name="id" type="integer">
-      The id of the campaign
+      Die ID der Kampagne
     </ResponseField>
 
     <ResponseField name="name" type="string">
-      The name of the campaign
+      Der Name der Kampagne
     </ResponseField>
 
     <ResponseField name="status" type="string">
-      The status of the campaign
+      Der Status der Kampagne
     </ResponseField>
 
     <ResponseField name="max_calls_in_parallel" type="integer">
-      Maximum number of calls that can be made in parallel
+      Maximale Anzahl von Anrufen, die parallel durchgeführt werden können
     </ResponseField>
 
     <ResponseField name="mark_complete_when_no_leads" type="boolean">
-      Whether to mark the campaign as complete when there are no leads
+      Ob die Kampagne als abgeschlossen markiert werden soll, wenn keine Leads vorhanden sind
     </ResponseField>
 
     <ResponseField name="allowed_hours_start_time" type="string">
-      The start time for allowed calling hours
+      Die Startzeit für erlaubte Anrufzeiten
     </ResponseField>
 
     <ResponseField name="allowed_hours_end_time" type="string">
-      The end time for allowed calling hours
+      Die Endzeit für erlaubte Anrufzeiten
     </ResponseField>
 
     <ResponseField name="allowed_days" type="array">
-      The days of the week when calls are allowed
+      Die Wochentage, an denen Anrufe erlaubt sind
     </ResponseField>
 
     <ResponseField name="max_retries" type="integer">
-      Maximum number of retry attempts for failed calls
+      Maximale Anzahl von Wiederholungsversuchen für fehlgeschlagene Anrufe
     </ResponseField>
 
     <ResponseField name="retry_interval" type="integer">
-      Interval in seconds between retry attempts
+      Intervall in Sekunden zwischen Wiederholungsversuchen
     </ResponseField>
 
     <ResponseField name="created_at" type="string">
-      The timestamp when the campaign was created
+      Der Zeitstempel, wann die Kampagne erstellt wurde
     </ResponseField>
 
     <ResponseField name="updated_at" type="string">
-      The timestamp when the campaign was last updated
+      Der Zeitstempel, wann die Kampagne zuletzt aktualisiert wurde
     </ResponseField>
 
   </Expandable>
@@ -63,7 +63,7 @@ This endpoint allows you to list all campaigns.
 
 <ResponseExample>
 
-```json 200 Response
+```json 200 Antwort
 [
   {
     "id": 1,

@@ -1,26 +1,26 @@
 ---
-title: "LinkedIn App Setup"
+title: "LinkedIn-App-Einrichtung"
 icon: "linkedin"
-description: "This document provides instructions on correctly setting up a LinkedIn application so that users can log in/register via LinkedIn on your site."
+description: "Dieses Dokument bietet Anleitungen zur korrekten Einrichtung einer LinkedIn-Anwendung, damit sich Benutzer über LinkedIn auf Ihrer Website anmelden/registrieren können."
 ---
 
-## Creating a new app
+## Neue App erstellen
 
-You need to create a LinkedIn app to allow users to log in to your site with their LinkedIn accounts. To create a new LinkedIn app, please do the following:
+Sie müssen eine LinkedIn-App erstellen, damit sich Benutzer mit ihren LinkedIn-Konten auf Ihrer Website anmelden können. Um eine neue LinkedIn-App zu erstellen, gehen Sie bitte wie folgt vor:
 
-- Go to the LinkedIn developer site: https://developer.linkedin.com/. 
-- Click the “Create App” button on the banner.
-- To correctly create the application, please fill in the application sections, which are explained below.
+- Gehen Sie zur LinkedIn-Entwickler-Website: https://developer.linkedin.com/. 
+- Klicken Sie auf die Schaltfläche "Create App" im Banner.
+- Um die Anwendung korrekt zu erstellen, füllen Sie bitte die Anwendungsabschnitte aus, die unten erklärt werden.
 
-## Create an app
+## App erstellen
 
-- **Application Name**  – Enter a name for your application.
-- **Company name**  – Select an existing company or choose a New Company. If you select the new company, you will be asked to enter a company name. 
-- **Description**  – Enter a name for your application.
-- **Business Email**  – Enter your email address.
-- **Legal terms**  – Read the terms of service and check the box to confirm that you have read and agree to the terms.
+- **Application Name** – Geben Sie einen Namen für Ihre Anwendung ein.
+- **Company name** – Wählen Sie ein vorhandenes Unternehmen aus oder wählen Sie New Company. Wenn Sie ein neues Unternehmen auswählen, werden Sie aufgefordert, einen Firmennamen einzugeben. 
+- **Description** – Geben Sie eine Beschreibung für Ihre Anwendung ein.
+- **Business Email** – Geben Sie Ihre E-Mail-Adresse ein.
+- **Legal terms** – Lesen Sie die Nutzungsbedingungen und aktivieren Sie das Kontrollkästchen, um zu bestätigen, dass Sie die Bedingungen gelesen haben und ihnen zustimmen.
 
-Click the project button in the top menu and you'll see the **Select a project** pop-up. Click the **NEW PROJECT** button create a project.
+Klicken Sie auf die Projektschaltfläche im oberen Menü und Sie sehen das Pop-up **Select a project**. Klicken Sie auf die Schaltfläche **NEW PROJECT**, um ein Projekt zu erstellen.
 
    <Frame>
      <img
@@ -29,9 +29,9 @@ Click the project button in the top menu and you'll see the **Select a project**
      />
    </Frame>
 
-## Products
+## Produkte
 
-Once you have clicked on the **Create app** button, you'll be redirected to the Products tab.
+Sobald Sie auf die Schaltfläche **Create app** geklickt haben, werden Sie zum Produkte-Tab weitergeleitet.
 
    <Frame>
      <img
@@ -40,7 +40,7 @@ Once you have clicked on the **Create app** button, you'll be redirected to the 
      />
    </Frame>
 
-Scroll down the product list until you find **Sign In with LinkedIn using OpenID Connect** and click the **Request Access** button.
+Scrollen Sie in der Produktliste nach unten, bis Sie **Sign In with LinkedIn using OpenID Connect** finden und klicken Sie auf die **Request Access**-Schaltfläche.
 
    <Frame>
      <img
@@ -49,65 +49,65 @@ Scroll down the product list until you find **Sign In with LinkedIn using OpenID
      />
    </Frame>
 
-Read the terms; if you agree with the terms, click on the checkbox and proceed by clicking on the **Request Access** button.
+Lesen Sie die Bedingungen; wenn Sie mit den Bedingungen einverstanden sind, klicken Sie auf das Kontrollkästchen und fahren Sie fort, indem Sie auf die **Request Access**-Schaltfläche klicken.
 
    <Frame>
      <img
        src="/resources/linkedin-request-acces.png"
-       alt="LinkedIn Request Access"
+       alt="LinkedIn-Zugriff anfordern"
      />
    </Frame>
 
 ## Auth
 
-Go to the Auth tab and add Redirect URLs. 
+Gehen Sie zum Auth-Tab und fügen Sie Redirect-URLs hinzu. 
 
    <Frame>
      <img
        src="/resources/linkedin-redirect-url.png"
-       alt="LinkedIn Auth Tab"
+       alt="LinkedIn Auth-Tab"
      />
    </Frame>
 
-## OAuth 2.0 settings
+## OAuth 2.0-Einstellungen
 
-In the redirects URLs, you just need to enter your site e.g.: https://sss.com/login/linkedin-openid/callback 
+In den Redirect-URLs müssen Sie nur Ihre Website eingeben, z.B.: https://sss.com/login/linkedin-openid/callback 
 
 
    <Frame>
      <img
        src="/resources/linkedin-oauth-redirect-uri.png"
-       alt="LinkedIn Redirect URI"
+       alt="LinkedIn Redirect-URI"
      />
    </Frame>
 
-## Scopes
+## Bereiche
 
-The OAuth 2.0 scopes will appear a few seconds after you have added and updated the redirect URLs in OAuth 2.0 Settings.
+Die OAuth 2.0-Bereiche erscheinen einige Sekunden, nachdem Sie die Redirect-URLs in den OAuth 2.0-Einstellungen hinzugefügt und aktualisiert haben.
 
    <Frame>
      <img
        src="/resources/linkedin-oauth-scopes.png"
-       alt="LinkedIn OAuth Scopes"
+       alt="LinkedIn OAuth-Bereiche"
      />
    </Frame>
 
-## Application details
+## Anwendungsdetails
 
-If the app is successfully created, you will see the following details.
+Wenn die App erfolgreich erstellt wurde, sehen Sie die folgenden Details.
     <Frame>
       <img
          src="/resources/linkedin-app-details.png"
-         alt="LinkedIn App Details"
+         alt="LinkedIn-App-Details"
       />
     </Frame> 
- You will need to copy the **API Key** and **Secret Key** and add them to the white-label > Settings > Social Logins > LinkedIn Login Configuration.
+ Sie müssen den **API Key** und **Secret Key** kopieren und zu white-label > Settings > Social Logins > LinkedIn Login Configuration hinzufügen.
     <Frame>
       <img
          src="/resources/linkedin-whitelabel-configuration.png"
-         alt="LinkedIn App Details"
+         alt="LinkedIn-App-Details"
       />
     </Frame> 
 ---
 
-**Need help?** Contact our support team for assistance with any step of the setup process.
+**Benötigen Sie Hilfe?** Kontaktieren Sie unser Support-Team für Unterstützung bei jedem Schritt des Einrichtungsprozesses.

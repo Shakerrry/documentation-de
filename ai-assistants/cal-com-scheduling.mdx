@@ -1,69 +1,69 @@
 ---
-title: "Cal.com Appointment Scheduling"
+title: "Cal.com Terminplanung"
 icon: "calendar-days"
-description: "Enable your AI assistant to schedule appointments using Cal.com"
+description: "Ermöglichen Sie Ihrem KI-Assistenten, Termine mit Cal.com-Integration zu planen"
 ---
 
-Enable your AI assistant to schedule meetings using Cal.com integration. The system automatically configures booking fields for you.
+Ermöglichen Sie Ihrem KI-Assistenten, Meetings mit Cal.com-Integration zu planen. Das System konfiguriert automatisch Buchungsfelder für Sie.
 
-## Setup
+## Einrichtung
 
-### 1. Get API Key
+### 1. API-Schlüssel erhalten
 
-1. Log in to [Cal.com](https://cal.com/)
-2. Go to **Settings** → **Developer** → **API Keys**
-3. Create a new API key and copy it
+1. Melden Sie sich bei [Cal.com](https://cal.com/) an
+2. Gehen Sie zu **Einstellungen** → **Entwickler** → **API-Schlüssel**
+3. Erstellen Sie einen neuen API-Schlüssel und kopieren Sie ihn
 
 <img height="200" src="/resources/calcom-api-key.png" />
 
-### 2. Connect Cal.com
+### 2. Cal.com verbinden
 
-1. In your assistant settings → **Tools** tab → **Appointment Scheduling**
-2. Select **Cal.com** from calendar type
-3. Paste your API key
-4. Select an event from the dropdown
+1. In Ihren Assistenteneinstellungen → **Werkzeuge**-Tab → **Terminplanung**
+2. Wählen Sie **Cal.com** als Kalendertyp
+3. Fügen Sie Ihren API-Schlüssel ein
+4. Wählen Sie ein Event aus der Dropdown-Liste
 
 <img height="200" src="/resources/calcom-connect.png" />
 
-### 3. Sync Event
+### 3. Event synchronisieren
 
-Click the **"Sync Event"** button to automatically configure booking fields.
+Klicken Sie auf die Schaltfläche **"Event synchronisieren"**, um Buchungsfelder automatisch zu konfigurieren.
 
 <img height="200" src="/resources/calcom-sync.png" />
 
 <Check>
-The sync configures: name, email, phone (required) + notes (optional). All other fields become optional.
+Die Synchronisierung konfiguriert: Name, E-Mail, Telefon (erforderlich) + Notizen (optional). Alle anderen Felder werden optional.
 </Check>
 
-## Multiple Calendars
+## Mehrere Kalender
 
-Click **"+"** next to Appointment Scheduling to add more calendars (e.g., 15min, 30min meetings).
+Klicken Sie auf **"+"** neben Terminplanung, um weitere Kalender hinzuzufügen (z.B. 15Min-, 30Min-Meetings).
 
-## Email Setup
+## E-Mail-Einrichtung
 
-For calendar invites to work:
+Damit Kalendereinladungen funktionieren:
 
-1. Define `email` in assistant [input variables](/ai-assistants/settings/prompt-and-tools#call-variables)
-2. Pass customer email when creating leads
+1. Definieren Sie `email` in den [Eingabevariablen](/ai-assistants/settings/prompt-and-tools#call-variables) des Assistenten
+2. Übergeben Sie Kunden-E-Mail beim Erstellen von Leads
 
-The phone number is automatically included after sync.
+Die Telefonnummer wird nach der Synchronisierung automatisch eingefügt.
 
-## Troubleshooting
+## Fehlerbehebung
 
-**Invalid API Key:** Verify it's active in Cal.com settings and includes `cal_live_` prefix
+**Ungültiger API-Schlüssel:** Überprüfen Sie, ob er in Cal.com-Einstellungen aktiv ist und das Präfix `cal_live_` enthält
 
-**Sync Failed:** Click **"Troubleshoot"** button to reset fields
+**Synchronisierung fehlgeschlagen:** Klicken Sie auf die Schaltfläche **"Fehlerbehebung"**, um Felder zurückzusetzen
 
-**No Invites Sent:** Ensure `email` variable is defined and passed with leads
+**Keine Einladungen gesendet:** Stellen Sie sicher, dass die Variable `email` definiert und mit Leads übergeben wird
 
-**Field Errors:** Use "Troubleshoot" to reset. Only name, email, phone should be required.
+**Feldfehler:** Verwenden Sie "Fehlerbehebung" zum Zurücksetzen. Nur Name, E-Mail, Telefon sollten erforderlich sein.
 
 <Note>
-For detailed troubleshooting, see [Cal.com Issues](/troubleshooting/cal-com).
+Für detaillierte Fehlerbehebung siehe [Cal.com-Probleme](/troubleshooting/cal-com).
 </Note>
 
-## Testing
+## Testen
 
-1. Make a test call and request a meeting
-2. Verify booking appears in Cal.com
-3. Check calendar invitation email was received
+1. Führen Sie einen Testanruf durch und fordern Sie ein Meeting an
+2. Überprüfen Sie, ob die Buchung in Cal.com erscheint
+3. Prüfen Sie, ob die Kalendereinladungs-E-Mail empfangen wurde

@@ -16,14 +16,14 @@
     }
   },
   "topAnchor": {
-    "name": "Platform Guide",
+    "name": "Plattform-Leitfaden",
     "icon": "book"
   },
   "sidebar": {
     "items": "card"
   },
   "topbarLinks": [{
-    "name": "Home",
+    "name": "Startseite",
     "url": "https://autocalls.ai"
   }, {
     "name": "Support",
@@ -34,28 +34,28 @@
     "url": "https://app.autocalls.ai"
   },
   "anchors": [{
-    "name": "No-Code Automation",
+    "name": "No-Code-Automatisierung",
     "icon": "wand-magic-sparkles",
     "color": "#6c63ff",
     "url": "automation-platform"
   }, {
-    "name": "White Label",
+    "name": "White-Label",
     "icon": "tag",
     "color": "#ff0142",
     "url": "white-label"
   }, {
-    "name": "API Reference",
+    "name": "API-Referenz",
     "icon": "code",
     "color": "#1c51fc",
     "url": "api-reference"
   }, {
-    "name": "Platform updates",
+    "name": "Plattform-Updates",
     "icon": "scroll",
     "color": "#ffbb00",
     "url": "releases"
   }],
   "navigation": [{
-      "group": "Introduction",
+      "group": "Einführung",
       "pages": [
         "introduction/what-is-autocalls",
         "introduction/how-it-works",
@@ -63,18 +63,18 @@
       ]
     },
     {
-      "group": "Getting Started",
+      "group": "Erste Schritte",
       "pages": [
         "getting-started/core-concepts",
         "getting-started/understanding-billing"
       ]
     },
     {
-      "group": "AI Assistants Overview",
+      "group": "KI-Assistenten Übersicht",
       "pages": [
         "ai-assistants/what-is-ai-assistant",
         {
-          "group": "Creating and Editing an AI Assistant",
+          "group": "Erstellen und Bearbeiten eines KI-Assistenten",
           "icon": "robot",
           "pages": [
             "ai-assistants/settings/general",
@@ -96,7 +96,7 @@
       ]
     },
     {
-      "group": "Campaigns",
+      "group": "Kampagnen",
       "icon": "bullhorn",
       "pages": [
         "campaigns/index",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "group": "Custom Dashboards",
+      "group": "Benutzerdefinierte Dashboards",
       "icon": "chart-line",
       "pages": [
         "custom-dashboards/overview",
@@ -121,7 +121,7 @@
       ]
     },
     {
-      "group": "Phone Numbers",
+      "group": "Telefonnummern",
       "pages": [
         "phone-numbers/types",
         "phone-numbers/purchasing-and-managing",
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "group": "Inbound Calls",
+      "group": "Eingehende Anrufe",
       "pages": [
         "inbound-calls/overview",
         "inbound-calls/provisioning",
@@ -140,7 +140,7 @@
       ]
     },
     {
-      "group": "Outbound Calls",
+      "group": "Ausgehende Anrufe",
       "pages": [
         "outbound-calls/overview",
         "outbound-calls/campaigns",
@@ -151,7 +151,7 @@
       ]
     },
     {
-      "group": "AI Prompting & Conversation Design",
+      "group": "KI-Prompting & Gesprächsgestaltung",
       "pages": [
         "conversation-design/prompt-basics",
         "conversation-design/knowledge-bases",
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "group": "Automation & Integrations",
+      "group": "Automatisierung & Integrationen",
       "pages": [
         "automation/overview",
         "automation/webhook-api",
@@ -168,7 +168,7 @@
       ]
     },
     {
-      "group": "Costs & Pricing",
+      "group": "Kosten & Preise",
       "pages": [
         "pricing/overview",
         "pricing/usage-based",
@@ -176,12 +176,12 @@
       ]
     },
     {
-      "group": "Number Provisioning",
+      "group": "Nummernbereitstellung",
       "pages": [
         "provisioning/supported-countries",
         "provisioning/managing-numbers",
         {
-          "group": "SIP trunking",
+          "group": "SIP-Trunking",
           "icon": "phone-volume",
           "pages": [
             "provisioning/sip-trunking/sip-integration",
@@ -192,7 +192,7 @@
       ]
     },
     {
-      "group": "White Label Program",
+      "group": "White-Label-Programm",
       "pages": [
         "white-label/overview",
         "white-label/onboarding",
@@ -209,7 +209,7 @@
       ]
     },
     {
-      "group": "Troubleshooting & FAQs",
+      "group": "Fehlerbehebung & FAQs",
       "pages": [
         "troubleshooting/ai-behavior",
         "troubleshooting/billing",
@@ -223,14 +223,14 @@
       ]
     },
     {
-      "group": "API Reference",
+      "group": "API-Referenz",
       "pages": [
         "api-reference/introduction",
         "api-reference/authentication"
       ]
     },
     {
-      "group": "Assistants",
+      "group": "Assistenten",
       "pages": [
         "api-reference/assistants/get-assistants",
         "api-reference/assistants/get-outbound-assistants",
@@ -247,7 +247,7 @@
       ]
     },
     {
-      "group": "Calls",
+      "group": "Anrufe",
       "pages": [
         "api-reference/calls/get-calls",
         "api-reference/calls/make-phone-call",
@@ -255,7 +255,7 @@
       ]
     },
     {
-      "group": "Mid Call Tools",
+      "group": "Werkzeuge während des Anrufs",
       "pages": [
         "api-reference/mid-call-tools/get-tools",
         "api-reference/mid-call-tools/get-tool",
@@ -274,7 +274,7 @@
       ]
     },
     {
-      "group": "Campaigns",
+      "group": "Kampagnen",
       "pages": [
         "api-reference/campaigns/get-campaigns",
         "api-reference/campaigns/update-status"
@@ -293,7 +293,7 @@
       ]
     },
     {
-      "group": "No-Code Automation platform",
+      "group": "No-Code-Automatisierungsplattform",
       "pages": [
         "automation-platform/introduction",
         "automation-platform/building-flows",
@@ -305,7 +305,7 @@
       ]
     },
     {
-      "group": "Calls Related",
+      "group": "Anrufbezogene Funktionen",
       "pages": [
         "automation-platform/calls-related/autocalls-tool",
         "automation-platform/calls-related/common-integrations",
@@ -313,7 +313,7 @@
       ]
     },
     {
-      "group": "Tutorials",
+      "group": "Anleitungen",
       "pages": [
         "automation-platform/tutorials/outbound-form-call",
         "automation-platform/tutorials/inbound-context-injection",
@@ -325,7 +325,7 @@
       ]
     },
     {
-      "group": "Platform updates",
+      "group": "Plattform-Updates",
       "pages": [
         "releases/index"
       ]

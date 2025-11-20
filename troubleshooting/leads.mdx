@@ -1,196 +1,196 @@
 ---
-title: "Leads Issues"
+title: "Leads-Probleme"
 icon: "user-gear"
-description: "Solve common lead management issues and import problems"
+description: "Lösen Sie häufige Lead-Management-Probleme und Importprobleme"
 ---
 
-Quick solutions for common lead management problems and import issues.
+Schnelle Lösungen für häufige Lead-Management-Probleme und Importprobleme.
 
-## Lead Import Issues
+## Lead-Importprobleme
 
-### Import Fails Completely
-**Error:** "Import failed" or "File format not supported"
+### Import schlägt komplett fehl
+**Fehler:** "Import fehlgeschlagen" oder "Dateiformat nicht unterstützt"
 
-**Solutions:**
-1. **Check file format:** Use CSV or Excel files only
-2. **Verify campaign selection:** Ensure a campaign is selected for import
-3. **File size limits:** Keep files under 10MB for optimal performance
-4. **Encoding issues:** Save CSV with UTF-8 encoding
+**Lösungen:**
+1. **Dateiformat prüfen:** Verwenden Sie nur CSV- oder Excel-Dateien
+2. **Kampagnenauswahl überprüfen:** Stellen Sie sicher, dass eine Kampagne für den Import ausgewählt ist
+3. **Dateigrößenlimits:** Halten Sie Dateien unter 10MB für optimale Leistung
+4. **Kodierungsprobleme:** Speichern Sie CSV mit UTF-8-Kodierung
 
-### No Leads Imported
-**Issue:** Import completes but no leads appear
+### Keine Leads importiert
+**Problem:** Import wird abgeschlossen, aber keine Leads erscheinen
 
-**Solutions:**
-1. **Column headers:** Verify headers match required format (phone, name, etc.)
-2. **Data validation:** Check that phone numbers are in correct format
-3. **Empty rows:** Remove empty rows from file
-4. **Required fields:** Ensure phone number column contains valid data
+**Lösungen:**
+1. **Spaltenüberschriften:** Überprüfen Sie, ob Überschriften dem erforderlichen Format entsprechen (phone, name, etc.)
+2. **Datenvalidierung:** Überprüfen Sie, ob Telefonnummern im richtigen Format vorliegen
+3. **Leere Zeilen:** Entfernen Sie leere Zeilen aus der Datei
+4. **Erforderliche Felder:** Stellen Sie sicher, dass die Telefonnummernspalte gültige Daten enthält
 
-### Partial Import Success
-**Issue:** Some leads imported, others failed
+### Teilerfolg beim Import
+**Problem:** Einige Leads wurden importiert, andere sind fehlgeschlagen
 
-**Solutions:**
-1. **Download error report:** Check failed rows for specific issues
-2. **Phone number format:** Ensure international format (+1234567890)
-3. **Duplicate detection:** Remove duplicate phone numbers
-4. **Invalid data:** Fix malformed phone numbers or missing required data
+**Lösungen:**
+1. **Fehlerbericht herunterladen:** Überprüfen Sie fehlgeschlagene Zeilen auf spezifische Probleme
+2. **Telefonnummernformat:** Stellen Sie internationales Format sicher (+1234567890)
+3. **Duplikatserkennung:** Entfernen Sie doppelte Telefonnummern
+4. **Ungültige Daten:** Beheben Sie fehlerhafte Telefonnummern oder fehlende erforderliche Daten
 
-### Processing Delays
-**Issue:** Import shows as processing for extended time
+### Verarbeitungsverzögerungen
+**Problem:** Import wird für längere Zeit als "in Bearbeitung" angezeigt
 
-**Explanation:**
-- Large files are processed in background
-- Processing time increases with file size
-- System queues multiple imports
+**Erklärung:**
+- Große Dateien werden im Hintergrund verarbeitet
+- Verarbeitungszeit steigt mit Dateigröße
+- System reiht mehrere Importe ein
 
-**Solutions:**
-1. **Wait for completion:** Check notifications for updates
-2. **Break up large files:** Split into smaller batches (500-1000 leads)
-3. **Contact support:** If processing exceeds 30 minutes
+**Lösungen:**
+1. **Auf Abschluss warten:** Überprüfen Sie Benachrichtigungen auf Updates
+2. **Große Dateien aufteilen:** In kleinere Chargen aufteilen (500-1000 Leads)
+3. **Support kontaktieren:** Wenn Verarbeitung 30 Minuten überschreitet
 
-## Lead Management Issues
+## Lead-Management-Probleme
 
-### Lead Not Appearing in Campaign
-**Issue:** Imported lead doesn't show in campaign
+### Lead erscheint nicht in Kampagne
+**Problem:** Importierter Lead wird nicht in Kampagne angezeigt
 
-**Check:**
-- Lead status (should be "Created" or "Scheduled")
-- Campaign filters or search settings
-- Lead marked as completed accidentally
+**Prüfen:**
+- Lead-Status (sollte "Created" oder "Scheduled" sein)
+- Kampagnenfilter oder Sucheinstellungen
+- Lead versehentlich als abgeschlossen markiert
 
-**Solutions:**
-1. **Reset lead status:** Change status to "Created" to re-queue
-2. **Verify campaign assignment:** Check lead is assigned to correct campaign
-3. **Refresh interface:** Reload campaign page
+**Lösungen:**
+1. **Lead-Status zurücksetzen:** Status auf "Created" ändern, um erneut einzureihen
+2. **Kampagnenzuweisung überprüfen:** Prüfen Sie, ob Lead der richtigen Kampagne zugewiesen ist
+3. **Oberfläche aktualisieren:** Kampagnenseite neu laden
 
-### Invalid Phone Numbers
-**Issue:** Phone numbers rejected during import
+### Ungültige Telefonnummern
+**Problem:** Telefonnummern werden beim Import abgelehnt
 
-**Common formats:**
-- **Correct:** +1234567890 (international format)
-- **Incorrect:** (123) 456-7890, 123-456-7890, 1234567890
+**Häufige Formate:**
+- **Korrekt:** +1234567890 (internationales Format)
+- **Falsch:** (123) 456-7890, 123-456-7890, 1234567890
 
-**Solutions:**
-1. **Standardize format:** Convert all numbers to +1234567890 format
-2. **Remove formatting:** Strip spaces, parentheses, dashes
-3. **Country codes:** Add appropriate country code prefix
-4. **Validation tools:** Use phone validation before import
+**Lösungen:**
+1. **Format standardisieren:** Alle Nummern ins Format +1234567890 konvertieren
+2. **Formatierung entfernen:** Leerzeichen, Klammern, Bindestriche entfernen
+3. **Ländercodes:** Entsprechende Ländercode-Präfixe hinzufügen
+4. **Validierungstools:** Telefonvalidierung vor Import verwenden
 
-### Duplicate Leads
-**Issue:** Same person appears multiple times
+### Doppelte Leads
+**Problem:** Dieselbe Person erscheint mehrmals
 
-**Prevention:**
-1. **Data cleanup:** Remove duplicates before import
-2. **Phone validation:** Check for format variations of same number
-3. **Name matching:** Identify potential duplicates by name + phone
-4. **Lead deduplication:** Use tools to identify similar entries
+**Prävention:**
+1. **Datenbereinigung:** Duplikate vor Import entfernen
+2. **Telefonvalidierung:** Auf Formatvariationen derselben Nummer prüfen
+3. **Namensabgleich:** Potenzielle Duplikate nach Name + Telefon identifizieren
+4. **Lead-Deduplizierung:** Tools zur Identifizierung ähnlicher Einträge verwenden
 
-### Secondary Contacts Not Working
-**Issue:** Secondary contacts not being called
+### Sekundäre Kontakte funktionieren nicht
+**Problem:** Sekundäre Kontakte werden nicht angerufen
 
-**Requirements:**
-- Secondary contact must have valid phone number
-- Primary contact must reach max retries first
-- Campaign must be configured for secondary contacts
+**Anforderungen:**
+- Sekundärer Kontakt muss gültige Telefonnummer haben
+- Primärer Kontakt muss zuerst max. Wiederholungen erreichen
+- Kampagne muss für sekundäre Kontakte konfiguriert sein
 
-**Solutions:**
-1. **Verify setup:** Check secondary contact configuration
-2. **Lead status:** Ensure primary contact has been attempted
-3. **Campaign settings:** Confirm secondary contact calling is enabled
+**Lösungen:**
+1. **Einrichtung überprüfen:** Konfiguration sekundärer Kontakte prüfen
+2. **Lead-Status:** Sicherstellen, dass primärer Kontakt versucht wurde
+3. **Kampagneneinstellungen:** Bestätigen, dass Anrufen sekundärer Kontakte aktiviert ist
 
-## Variable and Data Issues
+## Variablen- und Datenprobleme
 
-### Variable Mapping Errors
-**Issue:** Custom variables not importing correctly
+### Variablenzuordnungsfehler
+**Problem:** Benutzerdefinierte Variablen werden nicht korrekt importiert
 
-**Solutions:**
-1. **Column headers:** Match exactly with [assistant configuration](/ai-assistants/settings/prompt-and-tools#call-variables)
-2. **Data types:** Ensure data matches expected variable types
-3. **Required variables:** Include all variables defined in assistant
-4. **Default values:** Check if default values are being applied
+**Lösungen:**
+1. **Spaltenüberschriften:** Müssen exakt mit [Assistentenkonfiguration](/ai-assistants/settings/prompt-and-tools#call-variables) übereinstimmen
+2. **Datentypen:** Stellen Sie sicher, dass Daten den erwarteten Variablentypen entsprechen
+3. **Erforderliche Variablen:** Alle im Assistenten definierten Variablen einschließen
+4. **Standardwerte:** Überprüfen Sie, ob Standardwerte angewendet werden
 
-### Missing Lead Information
-**Issue:** Leads missing names, emails, or custom data
+### Fehlende Lead-Informationen
+**Problem:** Leads fehlen Namen, E-Mails oder benutzerdefinierte Daten
 
-**Solutions:**
-1. **Column mapping:** Verify all columns are mapped correctly
-2. **Optional fields:** Confirm optional fields are included in import
-3. **Data validation:** Check source data for completeness
-4. **Re-import:** Add missing data and re-import if needed
+**Lösungen:**
+1. **Spaltenzuordnung:** Überprüfen Sie, ob alle Spalten korrekt zugeordnet sind
+2. **Optionale Felder:** Bestätigen Sie, dass optionale Felder im Import enthalten sind
+3. **Datenvalidierung:** Überprüfen Sie Quelldaten auf Vollständigkeit
+4. **Erneuter Import:** Fehlende Daten hinzufügen und bei Bedarf erneut importieren
 
-## Campaign Integration Issues
+## Kampagnenintegrationsprobleme
 
-### Lead Status Problems
-**Issue:** Leads stuck in wrong status
+### Lead-Statusprobleme
+**Problem:** Leads stecken im falschen Status fest
 
-**Status meanings:**
-- **Created:** Ready to be called
-- **Scheduled:** Queued for next attempt
-- **Processing:** Currently being called
-- **Completed:** Finished or goal achieved
-- **Max Retries:** Reached retry limit
+**Statusbedeutungen:**
+- **Created:** Bereit zum Anrufen
+- **Scheduled:** Für nächsten Versuch eingeplant
+- **Processing:** Wird gerade angerufen
+- **Completed:** Fertig oder Ziel erreicht
+- **Max Retries:** Wiederholungslimit erreicht
 
-**Solutions:**
-1. **Manual status change:** Update status in leads table
-2. **Campaign restart:** Pause and restart campaign if needed
-3. **Retry settings:** Adjust max retries or intervals
+**Lösungen:**
+1. **Manueller Statuswechsel:** Status in Leads-Tabelle aktualisieren
+2. **Kampagnenneustart:** Kampagne bei Bedarf pausieren und neu starten
+3. **Wiederholungseinstellungen:** Max. Wiederholungen oder Intervalle anpassen
 
-### Variable Inheritance Issues
-**Issue:** Lead variables not working in calls
+### Probleme mit Variablenvererbung
+**Problem:** Lead-Variablen funktionieren nicht in Anrufen
 
-**Solutions:**
-1. **Assistant setup:** Verify variables defined in [assistant settings](/ai-assistants/settings/prompt-and-tools#call-variables)
-2. **Variable names:** Ensure exact match between lead data and assistant variables
-3. **Data format:** Check variable data is in expected format
-4. **Test calls:** Use manual test calls to verify variable passing
+**Lösungen:**
+1. **Assistenten-Einrichtung:** Variablen in [Assistenteneinstellungen](/ai-assistants/settings/prompt-and-tools#call-variables) definiert überprüfen
+2. **Variablennamen:** Exakte Übereinstimmung zwischen Lead-Daten und Assistentenvariablen sicherstellen
+3. **Datenformat:** Überprüfen Sie, ob Variablendaten im erwarteten Format vorliegen
+4. **Testanrufe:** Manuelle Testanrufe verwenden, um Variablenübergabe zu überprüfen
 
-## File Format Issues
+## Dateiformatprobleme
 
-### CSV Problems
-**Common issues:**
-- Wrong delimiter (use comma, not semicolon)
-- Missing headers in first row
-- Quoted fields with unescaped quotes
-- Mixed encoding (use UTF-8)
+### CSV-Probleme
+**Häufige Probleme:**
+- Falsches Trennzeichen (Komma verwenden, nicht Semikolon)
+- Fehlende Überschriften in erster Zeile
+- Zitierte Felder mit nicht maskierten Anführungszeichen
+- Gemischte Kodierung (UTF-8 verwenden)
 
-**Solutions:**
-1. **Standard format:** Use comma-separated values
-2. **Headers required:** First row must contain column names
-3. **Text qualification:** Use double quotes for text fields
-4. **Encoding:** Save as UTF-8 encoded CSV
+**Lösungen:**
+1. **Standardformat:** Kommagetrennten Werte verwenden
+2. **Überschriften erforderlich:** Erste Zeile muss Spaltennamen enthalten
+3. **Textqualifikation:** Doppelte Anführungszeichen für Textfelder verwenden
+4. **Kodierung:** Als UTF-8-kodierte CSV speichern
 
-### Excel Problems
-**Common issues:**
-- Multiple sheets (only first sheet imported)
-- Merged cells causing data misalignment
-- Formulas instead of values
-- Hidden characters or formatting
+### Excel-Probleme
+**Häufige Probleme:**
+- Mehrere Blätter (nur erstes Blatt wird importiert)
+- Verbundene Zellen verursachen Datenausrichtungsprobleme
+- Formeln statt Werte
+- Versteckte Zeichen oder Formatierung
 
-**Solutions:**
-1. **Single sheet:** Use only first worksheet
-2. **Unmerge cells:** Separate merged cells
-3. **Values only:** Convert formulas to values
-4. **Clean format:** Remove special formatting
+**Lösungen:**
+1. **Einzelnes Blatt:** Nur erstes Arbeitsblatt verwenden
+2. **Zellen trennen:** Verbundene Zellen trennen
+3. **Nur Werte:** Formeln in Werte konvertieren
+4. **Sauberes Format:** Spezielle Formatierung entfernen
 
-## Getting Help
+## Hilfe erhalten
 
-### Before Contacting Support
-1. **Download error report:** Review specific error messages
-2. **Check file format:** Verify CSV/Excel format compliance
-3. **Test small batch:** Try importing 5-10 leads first
-4. **Review documentation:** Check import requirements
+### Vor Kontaktaufnahme mit Support
+1. **Fehlerbericht herunterladen:** Spezifische Fehlermeldungen überprüfen
+2. **Dateiformat prüfen:** CSV/Excel-Formatkonformität überprüfen
+3. **Kleine Charge testen:** Zuerst 5-10 Leads importieren versuchen
+4. **Dokumentation überprüfen:** Importanforderungen prüfen
 
-### Information to Provide
-- Error messages received
-- Sample of import file (with sensitive data removed)
-- Campaign settings and requirements
-- Expected vs actual behavior
-- Assistant variable configuration
+### Bereitzustellende Informationen
+- Erhaltene Fehlermeldungen
+- Beispiel der Importdatei (mit entfernten sensiblen Daten)
+- Kampagneneinstellungen und Anforderungen
+- Erwartetes vs. tatsächliches Verhalten
+- Assistentenvariablenkonfiguration
 
 <Warning>
-**Data privacy:** Remove sensitive information from sample files before sharing with support.
+**Datenschutz:** Entfernen Sie sensible Informationen aus Beispieldateien, bevor Sie sie mit dem Support teilen.
 </Warning>
 
 <Note>
-For lead management best practices, see [Managing Leads](/leads/managing-leads) and [Campaign Setup](/campaigns/creating-campaigns).
+Für Best Practices zum Lead-Management siehe [Leads verwalten](/leads/managing-leads) und [Kampagneneinrichtung](/campaigns/creating-campaigns).
 </Note>

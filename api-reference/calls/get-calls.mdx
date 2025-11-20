@@ -1,146 +1,146 @@
 ---
-title: "List calls"
+title: "Anrufe auflisten"
 api: "GET /user/calls"
-description: "List all calls for the authenticated user with filtering options"
+description: "Alle Anrufe für den authentifizierten Benutzer mit Filteroptionen auflisten"
 ---
 
-This endpoint allows you to list all calls belonging to the authenticated user with various filtering options.
+Dieser Endpunkt ermöglicht es Ihnen, alle Anrufe aufzulisten, die dem authentifizierten Benutzer gehören, mit verschiedenen Filteroptionen.
 
-### Query Parameters
+### Abfrageparameter
 
 <ParamField query="status" type="string" optional>
-  Filter calls by status. Possible values: `initiated`, `ringing`, `busy`, `in-progress`, `ended`, `completed`, `ended_by_customer`, `ended_by_assistant`, `no-answer`, `failed`
+  Anrufe nach Status filtern. Mögliche Werte: `initiated`, `ringing`, `busy`, `in-progress`, `ended`, `completed`, `ended_by_customer`, `ended_by_assistant`, `no-answer`, `failed`
 </ParamField>
 
 <ParamField query="type" type="string" optional>
-  Filter calls by type. Possible values: `inbound`, `outbound`, `web`
+  Anrufe nach Typ filtern. Mögliche Werte: `inbound`, `outbound`, `web`
 </ParamField>
 
 <ParamField query="phone_number" type="string" optional>
-  Filter calls by client phone number
+  Anrufe nach Client-Telefonnummer filtern
 </ParamField>
 
 <ParamField query="assistant_id" type="integer" optional>
-  Filter calls by assistant ID
+  Anrufe nach Assistenten-ID filtern
 </ParamField>
 
 <ParamField query="campaign_id" type="integer" optional>
-  Filter calls by campaign ID
+  Anrufe nach Kampagnen-ID filtern
 </ParamField>
 
 <ParamField query="date_from" type="string" optional>
-  Filter calls from this date (YYYY-MM-DD format)
+  Anrufe ab diesem Datum filtern (Format YYYY-MM-DD)
 </ParamField>
 
 <ParamField query="date_to" type="string" optional>
-  Filter calls until this date (YYYY-MM-DD format)
+  Anrufe bis zu diesem Datum filtern (Format YYYY-MM-DD)
 </ParamField>
 
 <ParamField query="per_page" type="integer" optional>
-  Number of calls per page (1-100, default: 15)
+  Anzahl der Anrufe pro Seite (1-100, Standard: 15)
 </ParamField>
 
 <ParamField query="page" type="integer" optional>
-  Page number (default: 1)
+  Seitennummer (Standard: 1)
 </ParamField>
 
-### Response fields
+### Antwortfelder
 
 <ResponseField name="data" type="array">
-  <Expandable title="properties">
+  <Expandable title="Eigenschaften">
     <ResponseField name="id" type="integer">
-      The unique identifier of the call
+      Die eindeutige Kennung des Anrufs
     </ResponseField>
 
     <ResponseField name="assistant_name" type="string">
-      The name of the assistant that handled the call
+      Der Name des Assistenten, der den Anruf bearbeitet hat
     </ResponseField>
 
     <ResponseField name="campaign_name" type="string">
-      The name of the campaign this call belongs to (if applicable)
+      Der Name der Kampagne, zu der dieser Anruf gehört (falls zutreffend)
     </ResponseField>
 
     <ResponseField name="type" type="string">
-      The type of the call (`inbound`, `outbound`, or `web`)
+      Der Typ des Anrufs (`inbound`, `outbound` oder `web`)
     </ResponseField>
 
     <ResponseField name="duration" type="integer">
-      The duration of the call in seconds
+      Die Dauer des Anrufs in Sekunden
     </ResponseField>
 
     <ResponseField name="assistant_phone_number" type="string">
-      The phone number used by the assistant
+      Die vom Assistenten verwendete Telefonnummer
     </ResponseField>
 
     <ResponseField name="client_phone_number" type="string">
-      The phone number of the client
+      Die Telefonnummer des Clients
     </ResponseField>
 
     <ResponseField name="status" type="string">
-      The current status of the call
+      Der aktuelle Status des Anrufs
     </ResponseField>
 
     <ResponseField name="transcript" type="string">
-      The transcript of the call conversation
+      Die Transkription des Anrufgesprächs
     </ResponseField>
 
     <ResponseField name="variables" type="object">
-      Variables collected during the call
+      Während des Anrufs gesammelte Variablen
     </ResponseField>
 
     <ResponseField name="evaluation" type="object">
-      Evaluation data for the call performance
+      Bewertungsdaten für die Anrufleistung
     </ResponseField>
 
     <ResponseField name="webhook_response" type="object">
-      Response from any configured webhooks
+      Antwort von konfigurierten Webhooks
     </ResponseField>
 
     <ResponseField name="carrier_cost" type="number">
-      The cost charged by the carrier for this call
+      Die vom Carrier berechneten Kosten für diesen Anruf
     </ResponseField>
 
     <ResponseField name="total_cost" type="number">
-      The total cost of the call including all fees
+      Die Gesamtkosten des Anrufs einschließlich aller Gebühren
     </ResponseField>
 
     <ResponseField name="answered_by" type="string">
-      Who answered the call (`human`, `machine`, or `unknown`)
+      Wer den Anruf beantwortet hat (`human`, `machine` oder `unknown`)
     </ResponseField>
 
     <ResponseField name="recording_url" type="string">
-      URL to the call recording (if available and enabled)
+      URL zur Anrufaufzeichnung (falls verfügbar und aktiviert)
     </ResponseField>
 
     <ResponseField name="created_at" type="string">
-      The date and time when the call was created
+      Datum und Uhrzeit der Anruferstellung
     </ResponseField>
 
     <ResponseField name="updated_at" type="string">
-      The date and time when the call was last updated
+      Datum und Uhrzeit der letzten Aktualisierung des Anrufs
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="current_page" type="integer">
-  The current page number
+  Die aktuelle Seitennummer
 </ResponseField>
 
 <ResponseField name="per_page" type="integer">
-  Number of items per page
+  Anzahl der Elemente pro Seite
 </ResponseField>
 
 <ResponseField name="total" type="integer">
-  Total number of calls matching the criteria
+  Gesamtanzahl der Anrufe, die den Kriterien entsprechen
 </ResponseField>
 
 <ResponseField name="last_page" type="integer">
-  The last page number
+  Die letzte Seitennummer
 </ResponseField>
 
 <ResponseExample>
 
-```json 200 Response
+```json 200 Antwort
 {
   "current_page": 1,
   "data": [

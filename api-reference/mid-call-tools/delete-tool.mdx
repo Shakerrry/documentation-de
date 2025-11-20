@@ -1,55 +1,55 @@
 ---
-title: "Delete mid call tool"
+title: "Mid-Call-Tool löschen"
 api: "DELETE /user/tools/{id}"
-description: "Delete a mid call tool"
+description: "Mid-Call-Tool löschen"
 ---
 
-This endpoint allows you to permanently delete a mid call tool. This will also remove the tool from all assistants it was assigned to.
+Dieser Endpunkt ermöglicht es Ihnen, ein Mid-Call-Tool dauerhaft zu löschen. Dies entfernt das Tool auch von allen Assistenten, denen es zugewiesen war.
 
-### Headers
+### Header
 
 <ParamField header="Authorization" type="string" required>
-  Bearer token for authentication
+  Bearer-Token für die Authentifizierung
 </ParamField>
 
 <ParamField header="Content-Type" type="string" required>
-  Must be `application/json`
+  Muss `application/json` sein
 </ParamField>
 
 <ParamField header="Accept" type="string" required>
-  Must be `application/json`
+  Muss `application/json` sein
 </ParamField>
 
-### Path Parameters
+### Pfad-Parameter
 
 <ParamField path="id" type="integer" required>
-  The unique identifier of the tool to delete
+  Eindeutiger Bezeichner des zu löschenden Tools
 </ParamField>
 
-### Response fields
+### Antwortfelder
 
 <ResponseField name="message" type="string">
-  Success message confirming deletion
+  Erfolgsmeldung, die die Löschung bestätigt
 </ResponseField>
 
 <ResponseExample>
 
 ```json 200 OK
 {
-  "message": "Tool deleted successfully"
+  "message": "Tool erfolgreich gelöscht"
 }
 ```
 
-```json 404 Not Found
+```json 404 Nicht gefunden
 {
-  "message": "Tool not found"
+  "message": "Tool nicht gefunden"
 }
 ```
 
 </ResponseExample>
 
-### Note
+### Hinweis
 
-When a tool is deleted, it is automatically removed from all assistants. To manage tool assignments without deleting the tool, use:
+Wenn ein Tool gelöscht wird, wird es automatisch von allen Assistenten entfernt. Um Tool-Zuweisungen zu verwalten, ohne das Tool zu löschen, verwenden Sie:
 
-- **[Update Assistant](/api-reference/assistants/update-assistant)** - Use the `tool_ids` parameter to remove tools from specific assistants
+- **[Assistenten aktualisieren](/api-reference/assistants/update-assistant)** - Verwenden Sie den Parameter `tool_ids`, um Tools von bestimmten Assistenten zu entfernen

@@ -1,111 +1,111 @@
 ---
-title: "Assistant best practices"
+title: "Best Practices für Assistenten"
 icon: "sliders"
-description: "Quick guide to fine-tune mode, transcriber, model, and other settings for the best call experience."
+description: "Kurzanleitung zur Feinabstimmung von Modus, Transcriber, Modell und anderen Einstellungen für das beste Anruferlebnis."
 ---
 
-> **Last updated:** September 1, 2025
+> **Zuletzt aktualisiert:** 1. September 2025
 
-Getting great results often comes down to **picking the right engine settings**. Use this checklist when configuring an assistant:
+Großartige Ergebnisse hängen oft davon ab, **die richtigen Engine-Einstellungen zu wählen**. Verwenden Sie diese Checkliste beim Konfigurieren eines Assistenten:
 
-## 1. Pick a Mode
+## 1. Einen Modus wählen
 
-| Mode | Why choose it? | Notes |
+| Modus | Warum diesen wählen? | Hinweise |
 | --- | --- | --- |
-| **Dualplex (Beta)** | Fast turn-taking + premium/cloned voices | Recommended default. Pair with **Gemini Flash 2.0/2.5** or **GPT‑5 Realtime**. |
-| **Speech-to-Speech (Multimodal)** | Fastest turn-taking & most natural flow | Recommended model: **GPT‑5 Realtime**. |
-| **Pipeline** | Maximum control over voice & long-form replies | Recommended model: **GPT‑5 Mini**. If you select Pipeline, continue to the **Transcriber** step below. |
+| **Dualplex (Beta)** | Schneller Sprecherwechsel + Premium/geklonte Stimmen | Empfohlene Standardeinstellung. Kombinieren mit **Gemini Flash 2.0/2.5** oder **GPT‑5 Realtime**. |
+| **Speech-to-Speech (Multimodal)** | Schnellster Sprecherwechsel & natürlichster Fluss | Empfohlenes Modell: **GPT‑5 Realtime**. |
+| **Pipeline** | Maximale Kontrolle über Stimme & lange Antworten | Empfohlenes Modell: **GPT‑5 Mini**. Wenn Sie Pipeline wählen, fahren Sie mit dem Schritt **Transcriber** unten fort. |
 
-Want to know more about the differences between the modes? Read the <a href="/ai-assistants/assistant-modes">Assistant modes</a> guide.
+Möchten Sie mehr über die Unterschiede zwischen den Modi erfahren? Lesen Sie den <a href="/ai-assistants/assistant-modes">Leitfaden zu Assistenten-Modi</a>.
 
 <Note>
-Experiment with all three modes: record the same scenario in each and compare response time and caller satisfaction.<br/>
+Experimentieren Sie mit allen drei Modi: Nehmen Sie dasselbe Szenario in jedem auf und vergleichen Sie Antwortzeit und Anruferzufriedenheit.<br/>
 </Note>
 
-## 2. Choose a Transcriber (Pipeline only)
+## 2. Einen Transcriber wählen (nur Pipeline)
 
-| Transcriber | Accuracy | Latency | Best for |
+| Transcriber | Genauigkeit | Latenz | Am besten für |
 | --- | --- | --- | --- |
-| **Azure** | ⭐⭐⭐⭐ | ⏱️⏱️⏱️ (slower) | When you need the highest transcription fidelity. |
-| **Gladia** | ⭐⭐⭐ | ⏱️ (faster) | Good all-rounder for most languages. |
-| **Deepgram** | ⭐⭐⭐ | ⏱️ (faster) | Another solid choice—test which performs better for your language & audio setup. |
+| **Azure** | ⭐⭐⭐⭐ | ⏱️⏱️⏱️ (langsamer) | Wenn Sie die höchste Transkriptionsgenauigkeit benötigen. |
+| **Gladia** | ⭐⭐⭐ | ⏱️ (schneller) | Guter Allrounder für die meisten Sprachen. |
+| **Deepgram** | ⭐⭐⭐ | ⏱️ (schneller) | Eine weitere solide Wahl – testen Sie, welche für Ihre Sprache & Audio-Einrichtung besser funktioniert. |
 
-> **Tip:** Different languages, accents, or background noise can impact each engine differently. Run a quick A/B test and keep the best performer.
+> **Tipp:** Verschiedene Sprachen, Akzente oder Hintergrundgeräusche können jede Engine unterschiedlich beeinflussen. Führen Sie einen schnellen A/B-Test durch und behalten Sie die beste.
 
-## 3. Select an LLM Model
+## 3. Ein LLM-Modell auswählen
 
-| Model | Strengths | Trade-offs |
+| Modell | Stärken | Kompromisse |
 | --- | --- | --- |
-| **GPT-5 Mini** | Balanced reasoning with low latency | May be slower than realtime models for rapid turn-taking. |
-| **GPT-5 Realtime** | Designed for ultra-low-latency voice turns | Best for **Speech-to-Speech** and **Dualplex**. |
-| **GPT-4o** | Strong reasoning and multimodal understanding | Higher latency. |
-| **Gemini Flash 2.0 / 2.5** | Ultra-fast for voice turns in Dualplex/Multimodal | Excellent for minimizing perceived latency. |
+| **GPT-5 Mini** | Ausgewogenes Denken mit niedriger Latenz | Kann langsamer sein als Echtzeit-Modelle für schnellen Sprecherwechsel. |
+| **GPT-5 Realtime** | Entwickelt für ultra-niedrige Latenz bei Sprachwechseln | Am besten für **Speech-to-Speech** und **Dualplex**. |
+| **GPT-4o** | Starkes Denken und multimodales Verständnis | Höhere Latenz. |
+| **Gemini Flash 2.0 / 2.5** | Ultra-schnell für Sprachwechsel in Dualplex/Multimodal | Hervorragend zur Minimierung der wahrgenommenen Latenz. |
 
-If speed is critical, use **GPT‑5 Realtime** (great for **Speech-to-Speech**) or **Gemini Flash 2.0/2.5** (great with **Dualplex**). For richer reasoning, use **GPT-4o** or **GPT-5 Mini** and offset latency by using filler audios.
+Wenn Geschwindigkeit kritisch ist, verwenden Sie **GPT‑5 Realtime** (ideal für **Speech-to-Speech**) oder **Gemini Flash 2.0/2.5** (ideal mit **Dualplex**). Für reichhaltigeres Denken verwenden Sie **GPT-4o** oder **GPT-5 Mini** und gleichen Sie die Latenz durch Füllaudios aus.
 
-## 4. Noise Cancellation
+## 4. Geräuschunterdrückung
 
-If callers are on speaker phone or in a quiet environment, keep **noise cancellation ON**. If your call volume is low or some words are "clipped," **turn it OFF** so the transcriber gets the full waveform.
+Wenn Anrufer auf Freisprecheinrichtung oder in einer ruhigen Umgebung sind, lassen Sie die **Geräuschunterdrückung AN**. Wenn Ihre Anruflautstärke niedrig ist oder einige Wörter "abgeschnitten" werden, **schalten Sie sie AUS**, damit der Transcriber die vollständige Wellenform erhält.
 
 <Note>
-If your assistant is not hearing you well, you can try to turn off noise cancellation.
+Wenn Ihr Assistent Sie nicht gut hört, können Sie versuchen, die Geräuschunterdrückung auszuschalten.
 </Note>
 
-## 5. Conversation Timers
+## 5. Gesprächs-Timer
 
-Parameter | Recommended | Why
+Parameter | Empfohlen | Warum
 --- | --- | ---
-**Re-engagement** | `≈ 30 s` | Gives callers enough time to think. Lower values can feel pushy.
-**Max silence duration** | `≈ 60 s` | Prevents premature hang-ups while still ending truly silent calls.
+**Re-engagement** | `≈ 30 s` | Gibt Anrufern genug Zeit zum Nachdenken. Niedrigere Werte können aufdringlich wirken.
+**Maximale Stille** | `≈ 60 s` | Verhindert vorzeitiges Auflegen und beendet trotzdem wirklich stille Anrufe.
 
-Test different values in real calls—too low can interrupt, too high leaves awkward gaps.
+Testen Sie verschiedene Werte bei echten Anrufen – zu niedrig kann unterbrechen, zu hoch hinterlässt unangenehme Pausen.
 
-## 6. Initial Message
+## 6. Anfangsnachricht
 
-Mode | How it's used | Best practice
+Modus | Verwendung | Best Practice
 --- | --- | ---
-**Pipeline** | Read **exactly** as written (converted by TTS). | Write the greeting verbatim: "Hello, this is Alex from …".
-**Dualplex** | Read **exactly** as written (rendered via ElevenLabs TTS). | Write the greeting verbatim, then select your cloned voice.
-**Speech-to-Speech** | Interpreted as a **prompt** by the model. | Include instructions like "Greet the customer and say …" _or_ prepend `say exactly: ` to ensure literal output.
+**Pipeline** | Wird **genau** wie geschrieben vorgelesen (durch TTS konvertiert). | Schreiben Sie die Begrüßung wörtlich: "Hallo, hier ist Alex von …".
+**Dualplex** | Wird **genau** wie geschrieben vorgelesen (gerendert über ElevenLabs TTS). | Schreiben Sie die Begrüßung wörtlich und wählen Sie dann Ihre geklonte Stimme.
+**Speech-to-Speech** | Wird als **Prompt** vom Modell interpretiert. | Fügen Sie Anweisungen wie "Begrüßen Sie den Kunden und sagen Sie …" hinzu _oder_ stellen Sie `sage genau: ` voran, um wörtliche Ausgabe sicherzustellen.
 
-## 7. Ambient sound
+## 7. Umgebungsgeräusch
 
-Enabled by default, ambient sound is a feature that adds background noise to the assistant's voice.
+Standardmäßig aktiviert, ist Umgebungsgeräusch eine Funktion, die Hintergrundgeräusche zur Stimme des Assistenten hinzufügt.
 
 <Note>
-If the assistant is not hearing you well, you can try to turn off ambient sound or turn the volume lower.
+Wenn der Assistent Sie nicht gut hört, können Sie versuchen, das Umgebungsgeräusch auszuschalten oder die Lautstärke zu verringern.
 </Note>
 
-## 8. Endpointing sliders
+## 8. Endpointing-Regler
 
-**Control when your assistant starts talking** with the endpointing sensitivity slider at the bottom of assistant settings.
+**Steuern Sie, wann Ihr Assistent zu sprechen beginnt** mit dem Endpointing-Empfindlichkeitsregler am Ende der Assistenteneinstellungen.
 
-| Setting | Effect | Use when |
+| Einstellung | Wirkung | Verwenden, wenn |
 | --- | --- | --- |
-| **Lower sensitivity** | Assistant responds **faster** after caller stops speaking | You want snappy, quick-turn conversations |
-| **Higher sensitivity** | Assistant waits **longer** before responding | Callers give longer, more detailed replies |
+| **Niedrigere Empfindlichkeit** | Assistent antwortet **schneller**, nachdem der Anrufer aufhört zu sprechen | Sie schnelle, reaktionsschnelle Gespräche möchten |
+| **Höhere Empfindlichkeit** | Assistent wartet **länger**, bevor er antwortet | Anrufer längere, detailliertere Antworten geben |
 
 <Tip>
-**Pro tip:** If your assistant cuts off callers mid-sentence, **increase** the sensitivity. If responses feel sluggish, **decrease** it.
+**Profi-Tipp:** Wenn Ihr Assistent Anrufer mitten im Satz unterbricht, **erhöhen** Sie die Empfindlichkeit. Wenn die Antworten träge wirken, **verringern** Sie sie.
 </Tip>
 
-## 9. Debug using call transcript
+## 9. Debuggen mit Anruftranskript
 
-If you are having issues with your assistant, you can use the call transcript to debug the issue.
+Wenn Sie Probleme mit Ihrem Assistenten haben, können Sie das Anruftranskript zum Debuggen verwenden.
 
-1. Go to the Call history page.
-2. Click on the last call you tested
-3. The call transcript will be shown including function calls and its parameters.
+1. Gehen Sie zur Anrufverlaufsseite.
+2. Klicken Sie auf den letzten von Ihnen getesteten Anruf
+3. Das Anruftranskript wird angezeigt, einschließlich Funktionsaufrufen und deren Parametern.
 
-## 10. Still have questions?
+## 10. Haben Sie noch Fragen?
 
-If you have any questions, please contact our support team via the chat widget inside the app.
+Wenn Sie Fragen haben, kontaktieren Sie bitte unser Support-Team über das Chat-Widget in der App.
 
 <Note>
-Test different settings with real calls—the right balance depends on your conversation flow and caller behavior patterns.
+Testen Sie verschiedene Einstellungen mit echten Anrufen – das richtige Gleichgewicht hängt von Ihrem Gesprächsfluss und den Verhaltensmustern der Anrufer ab.
 </Note>
 
 ---
 
-Need a complete list of every toggle and slider? See the full
-<a href="/ai-assistants/settings/general">Assistant settings reference</a>.
+Benötigen Sie eine vollständige Liste aller Schalter und Regler? Siehe die vollständige
+<a href="/ai-assistants/settings/general">Referenz zu Assistenteneinstellungen</a>.

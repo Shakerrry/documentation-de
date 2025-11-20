@@ -1,51 +1,51 @@
 ---
-title: "Disable assistant webhook"
+title: "Assistenten-Webhook deaktivieren"
 api: "POST /user/assistants/disable-webhook"
-description: "Disable webhook notifications for a specific assistant"
+description: "Webhook-Benachrichtigungen für einen bestimmten Assistenten deaktivieren"
 ---
 
-This endpoint disables webhook notifications for an assistant, stopping all real-time updates about call completions and data.
+Dieser Endpunkt deaktiviert Webhook-Benachrichtigungen für einen Assistenten und stoppt alle Echtzeit-Updates über Anrufabschlüsse und Daten.
 
-### Request Body
+### Anfragekörper
 
 <ParamField body="assistant_id" type="integer" required>
-  The ID of the assistant to disable webhook for
+  Die ID des Assistenten, für den der Webhook deaktiviert werden soll
 </ParamField>
 
-### Response
+### Antwort
 
 <ResponseField name="message" type="string">
-  Success message confirming webhook was disabled
+  Erfolgsmeldung, die bestätigt, dass der Webhook deaktiviert wurde
 </ResponseField>
 
 <ResponseField name="data" type="array">
-  Empty array (reserved for future use)
+  Leeres Array (für zukünftige Verwendung reserviert)
 </ResponseField>
 
-### Error Responses
+### Fehlerantworten
 
 <ResponseField name="404 Not Found">
-  <Expandable title="Error Response">
+  <Expandable title="Fehlerantwort">
     <ResponseField name="message" type="string">
-      Error message when the assistant is not found or doesn't belong to the authenticated user
+      Fehlermeldung, wenn der Assistent nicht gefunden wurde oder dem authentifizierten Benutzer nicht gehört
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="422 Validation Error">
-  <Expandable title="Error Response">
+  <Expandable title="Fehlerantwort">
     <ResponseField name="message" type="string">
-      Error message indicating validation failure
+      Fehlermeldung, die einen Validierungsfehler anzeigt
     </ResponseField>
     <ResponseField name="errors" type="object">
-      Detailed validation errors for each field
+      Detaillierte Validierungsfehler für jedes Feld
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseExample>
 
-```json 200 Success Response
+```json 200 Erfolgsantwort
 {
   "message": "Webhook disabled successfully",
   "data": []
@@ -58,7 +58,7 @@ This endpoint disables webhook notifications for an assistant, stopping all real
 }
 ```
 
-```json 422 Validation Error
+```json 422 Validierungsfehler
 {
   "message": "The given data was invalid.",
   "errors": {
@@ -71,18 +71,18 @@ This endpoint disables webhook notifications for an assistant, stopping all real
 
 </ResponseExample>
 
-### Webhook Behavior
+### Webhook-Verhalten
 
-When webhook is disabled:
+Wenn der Webhook deaktiviert ist:
 
-- The assistant will stop sending HTTP POST requests to your webhook URL
-- Both `is_webhook_active` is set to `false` and `webhook_url` is set to `null`
-- Any ongoing calls will complete normally, but no webhook notifications will be sent
-- Call data will still be available through the API calls endpoints
+- Der Assistent sendet keine HTTP-POST-Anfragen mehr an Ihre Webhook-URL
+- Sowohl `is_webhook_active` wird auf `false` gesetzt als auch `webhook_url` auf `null`
+- Alle laufenden Anrufe werden normal abgeschlossen, aber es werden keine Webhook-Benachrichtigungen gesendet
+- Anrufdaten sind weiterhin über die API-Anruf-Endpunkte verfügbar
 
-### Notes
+### Hinweise
 
-- The assistant must belong to the authenticated user
-- This completely removes the webhook configuration from the assistant
-- You can later re-enable webhooks using the enable webhook endpoint with a new URL
-- Disabling webhooks does not affect call recording or data collection
+- Der Assistent muss dem authentifizierten Benutzer gehören
+- Dies entfernt die Webhook-Konfiguration vollständig vom Assistenten
+- Sie können Webhooks später mit dem Enable-Webhook-Endpunkt mit einer neuen URL erneut aktivieren
+- Das Deaktivieren von Webhooks wirkt sich nicht auf Anrufaufzeichnungen oder Datenerfassung aus

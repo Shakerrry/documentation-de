@@ -1,56 +1,56 @@
 ---
-title: "Tools & Functions"
+title: "Werkzeuge & Funktionen"
 icon: "screwdriver-wrench"
-description: "Explore the built-in tools and functions that enhance your AI assistant's capabilities during calls"
+description: "Erkunden Sie die integrierten Werkzeuge und Funktionen, die die Fähigkeiten Ihres KI-Assistenten während Anrufen erweitern"
 ---
 
-Autocalls.ai offers built-in "tools" that your AI assistant can use during a call. These help you shape the conversation flow and automate actions like transferring calls or scheduling appointments.
+Autocalls.ai bietet integrierte "Werkzeuge", die Ihr KI-Assistent während eines Anrufs verwenden kann. Diese helfen Ihnen, den Gesprächsfluss zu gestalten und Aktionen wie Anrufweiterleitung oder Terminplanung zu automatisieren.
 
-## 1. End Call Tool
+## 1. Anrufbeendigungs-Werkzeug
 
-- **Purpose**: Tells the AI to politely wrap up the conversation.
-- **How It Works**: You can specify in the system prompt or logic, for instance: "If the user says `goodbye`, end the call."
-- **Configuration**: Enable in [Prompt & Tools settings](/ai-assistants/settings/prompt-and-tools#default-tools) and define conditions in your system prompt that should trigger the end call.
+- **Zweck**: Weist die KI an, das Gespräch höflich abzuschließen.
+- **Funktionsweise**: Sie können im System-Prompt oder in der Logik angeben, zum Beispiel: "Wenn der Benutzer `auf Wiedersehen` sagt, beende den Anruf."
+- **Konfiguration**: Aktivieren Sie es in den [Prompt & Werkzeuge-Einstellungen](/ai-assistants/settings/prompt-and-tools#default-tools) und definieren Sie Bedingungen in Ihrem System-Prompt, die die Anrufbeendigung auslösen sollten.
 
-## 2. Transfer Tool
+## 2. Weiterleitungs-Werkzeug
 
-- **Purpose**: Moves the caller from the AI assistant to a human agent or external phone number.
-- **Use Cases**: Warm leads on a sales call, escalations on a support call, etc.
-- **Configuration**: Set up in [Prompt & Tools settings](/ai-assistants/settings/prompt-and-tools#default-tools) by adding the phone number or department the call should go to, and optionally a short hold message.
+- **Zweck**: Leitet den Anrufer vom KI-Assistenten zu einem menschlichen Agenten oder einer externen Telefonnummer weiter.
+- **Anwendungsfälle**: Warme Leads bei einem Vertriebsanruf, Eskalationen bei einem Support-Anruf usw.
+- **Konfiguration**: Richten Sie es in den [Prompt & Werkzeuge-Einstellungen](/ai-assistants/settings/prompt-and-tools#default-tools) ein, indem Sie die Telefonnummer oder Abteilung hinzufügen, an die der Anruf gehen soll, und optional eine kurze Wartenachricht.
 
-## 3. Appointment Scheduler
+## 3. Terminplaner
 
-- **Purpose**: Lets the AI check your calendar availability and book appointments automatically.
-- **Available Integrations**: Cal.com and GoHighLevel calendar systems
-- **Typical Flow**:
-  1. AI offers scheduling.
-  2. Caller selects date/time.
-  3. AI confirms and sends a confirmation (using email or SMS if configured).
-- **Configuration**: Set up in [Prompt & Tools settings](/ai-assistants/settings/prompt-and-tools#default-tools) with your calendar integration.
+- **Zweck**: Ermöglicht der KI, Ihre Kalenderverfügbarkeit zu prüfen und automatisch Termine zu buchen.
+- **Verfügbare Integrationen**: Cal.com und GoHighLevel Kalendersysteme
+- **Typischer Ablauf**:
+  1. KI bietet Terminplanung an.
+  2. Anrufer wählt Datum/Uhrzeit.
+  3. KI bestätigt und sendet eine Bestätigung (per E-Mail oder SMS, falls konfiguriert).
+- **Konfiguration**: Richten Sie es in den [Prompt & Werkzeuge-Einstellungen](/ai-assistants/settings/prompt-and-tools#default-tools) mit Ihrer Kalenderintegration ein.
 
-## 4. DTMF Input
+## 4. DTMF-Eingabe
 
-- **Purpose**: Allows the AI to send keypad inputs during calls to navigate phone menus, IVR systems, and automated workflows.
-- **How It Works**: The AI can press phone keypad buttons (0-9, *, #) when encountering automated systems or menu prompts.
-- **Use Cases**: 
-  - Navigate through company phone menus
-  - Enter extension numbers to reach specific departments
-  - Input security codes or account numbers
-  - Bypass IVR systems to reach human agents
-- **Configuration**: Enable in [Prompt & Tools settings](/ai-assistants/settings/prompt-and-tools#default-tools) and include instructions in your system prompt about when to use DTMF.
+- **Zweck**: Ermöglicht der KI, Tastatureingaben während Anrufen zu senden, um Telefonmenüs, IVR-Systeme und automatisierte Workflows zu navigieren.
+- **Funktionsweise**: Die KI kann Telefontastaturknöpfe (0-9, *, #) drücken, wenn sie auf automatisierte Systeme oder Menüaufforderungen trifft.
+- **Anwendungsfälle**:
+  - Navigation durch Unternehmenstelefonmenüs
+  - Eingabe von Durchwahlnummern, um bestimmte Abteilungen zu erreichen
+  - Eingabe von Sicherheitscodes oder Kontonummern
+  - Umgehung von IVR-Systemen, um menschliche Agenten zu erreichen
+- **Konfiguration**: Aktivieren Sie es in den [Prompt & Werkzeuge-Einstellungen](/ai-assistants/settings/prompt-and-tools#default-tools) und fügen Sie Anweisungen in Ihren System-Prompt ein, wann DTMF verwendet werden soll.
 
-## 5. No-Code Automation Platform
+## 5. No-Code-Automatisierungsplattform
 
-- **Purpose**: After calls, the AI can trigger actions in the automation platform (like updating a CRM, sending an email, or logging results in Google Sheets).
-- **Configuration**: Set up triggers and actions in the [Automation Platform](/automation-platform/introduction), then link to your assistant via webhook configuration in [Post-call Actions](/ai-assistants/settings/post-call-actions#webhook-configuration).
+- **Zweck**: Nach Anrufen kann die KI Aktionen in der Automatisierungsplattform auslösen (wie die Aktualisierung eines CRM, das Senden einer E-Mail oder das Protokollieren von Ergebnissen in Google Sheets).
+- **Konfiguration**: Richten Sie Trigger und Aktionen in der [Automatisierungsplattform](/automation-platform/introduction) ein und verknüpfen Sie sie dann über die Webhook-Konfiguration in [Nach-Anruf-Aktionen](/ai-assistants/settings/post-call-actions#webhook-configuration) mit Ihrem Assistenten.
 
-## 6. Custom Mid-Call Tools
+## 6. Benutzerdefinierte Mid-Call-Werkzeuge
 
-- **Purpose**: Create your own custom API integrations that the AI can use during calls.
-- **Use Cases**: Check inventory, verify customer data, fetch real-time information, or integrate with your own systems.
-- **Configuration**: Set up in [Prompt & Tools settings](/ai-assistants/settings/prompt-and-tools#custom-mid-call-tools) by defining API endpoints, parameters, and when the AI should use them.
-- For detailed setup instructions and examples, see our [Custom Mid-Call Tools Guide](/ai-assistants/custom-tools).
+- **Zweck**: Erstellen Sie Ihre eigenen benutzerdefinierten API-Integrationen, die die KI während Anrufen verwenden kann.
+- **Anwendungsfälle**: Bestandsprüfung, Kundendatenverifizierung, Abruf von Echtzeitinformationen oder Integration mit Ihren eigenen Systemen.
+- **Konfiguration**: Richten Sie es in den [Prompt & Werkzeuge-Einstellungen](/ai-assistants/settings/prompt-and-tools#custom-mid-call-tools) ein, indem Sie API-Endpunkte, Parameter und festlegen, wann die KI sie verwenden soll.
+- Für detaillierte Einrichtungsanweisungen und Beispiele siehe unseren [Leitfaden zu benutzerdefinierten Mid-Call-Werkzeugen](/ai-assistants/custom-tools).
 
 ---
 
-**Note:** Tools can be combined. For instance, the AI can use a custom tool to check availability, then schedule an appointment, and finally transfer to a human agent if needed.
+**Hinweis:** Werkzeuge können kombiniert werden. Zum Beispiel kann die KI ein benutzerdefiniertes Werkzeug verwenden, um die Verfügbarkeit zu prüfen, dann einen Termin planen und schließlich bei Bedarf an einen menschlichen Agenten weiterleiten.

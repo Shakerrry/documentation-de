@@ -1,39 +1,39 @@
 ---
-title: "Update Lead"
+title: "Lead aktualisieren"
 api: "PUT /user/leads/{id}"
-description: "Update an existing lead in your campaigns"
+description: "Einen vorhandenen Lead in Ihren Kampagnen aktualisieren"
 ---
 
-Update a lead by providing the lead ID and the fields you want to modify. Only the fields provided in the request will be updated.
+Aktualisieren Sie einen Lead, indem Sie die Lead-ID und die Felder angeben, die Sie ändern möchten. Es werden nur die im Request angegebenen Felder aktualisiert.
 
-## Path Parameters
+## Pfad-Parameter
 
 <ParamField path="id" type="integer" required>
-  The ID of the lead to update
+  Die ID des zu aktualisierenden Leads
 </ParamField>
 
-## Body Parameters
+## Body-Parameter
 
 <ParamField body="campaign_id" type="integer" optional>
-  The ID of the campaign to assign the lead to
+  Die ID der Kampagne, der der Lead zugewiesen werden soll
 </ParamField>
 
 <ParamField body="phone_number" type="string" optional>
-  The phone number of the lead (will be formatted to E164)
+  Die Telefonnummer des Leads (wird in das E164-Format formatiert)
 </ParamField>
 
 <ParamField body="status" type="string" optional>
-  The status of the lead. Must be one of: `created`, `completed`, `reached-max-retries`
+  Der Status des Leads. Muss einer der folgenden sein: `created`, `completed`, `reached-max-retries`
 </ParamField>
 
 <ParamField body="variables" type="object" optional>
-  Custom variables to merge with existing lead variables
+  Benutzerdefinierte Variablen, die mit vorhandenen Lead-Variablen zusammengeführt werden
 </ParamField>
 
-## Response
+## Antwort
 
 <ResponseField name="message" type="string">
-  Success message indicating the lead was updated
+  Erfolgsmeldung, die anzeigt, dass der Lead aktualisiert wurde
 </ResponseField>
 
 <RequestExample>
@@ -56,31 +56,31 @@ curl -X PUT "https://app.autocalls.ai/api/user/leads/123" \
 
 <ResponseExample>
 
-```json Success Response
+```json Erfolgsantwort
 {
   "message": "Lead updated successfully"
 }
 ```
 
-```json Error Response - Lead Not Found
+```json Fehlerantwort - Lead nicht gefunden
 {
   "message": "Lead not found"
 }
 ```
 
-```json Error Response - Campaign Not Found
+```json Fehlerantwort - Kampagne nicht gefunden
 {
   "message": "Campaign not found"
 }
 ```
 
-```json Error Response - Invalid Phone Number
+```json Fehlerantwort - Ungültige Telefonnummer
 {
   "message": "Invalid phone number"
 }
 ```
 
-```json Error Response - Validation Failed
+```json Fehlerantwort - Validierung fehlgeschlagen
 {
   "message": "Validation failed",
   "errors": {
@@ -91,7 +91,7 @@ curl -X PUT "https://app.autocalls.ai/api/user/leads/123" \
 }
 ```
 
-```json Error Response - Invalid Fields
+```json Fehlerantwort - Ungültige Felder
 {
   "message": "Invalid fields: invalid_field, another_invalid_field"
 }
@@ -99,11 +99,11 @@ curl -X PUT "https://app.autocalls.ai/api/user/leads/123" \
 
 </ResponseExample>
 
-## Notes
+## Hinweise
 
-- The lead must belong to the authenticated user
-- If updating the campaign, the new campaign must also belong to the authenticated user
-- Phone numbers are automatically formatted and validated
-- Variables are merged with existing variables (not replaced)
-- Only allowed fields can be updated: `campaign_id`, `phone_number`, `status`, `variables`
-- The `status` field has restricted values for data integrity
+- Der Lead muss dem authentifizierten Benutzer gehören
+- Beim Aktualisieren der Kampagne muss die neue Kampagne ebenfalls dem authentifizierten Benutzer gehören
+- Telefonnummern werden automatisch formatiert und validiert
+- Variablen werden mit vorhandenen Variablen zusammengeführt (nicht ersetzt)
+- Es können nur erlaubte Felder aktualisiert werden: `campaign_id`, `phone_number`, `status`, `variables`
+- Das Feld `status` hat eingeschränkte Werte für die Datenintegrität

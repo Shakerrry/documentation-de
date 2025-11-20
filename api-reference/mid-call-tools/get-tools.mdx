@@ -1,99 +1,99 @@
 ---
-title: "List mid call tools"
+title: "Mid-Call-Tools auflisten"
 api: "GET /user/tools"
-description: "Retrieve all mid call tools"
+description: "Alle Mid-Call-Tools abrufen"
 ---
 
-This endpoint allows you to retrieve all mid call tools. Mid call tools enable your AI assistants to interact with external APIs during a call.
+Dieser Endpunkt ermöglicht es Ihnen, alle Mid-Call-Tools abzurufen. Mid-Call-Tools ermöglichen Ihren KI-Assistenten, während eines Anrufs mit externen APIs zu interagieren.
 
-### Headers
+### Header
 
 <ParamField header="Authorization" type="string" required>
-  Bearer token for authentication
+  Bearer-Token für die Authentifizierung
 </ParamField>
 
 <ParamField header="Content-Type" type="string" required>
-  Must be `application/json`
+  Muss `application/json` sein
 </ParamField>
 
 <ParamField header="Accept" type="string" required>
-  Must be `application/json`
+  Muss `application/json` sein
 </ParamField>
 
-### Response fields
+### Antwortfelder
 
 <ResponseField name="data" type="array">
-  Array of mid call tools
-  <Expandable title="properties">
+  Array von Mid-Call-Tools
+  <Expandable title="Eigenschaften">
     <ResponseField name="id" type="integer">
-      The unique identifier of the tool
+      Eindeutiger Bezeichner des Tools
     </ResponseField>
 
     <ResponseField name="name" type="string">
-      The name of the tool (lowercase with underscores)
+      Name des Tools (Kleinbuchstaben mit Unterstrichen)
     </ResponseField>
 
     <ResponseField name="description" type="string">
-      Detailed explanation of when and how the AI should use this tool
+      Detaillierte Erklärung, wann und wie die KI dieses Tool verwenden soll
     </ResponseField>
 
     <ResponseField name="endpoint" type="string">
-      The API endpoint URL that will be called
+      Die API-Endpunkt-URL, die aufgerufen wird
     </ResponseField>
 
     <ResponseField name="method" type="string">
-      HTTP method (GET, POST, PUT, PATCH, DELETE)
+      HTTP-Methode (GET, POST, PUT, PATCH, DELETE)
     </ResponseField>
 
     <ResponseField name="timeout" type="integer">
-      Request timeout in seconds (1-30)
+      Anfrage-Timeout in Sekunden (1-30)
     </ResponseField>
 
     <ResponseField name="headers" type="array">
-      HTTP headers to send with the request
-      <Expandable title="header properties">
+      Mit der Anfrage zu sendende HTTP-Header
+      <Expandable title="header-Eigenschaften">
         <ResponseField name="name" type="string">
-          Header name
+          Header-Name
         </ResponseField>
         <ResponseField name="value" type="string">
-          Header value
+          Header-Wert
         </ResponseField>
       </Expandable>
     </ResponseField>
 
     <ResponseField name="schema" type="array">
-      Parameters that the AI will extract and send to the endpoint
-      <Expandable title="schema properties">
+      Parameter, die die KI extrahiert und an den Endpunkt sendet
+      <Expandable title="schema-Eigenschaften">
         <ResponseField name="name" type="string">
-          Parameter name
+          Parameter-Name
         </ResponseField>
         <ResponseField name="type" type="string">
-          Parameter type (string, number, boolean)
+          Parameter-Typ (string, number, boolean)
         </ResponseField>
         <ResponseField name="description" type="string">
-          Description to help AI understand how to extract this parameter
+          Beschreibung, die der KI hilft zu verstehen, wie dieser Parameter extrahiert werden soll
         </ResponseField>
       </Expandable>
     </ResponseField>
 
     <ResponseField name="created_at" type="string">
-      ISO 8601 timestamp when the tool was created
+      ISO 8601-Zeitstempel, wann das Tool erstellt wurde
     </ResponseField>
 
     <ResponseField name="updated_at" type="string">
-      ISO 8601 timestamp when the tool was last updated
+      ISO 8601-Zeitstempel, wann das Tool zuletzt aktualisiert wurde
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseExample>
 
-```json 200 Response
+```json 200 Antwort
 [
   {
     "id": 1,
     "name": "get_weather",
-    "description": "Use this tool to get the current weather in a specific city. Call this when the customer asks about weather conditions.",
+    "description": "Verwenden Sie dieses Tool, um das aktuelle Wetter in einer bestimmten Stadt abzurufen. Rufen Sie dies auf, wenn der Kunde nach Wetterbedingungen fragt.",
     "endpoint": "https://api.openweathermap.org/data/2.5/weather",
     "method": "GET",
     "timeout": 10,
@@ -111,17 +111,17 @@ This endpoint allows you to retrieve all mid call tools. Mid call tools enable y
       {
         "name": "city",
         "type": "string",
-        "description": "The city name to get weather for"
+        "description": "Der Stadtname, für den das Wetter abgerufen werden soll"
       },
       {
         "name": "temperature",
         "type": "number",
-        "description": "Current temperature value"
+        "description": "Aktueller Temperaturwert"
       },
       {
         "name": "is_raining",
         "type": "boolean",
-        "description": "Whether it is currently raining"
+        "description": "Ob es derzeit regnet"
       }
     ],
     "created_at": "2025-10-10T12:00:00.000000Z",
@@ -130,7 +130,7 @@ This endpoint allows you to retrieve all mid call tools. Mid call tools enable y
   {
     "id": 2,
     "name": "send_notification",
-    "description": "Use this tool to send a notification to the customer. Call this when customer requests updates.",
+    "description": "Verwenden Sie dieses Tool, um eine Benachrichtigung an den Kunden zu senden. Rufen Sie dies auf, wenn der Kunde Updates anfordert.",
     "endpoint": "https://api.yourcompany.com/notifications/send",
     "method": "POST",
     "timeout": 15,
@@ -144,17 +144,17 @@ This endpoint allows you to retrieve all mid call tools. Mid call tools enable y
       {
         "name": "message",
         "type": "string",
-        "description": "The notification message to send"
+        "description": "Die zu sendende Benachrichtigungsnachricht"
       },
       {
         "name": "priority_level",
         "type": "number",
-        "description": "Priority level from 1 to 5"
+        "description": "Prioritätsstufe von 1 bis 5"
       },
       {
         "name": "send_sms",
         "type": "boolean",
-        "description": "Whether to also send SMS notification"
+        "description": "Ob auch eine SMS-Benachrichtigung gesendet werden soll"
       }
     ],
     "created_at": "2025-10-09T14:30:00.000000Z",
@@ -165,9 +165,9 @@ This endpoint allows you to retrieve all mid call tools. Mid call tools enable y
 
 </ResponseExample>
 
-### Assigning Tools to Assistants
+### Tools Assistenten zuweisen
 
-To use these tools with assistants, see:
+Um diese Tools mit Assistenten zu verwenden, siehe:
 
-- **[Create Assistant](/api-reference/assistants/create-assistant)** - Attach tools using the `tool_ids` parameter
-- **[Update Assistant](/api-reference/assistants/update-assistant)** - Manage tool assignments using the `tool_ids` parameter
+- **[Assistenten erstellen](/api-reference/assistants/create-assistant)** - Tools mit dem Parameter `tool_ids` anhängen
+- **[Assistenten aktualisieren](/api-reference/assistants/update-assistant)** - Tool-Zuweisungen mit dem Parameter `tool_ids` verwalten

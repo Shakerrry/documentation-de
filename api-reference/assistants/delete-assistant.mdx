@@ -1,44 +1,44 @@
 ---
-title: "Delete assistant"
+title: "Assistenten löschen"
 api: "DELETE /user/assistant/{id}"
-description: "Delete a specific AI assistant"
+description: "Einen bestimmten KI-Assistenten löschen"
 ---
 
-This endpoint allows you to permanently delete an AI assistant that belongs to the authenticated user.
+Dieser Endpunkt ermöglicht es Ihnen, einen KI-Assistenten, der dem authentifizierten Benutzer gehört, dauerhaft zu löschen.
 
-### Path Parameters
+### Pfad-Parameter
 
 <ParamField path="id" type="integer" required>
-  The unique identifier of the assistant to delete
+  Die eindeutige Kennung des zu löschenden Assistenten
 </ParamField>
 
-### Response
+### Antwort
 
 <ResponseField name="message" type="string">
-  Confirmation message indicating the assistant was deleted successfully
+  Bestätigungsnachricht, die anzeigt, dass der Assistent erfolgreich gelöscht wurde
 </ResponseField>
 
-### Error Responses
+### Fehlerantworten
 
 <ResponseField name="404 Not Found">
-  <Expandable title="Error Response">
+  <Expandable title="Fehlerantwort">
     <ResponseField name="message" type="string">
-      Error message when the assistant is not found or doesn't belong to the authenticated user
+      Fehlermeldung, wenn der Assistent nicht gefunden wurde oder dem authentifizierten Benutzer nicht gehört
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="500 Internal Server Error">
-  <Expandable title="Error Response">
+  <Expandable title="Fehlerantwort">
     <ResponseField name="message" type="string">
-      Error message indicating assistant deletion failure
+      Fehlermeldung, die das Fehlschlagen der Assistentenlöschung anzeigt
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseExample>
 
-```json 200 Success Response
+```json 200 Erfolgsantwort
 {
   "message": "Assistant deleted successfully"
 }
@@ -58,9 +58,9 @@ This endpoint allows you to permanently delete an AI assistant that belongs to t
 
 </ResponseExample>
 
-### Notes
+### Hinweise
 
-- Only assistants that belong to the authenticated user can be deleted
-- Once an assistant is deleted, it cannot be recovered
-- This action will permanently remove the assistant and all its configuration
-- If the assistant is currently handling active calls, those calls may be affected
+- Nur Assistenten, die dem authentifizierten Benutzer gehören, können gelöscht werden
+- Sobald ein Assistent gelöscht wurde, kann er nicht wiederhergestellt werden
+- Diese Aktion entfernt den Assistenten und seine gesamte Konfiguration dauerhaft
+- Wenn der Assistent derzeit aktive Anrufe bearbeitet, können diese Anrufe beeinträchtigt werden
