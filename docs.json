@@ -1,11 +1,9 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Autocalls",
+  "name": "Website Excellence Builders",
   "colors": {
-    "primary": "#06df4b",
-    "light": "#06df4b",
-    "dark": "#65fe50"
+    "primary": "#00A887",
   },
   "favicon": "/favicon.png",
   "navigation": {
@@ -345,7 +343,7 @@
   },
   "api": {
     "mdx": {
-      "server": "https://app.autocalls.ai/api/",
+      "server": "https://ki.web-wb.de/api/",
       "auth": {
         "method": "bearer"
       }
@@ -355,17 +353,17 @@
     "links": [
       {
         "label": "Startseite",
-        "href": "https://autocalls.ai"
+        "href": "https://web-wb.de"
       },
       {
         "label": "Support",
-        "href": "https://autocalls.ai/contact"
+        "href": "https://web-wb.de/contact"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://app.autocalls.ai"
+      "href": "https://ki.web-wb.de"
     }
   },
   "footer": {
